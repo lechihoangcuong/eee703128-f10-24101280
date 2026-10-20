@@ -1,3 +1,5 @@
+> Bản ghi tại thời điểm xây dựng trước đó. Trạng thái hiện tại, đường dẫn portable và giới hạn bổ sung được chốt tại CONTRACT_AND_INTERFACE.md, VERIFICATION_PLAN.md và EVIDENCE_INDEX.md; không dùng các câu “chưa kiểm wrapper” trong bản ghi này thay kết quả mới.
+
 # Tích hợp Tiny Tapeout của bản làm việc
 
 `f10_tiny_tapeout_top` đã thay wrapper cũ nối clock/reset hằng số bằng wrapper có đủ tám cổng chuẩn. Lõi `f10_handshake_controller` được giữ nguyên. Alias `tt_um_24101280_f10` chỉ đổi tên top để kết nối template, không thêm trạng thái.

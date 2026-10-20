@@ -1,3 +1,5 @@
+> Bản ghi tại thời điểm xây dựng trước đó. Trạng thái hiện tại, đường dẫn portable và giới hạn bổ sung được chốt tại CONTRACT_AND_INTERFACE.md, VERIFICATION_PLAN.md và EVIDENCE_INDEX.md; không dùng các câu “chưa kiểm wrapper” trong bản ghi này thay kết quả mới.
+
 # F10 — kế hoạch kiểm chứng thực thi của bản làm việc
 
 Phiên bản 1.0 — 2026-10-19. Nguồn được giữ nguyên trong `reference/f10_supplied/`; kế hoạch này kiểm lõi trong bản làm việc, không dùng kết quả mô phỏng đính kèm gói làm bằng chứng mới.

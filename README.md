@@ -48,3 +48,16 @@ Giảng viên yêu cầu repo cá nhân, lịch sử commit thật và link lầ
 Physical job giữ log kể cả khi hỏng. Nếu chưa có sản phẩm cuối, nộp log lỗi thật và phân tích theo yêu cầu giảng viên; không chuyển trạng thái lỗi thành thành công. Cần kiểm hướng dẫn nộp chính thức, quyền giảng viên xem repo riêng tư và quy định sử dụng AI.
 
 **Giả định giao diện cần rà soát với giảng viên:** `uio_in[1]` dùng START, giữ nguyên ACK ở bit 0 và timeout đủ 8 bit. Charter chưa chốt chân START. Khối triển khai là requester; phía đáp ứng ACK được mô hình hóa trong TB. Không tự nhận giảng viên đã duyệt hai cách diễn giải này.
+
+
+## Báo cáo và bài học
+
+- [Hướng dẫn học từ đầu và22câu vấn đáp](docs/F10_HUONG_DAN_HOC_VA_BAO_VE.md).
+- [Đối chiếu24yêu cầu](docs/F10_REQUIREMENTS_AUDIT.md).
+- [Báo cáo làm việc14trang](reports/F10_24101280_BAO_CAO_BAN_LAM_VIEC.pdf).
+- [Phụ lục mã17trang](reports/F10_24101280_PHU_LUC_MA_NGUON.pdf).
+- [Bản văn bản để chỉnh sửa](reports/F10_24101280_BAO_CAO_BAN_LAM_VIEC.md).
+
+Kiểm thêm deadline hai pha và giới hạn đối tác: `bash diagnostics/contract_bounds/run.sh`. Thử sức bắt lỗi của checker: `bash scripts/run_mutations.sh`. Tất cả chạy được từ repo; giữ riêng các log FAIL có chủ ý.
+
+Không đồng nhất “có đủ tệp” với “đã hiểu và đã đạt mọi tiêu chí”. Cổng A và physical cần CI thật; phần waveform và22FF phải tự giải thích được trước khi nộp.

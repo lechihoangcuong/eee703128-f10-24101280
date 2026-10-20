@@ -1,0 +1,9 @@
+{
+  "main_pages": 14,
+  "appendix_pages": 17,
+  "visual_review": "all pages inspected after rendering; changed pages inspected after revisions",
+  "vietnamese_fonts": "Times New Roman embedded; diagrams use Arial; source uses Consolas",
+  "main_sha256": "e9336876ae8a6cb4b99f35ab3f5773fe5137008ea64edf1f208d8936923c8873",
+  "appendix_sha256": "e6a6c628c57abc2f30924ab39147e1b18439122f4caba62e90410cc13798294e",
+  "status": "working draft; external publication and physical CI pending"
+}

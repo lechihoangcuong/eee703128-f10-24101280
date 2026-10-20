@@ -18,3 +18,10 @@ Các tệp `summary.json`, mã thoát, hash nguồn, `tool_versions.txt` và log
 Các mutation FAIL có chủ ý được giữ riêng trong thư mục làm việc gốc, không trộn vào PASS của thiết kế bàn giao. Đây không phải số liệu code coverage hay formal proof. Sweep đủ 256 N cho bốn kịch bản deadline đã định nghĩa, chưa duyệt mọi chuỗi input có thể có.
 
 GDS, mapped Sky130 area, slack/corner, power, DRC/LVS và link CI đang **chưa có** tại lúc tạo gói. Không thay chúng bằng số 0 hoặc lấy số trong tài liệu cũ. Khi CI chạy, thêm URL và tải artifact thật rồi cập nhật phân tích.
+
+
+## Bổ sung E3 và E5, chạy lại từ repo
+
+- E3: `evidence/portable-validation/mutation_smoke/`:3/3 mutant cố ý sai bị phát hiện; mỗi mutant compile0,sim1 và có FAIL/FATAL. Fixture nằm ngoài `rtl/`; script `scripts/run_mutations.sh`.
+- E5: `evidence/portable-validation/contract_bounds/`:3ca hợp lệ N0/N1/N255 đo3/3/511chu kỳ;1quan sát ACK hạ sớm ngoài contract;1607check,0mismatch. Năm cạnh ở mỗi thí nghiệm được đối chiếu rawVCD. TB cùng byte với bản trong phụ lục; script `diagnostics/contract_bounds/run.sh`.
+- Báo cáo14trang và phụ lục17trang nằm trong `reports/`; đây là bản làm việc, chưa có CI/physical. Hướng dẫn học và bảng đối chiếu yêu cầu nằm cùng thư mục docs.

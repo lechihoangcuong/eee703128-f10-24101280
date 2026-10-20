@@ -24,6 +24,10 @@ jobs:
           sudo apt-get install -y iverilog yosys verilator
       - name: Run independent core and wrapper testbenches
         run: bash scripts/run_sim.sh
+      - name: Measure paired deadline bounds and unsupported peer behavior
+        run: bash diagnostics/contract_bounds/run.sh
+      - name: Require checker to catch three intentionally broken fixtures
+        run: bash scripts/run_mutations.sh
       - name: Run generic structural synthesis
         run: bash scripts/run_synth.sh
       - name: Upload actual verification evidence
