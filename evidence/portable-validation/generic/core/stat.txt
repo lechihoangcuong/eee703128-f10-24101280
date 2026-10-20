@@ -1,0 +1,28 @@
+
+7. Printing statistics.
+
+=== f10_handshake_controller ===
+
+   Number of wires:                188
+   Number of wire bits:            240
+   Number of public wires:          12
+   Number of public wire bits:      39
+   Number of ports:                  9
+   Number of port bits:             19
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                209
+     $_ANDNOT_                      52
+     $_AND_                          6
+     $_MUX_                         15
+     $_NAND_                         4
+     $_NOR_                         11
+     $_NOT_                          9
+     $_ORNOT_                       11
+     $_OR_                          56
+     $_SDFFE_PN0P_                  12
+     $_SDFF_PN0_                    10
+     $_XNOR_                         1
+     $_XOR_                         22
+

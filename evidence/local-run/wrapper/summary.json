@@ -1,0 +1,8 @@
+{
+  "cases": 11,
+  "failed_cases": 0,
+  "checks": 708,
+  "errors": 0,
+  "status": "PASSED",
+  "reference": "concrete directed expected outputs, no DUT-derived expected"
+}

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="840" viewBox="0 0 1200 840">
+<title>F10 · Sơ đồ chuyển trạng thái</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="36.00" y="25.00" fill="#15324d" font-family="Arial, sans-serif" font-size="34" font-weight="bold" dominant-baseline="text-before-edge">F10 · Sơ đồ chuyển trạng thái</text>
+<text x="36.00" y="78.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Chuyển trạng thái tại cạnh lên clk; req là ngõ ra Moore.</text>
+<rect x="70" y="180" width="360" height="130" rx="12" fill="#eef5fd" stroke="#195fa8" stroke-width="2"/>
+<text x="197.75" y="212.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">0 · IDLE</text>
+<text x="212.25" y="250.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">req=0</text>
+<rect x="770" y="180" width="360" height="130" rx="12" fill="#eef5fd" stroke="#195fa8" stroke-width="2"/>
+<text x="856.50" y="212.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">1 · REQ_HIGH</text>
+<text x="912.25" y="250.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">req=1</text>
+<rect x="770" y="500" width="360" height="130" rx="12" fill="#eef5fd" stroke="#195fa8" stroke-width="2"/>
+<text x="856.76" y="532.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">2 · ACK_HIGH</text>
+<text x="912.25" y="570.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">req=1</text>
+<rect x="70" y="500" width="360" height="130" rx="12" fill="#eef5fd" stroke="#195fa8" stroke-width="2"/>
+<text x="115.51" y="532.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">3 · WAIT_ACK_LOW</text>
+<text x="212.25" y="570.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">req=0</text>
+<polyline points="430.00,225.00 770.00,225.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="770.00,225.00 759.36,230.54 759.36,219.46 770.00,225.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="770.00,225.00 759.36,230.54 759.36,219.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="518.25" y="170.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">start=1, ack=0</text>
+<polyline points="950.00,310.00 950.00,500.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="950.00,500.00 944.46,489.36 955.54,489.36 950.00,500.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="950.00,500.00 944.46,489.36 955.54,489.36" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="995.00" y="390.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ack=1</text>
+<polyline points="770.00,565.00 430.00,565.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="430.00,565.00 440.64,559.46 440.64,570.54 430.00,565.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="430.00,565.00 440.64,559.46 440.64,570.54" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="525.50" y="603.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Luôn chuyển</text>
+<polyline points="200.00,500.00 200.00,310.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="200.00,310.00 205.54,320.64 194.46,320.64 200.00,310.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="200.00,310.00 205.54,320.64 194.46,320.64" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="73.00" y="366.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ack=0</text>
+<text x="64.25" y="402.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">done=1</text>
+<polyline points="770.00,280.00 430.00,280.00" fill="none" stroke="#b14549" stroke-width="3"/>
+<polyline points="430.00,280.00 440.64,274.46 440.64,285.54 430.00,280.00" fill="none" stroke="#b14549" stroke-width="1"/>
+<polygon points="430.00,280.00 440.64,274.46 440.64,285.54" fill="#b14549" stroke="#b14549" stroke-width="1"/>
+<text x="480.25" y="332.00" fill="#b14549" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ACK thấp và hết hạn</text>
+<polyline points="380.00,500.00 380.00,310.00" fill="none" stroke="#b14549" stroke-width="3"/>
+<polyline points="380.00,310.00 385.54,320.64 374.46,320.64 380.00,310.00" fill="none" stroke="#b14549" stroke-width="1"/>
+<polygon points="380.00,310.00 385.54,320.64 374.46,320.64" fill="#b14549" stroke="#b14549" stroke-width="1"/>
+<text x="509.50" y="420.00" fill="#b14549" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ACK cao và hết hạn</text>
+<text x="498.00" y="456.00" fill="#b14549" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">→ timeout=1, về IDLE</text>
+<text x="36.00" y="690.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Không có điều kiện chuyển: giữ state (trừ ACK_HIGH luôn chuyển).</text>
+<text x="36.00" y="726.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Reset đồng bộ ưu tiên cao nhất; ACK hợp lệ thắng timeout tại deadline.</text>
+<text x="36.00" y="762.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Nhánh default: trở về IDLE; timeout không bảo đảm đối tác đã reset.</text>
+<text x="36.00" y="804.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Nguồn: RTL lõi · SHA-256: 10cca64461908d5c…</text>
+</svg>

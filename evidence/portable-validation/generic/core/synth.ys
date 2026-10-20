@@ -1,0 +1,8 @@
+read_verilog -sv rtl/f10_handshake_controller.sv rtl/f10_tiny_tapeout_top.sv rtl/tt_um_24101280_f10.sv
+hierarchy -check -top f10_handshake_controller
+synth -top f10_handshake_controller -flatten
+delete t:$scopeinfo
+check -assert
+tee -o evidence/portable-validation/generic/core/stat.txt stat
+write_json evidence/portable-validation/generic/core/design.json
+write_verilog -noattr evidence/portable-validation/generic/core/netlist.v

@@ -1,0 +1,1 @@
+timeout 60s yosys -Q -s 06_GDSII/generic/wrapper/synth.ys

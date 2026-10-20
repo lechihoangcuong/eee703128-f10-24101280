@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+<title>F10 · Ngữ cảnh hệ thống</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="36.00" y="25.00" fill="#15324d" font-family="Arial, sans-serif" font-size="34" font-weight="bold" dominant-baseline="text-before-edge">F10 · Ngữ cảnh hệ thống</text>
+<text x="36.00" y="78.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Các tín hiệu điều khiển và đối tác đều được giả định đồng bộ với clk.</text>
+<rect x="40" y="220" width="260" height="210" rx="12" fill="#f2f7fc" stroke="#195fa8" stroke-width="2"/>
+<rect x="430" y="220" width="330" height="210" rx="12" fill="#f2f7fc" stroke="#195fa8" stroke-width="2"/>
+<rect x="890" y="220" width="270" height="210" rx="12" fill="#f2f7fc" stroke="#195fa8" stroke-width="2"/>
+<text x="71.25" y="290.00" fill="#15324d" font-family="Arial, sans-serif" font-size="30" font-weight="bold" dominant-baseline="text-before-edge">Bộ điều khiển</text>
+<text x="99.50" y="330.00" fill="#15324d" font-family="Arial, sans-serif" font-size="30" font-weight="bold" dominant-baseline="text-before-edge">ứng dụng</text>
+<text x="567.25" y="288.00" fill="#15324d" font-family="Arial, sans-serif" font-size="32" font-weight="bold" dominant-baseline="text-before-edge">F10</text>
+<text x="505.00" y="330.00" fill="#15324d" font-family="Arial, sans-serif" font-size="32" font-weight="bold" dominant-baseline="text-before-edge">FSM bắt tay</text>
+<text x="975.00" y="290.00" fill="#15324d" font-family="Arial, sans-serif" font-size="30" font-weight="bold" dominant-baseline="text-before-edge">Đối tác</text>
+<text x="965.25" y="330.00" fill="#15324d" font-family="Arial, sans-serif" font-size="30" font-weight="bold" dominant-baseline="text-before-edge">đồng bộ</text>
+<polyline points="300.00,300.00 430.00,300.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="430.00,300.00 419.36,305.54 419.36,294.46 430.00,300.00" fill="none" stroke="#195fa8" stroke-width="1"/>
+<polygon points="430.00,300.00 419.36,305.54 419.36,294.46" fill="#195fa8" stroke="#195fa8" stroke-width="1"/>
+<text x="340.00" y="228.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">start</text>
+<text x="330.50" y="264.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">N[7:0]</text>
+<polyline points="760.00,275.00 890.00,275.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="890.00,275.00 879.36,280.54 879.36,269.46 890.00,275.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="890.00,275.00 879.36,280.54 879.36,269.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="803.25" y="232.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">req</text>
+<polyline points="890.00,365.00 760.00,365.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="760.00,365.00 770.64,359.46 770.64,370.54 760.00,365.00" fill="none" stroke="#7244a5" stroke-width="1"/>
+<polygon points="760.00,365.00 770.64,359.46 770.64,370.54" fill="#7244a5" stroke="#7244a5" stroke-width="1"/>
+<text x="801.75" y="380.00" fill="#7244a5" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">ack</text>
+<rect x="40" y="530" width="260" height="100" rx="12" fill="#f8fafc" stroke="#526b80" stroke-width="2"/>
+<text x="109.00" y="566.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">clk · rst_n</text>
+<polyline points="300.00,580.00 370.00,580.00 370.00,385.00 430.00,385.00" fill="none" stroke="#526b80" stroke-width="3"/>
+<polyline points="430.00,385.00 419.36,390.54 419.36,379.46 430.00,385.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="430.00,385.00 419.36,390.54 419.36,379.46" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<rect x="430" y="530" width="420" height="100" rx="12" fill="#f4fbf7" stroke="#137d59" stroke-width="2"/>
+<text x="541.50" y="549.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Quan sát kết quả</text>
+<text x="493.00" y="585.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">done · timeout · state[3:0]</text>
+<polyline points="595.00,430.00 595.00,530.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="595.00,530.00 589.46,519.36 600.54,519.36 595.00,530.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="595.00,530.00 589.46,519.36 600.54,519.36" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="36.00" y="660.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Reset đồng bộ mức thấp; không bao gồm truyền dữ liệu hoặc CDC.</text>
+<text x="36.00" y="704.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Nguồn: contract + RTL lõi · SHA-256: 10cca64461908d5c…</text>
+</svg>

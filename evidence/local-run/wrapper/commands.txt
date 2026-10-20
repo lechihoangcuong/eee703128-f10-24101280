@@ -1,0 +1,3 @@
+Working directory: /mnt/c/Users/ADMIN/.codex/.chatgpt-projects/g-p-6ac7c7ad714c8191b5d6bbb55ebb7c57/work/F10
+timeout 30s iverilog -g2012 -Wall -s f10_wrapper_tb -o 05_VERIFICATION/runs/wrapper/sim.vvp 04_IMPLEMENTATION/rtl/f10_handshake_controller.sv 04_IMPLEMENTATION/rtl/f10_tiny_tapeout_top.sv 04_IMPLEMENTATION/rtl/tt_um_24101280_f10.sv 05_VERIFICATION/testbench/f10_wrapper_tb.sv
+(cd 05_VERIFICATION/runs/wrapper; timeout 30s vvp sim.vvp)

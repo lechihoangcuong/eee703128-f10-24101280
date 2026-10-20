@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790">
+<title>F10 · Vòng đời thiết kế và mức bằng chứng</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="36.00" y="25.00" fill="#15324d" font-family="Arial, sans-serif" font-size="34" font-weight="bold" dominant-baseline="text-before-edge">F10 · Vòng đời thiết kế và mức bằng chứng</text>
+<text x="36.00" y="78.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Xanh: đã có kết quả trong bản làm việc · xám: chưa thực hiện hoặc ngoài phạm vi.</text>
+<rect x="40" y="160" width="200" height="165" rx="12" fill="#ecf8f1" stroke="#137d59" stroke-width="2"/>
+<text x="86.50" y="184.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">Yêu cầu</text>
+<text x="70.75" y="254.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Charter F10</text>
+<polyline points="240.00,242.00 270.00,242.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="270.00,242.00 259.36,247.54 259.36,236.46 270.00,242.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="270.00,242.00 259.36,247.54 259.36,236.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<rect x="270" y="160" width="200" height="165" rx="12" fill="#ecf8f1" stroke="#137d59" stroke-width="2"/>
+<text x="328.00" y="184.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">Đặc tả</text>
+<text x="293.00" y="254.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Port · hành vi</text>
+<polyline points="470.00,242.00 500.00,242.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="500.00,242.00 489.36,247.54 489.36,236.46 500.00,242.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="500.00,242.00 489.36,247.54 489.36,236.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<rect x="500" y="160" width="200" height="165" rx="12" fill="#ecf8f1" stroke="#137d59" stroke-width="2"/>
+<text x="573.00" y="184.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">RTL</text>
+<text x="521.00" y="254.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Lõi + wrapper</text>
+<polyline points="700.00,242.00 730.00,242.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="730.00,242.00 719.36,247.54 719.36,236.46 730.00,242.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="730.00,242.00 719.36,247.54 719.36,236.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<rect x="730" y="160" width="200" height="165" rx="12" fill="#ecf8f1" stroke="#137d59" stroke-width="2"/>
+<text x="748.25" y="184.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">Kiểm chứng</text>
+<text x="772.25" y="236.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Mô phỏng</text>
+<text x="786.75" y="272.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">tự kiểm</text>
+<polyline points="930.00,242.00 960.00,242.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="960.00,242.00 949.36,247.54 949.36,236.46 960.00,242.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="960.00,242.00 949.36,247.54 949.36,236.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<rect x="960" y="160" width="200" height="165" rx="12" fill="#ecf8f1" stroke="#137d59" stroke-width="2"/>
+<text x="995.00" y="184.00" fill="#137d59" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">Tổng hợp</text>
+<text x="977.50" y="254.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Netlist generic</text>
+<polyline points="1060.00,325.00 1060.00,380.00 160.00,380.00 160.00,455.00" fill="none" stroke="#526b80" stroke-width="3" stroke-dasharray="6 6"/>
+<polyline points="160.00,455.00 154.46,444.36 165.54,444.36 160.00,455.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="160.00,455.00 154.46,444.36 165.54,444.36" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<text x="36.00" y="410.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Cần PDK / flow phù hợp — chưa có bằng chứng chạy mới cho các bước dưới:</text>
+<rect x="60" y="460" width="225" height="140" rx="12" fill="#f3f5f7" stroke="#8b9baa" stroke-width="2"/>
+<text x="144.27" y="480.00" fill="#526b80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">STA</text>
+<text x="109.50" y="526.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Ràng buộc</text>
+<text x="114.50" y="562.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">+ thư viện</text>
+<polyline points="285.00,530.00 345.00,530.00" fill="none" stroke="#526b80" stroke-width="3" stroke-dasharray="6 6"/>
+<polyline points="345.00,530.00 334.36,535.54 334.36,524.46 345.00,530.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="345.00,530.00 334.36,535.54 334.36,524.46" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<rect x="345" y="460" width="225" height="140" rx="12" fill="#f3f5f7" stroke="#8b9baa" stroke-width="2"/>
+<text x="427.75" y="480.00" fill="#526b80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">P&amp;R</text>
+<text x="384.75" y="544.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Đặt / nối dây</text>
+<polyline points="570.00,530.00 630.00,530.00" fill="none" stroke="#526b80" stroke-width="3" stroke-dasharray="6 6"/>
+<polyline points="630.00,530.00 619.36,535.54 619.36,524.46 630.00,530.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="630.00,530.00 619.36,535.54 619.36,524.46" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<rect x="630" y="460" width="225" height="140" rx="12" fill="#f3f5f7" stroke="#8b9baa" stroke-width="2"/>
+<text x="673.02" y="480.00" fill="#526b80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">DRC / LVS</text>
+<text x="660.50" y="544.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Kiểm tra vật lý</text>
+<polyline points="855.00,530.00 915.00,530.00" fill="none" stroke="#526b80" stroke-width="3" stroke-dasharray="6 6"/>
+<polyline points="915.00,530.00 904.36,535.54 904.36,524.46 915.00,530.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="915.00,530.00 904.36,535.54 904.36,524.46" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<rect x="915" y="460" width="225" height="140" rx="12" fill="#f3f5f7" stroke="#8b9baa" stroke-width="2"/>
+<text x="988.75" y="480.00" fill="#526b80" font-family="Arial, sans-serif" font-size="28" font-weight="bold" dominant-baseline="text-before-edge">GDSII</text>
+<text x="960.25" y="544.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Bố cục chip</text>
+<rect x="415" y="665" width="370" height="85" rx="12" fill="#f3f5f7" stroke="#8b9baa" stroke-width="2"/>
+<text x="439.00" y="694.50" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Chế tạo chip: ngoài phạm vi</text>
+<polyline points="1027.00,600.00 1027.00,635.00 600.00,635.00 600.00,665.00" fill="none" stroke="#526b80" stroke-width="3" stroke-dasharray="6 6"/>
+<polyline points="600.00,665.00 594.46,654.36 605.54,654.36 600.00,665.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="600.00,665.00 594.46,654.36 605.54,654.36" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<text x="36.00" y="758.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Nguồn: quy trình thiết kế + trạng thái bằng chứng của bản làm việc.</text>
+</svg>

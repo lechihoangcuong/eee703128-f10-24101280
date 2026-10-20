@@ -1,0 +1,84 @@
+# Adapted from the instructor's Canvas workflow, archived in docs/course-reference/.
+name: F10 RTL to GDSII
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  MA_DE: F10
+  DESIGN_NAME: tt_um_24101280_f10
+  CONFIG: config.json
+  F10_EVIDENCE_DIR: evidence/ci
+jobs:
+  mo-phong:
+    name: 1 - RTL verification and generic synthesis
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog yosys verilator
+      - name: Run independent core and wrapper testbenches
+        run: bash scripts/run_sim.sh
+      - name: Run generic structural synthesis
+        run: bash scripts/run_synth.sh
+      - name: Upload actual verification evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mo-phong-${{ env.MA_DE }}
+          path: evidence/ci/
+          if-no-files-found: error
+  rtl2gds:
+    name: 2 - LibreLane sky130A physical flow
+    needs: mo-phong
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Nix with FOSSi cache
+        uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            extra-substituters = https://nix-cache.fossi-foundation.org
+            extra-trusted-public-keys = nix-cache.fossi-foundation.org:3+K59iFwXqKsL7BNu6Guy0v+uTlwsxYQxjspXzqLYQs=
+            extra-experimental-features = nix-command flakes
+      - name: Obtain LibreLane and record immutable revision
+        run: |
+          mkdir -p evidence/ci/physical
+          git clone --depth 1 https://github.com/librelane/librelane "$HOME/librelane"
+          git -C "$HOME/librelane" rev-parse HEAD | tee evidence/ci/physical/librelane_commit.txt
+      - name: Run physical flow without hiding failure
+        shell: bash
+        run: |
+          set -o pipefail
+          cd "$HOME/librelane"
+          set +e
+          nix-shell --run "cd '$GITHUB_WORKSPACE' && librelane --version && librelane '$CONFIG'" 2>&1 | tee "$GITHUB_WORKSPACE/evidence/ci/physical/flow.log"
+          status=${PIPESTATUS[0]}
+          printf '%s\n' "$status" > "$GITHUB_WORKSPACE/evidence/ci/physical/exit_code.txt"
+          exit "$status"
+      - name: Check actual final product
+        shell: bash
+        run: |
+          python3 .github/doc_metrics.py --run-root runs --out evidence/ci/physical/metrics_summary.json --require-final
+      - name: Record partial metrics even when flow fails
+        if: always()
+        run: python3 .github/doc_metrics.py --run-root runs --out evidence/ci/physical/partial_metrics_summary.json
+      - name: Upload final products and failure diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rtl2gds-${{ env.MA_DE }}
+          path: |
+            evidence/ci/physical/
+            runs/**/final/**
+            runs/**/*.log
+            runs/**/metrics.json
+            runs/**/state_out.json
+            runs/**/resolved.json
+          if-no-files-found: warn

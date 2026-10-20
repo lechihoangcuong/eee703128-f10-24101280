@@ -1,0 +1,14 @@
+VCD info: dumpfile f10_core_selfcheck.vcd opened for output.
+CASE TC00_RESET PASS time_ns=[0..37] cycles=4 checks=49 errors=0
+CASE TC01_NORMAL PASS time_ns=[37..87] cycles=5 checks=65 errors=0
+CASE TC02_DELAYED_SUCCESS PASS time_ns=[87..187] cycles=10 checks=125 errors=0
+CASE TC03_NO_ACK PASS time_ns=[187..247] cycles=6 checks=77 errors=0
+CASE TC04_ACK_STUCK PASS time_ns=[247..327] cycles=8 checks=101 errors=0
+CASE TC05_BACK_TO_BACK PASS time_ns=[327..467] cycles=14 checks=177 errors=0
+CASE TC06_STALE_ACK PASS time_ns=[467..557] cycles=9 checks=117 errors=0
+CASE TC07_BUSY_START PASS time_ns=[557..627] cycles=7 checks=86 errors=0
+CASE TC08_LATCH_TIMEOUT PASS time_ns=[627..767] cycles=14 checks=172 errors=0
+CASE TC09_SYNC_RESET PASS time_ns=[767..907] cycles=14 checks=180 errors=0
+SUMMARY cases=1035 failed_cases=0 cycles=138571 checks=1665218 errors=0 seed=F1002026 stress_resets=16
+ALL TESTS PASSED: F10 core independent reference and deadline sweep
+tb/f10_tb_selfcheck.sv:374: $finish called at 1385707000 (1ps)

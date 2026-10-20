@@ -1,0 +1,7 @@
+{
+  "metrics_source": null,
+  "metrics_source_is_final": false,
+  "final_gds_files": [],
+  "observed_metrics": {},
+  "limits": "Missing values remain absent/null. Final GDS existence alone does not prove clean DRC/LVS or timing closure."
+}

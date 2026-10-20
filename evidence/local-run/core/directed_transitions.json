@@ -1,0 +1,2772 @@
+[
+  {
+    "time_ns": 0.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "model_timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "state",
+    "value": "x"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "timeout",
+    "value": "x"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "done",
+    "value": "x"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "req",
+    "value": "x"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "rst_n",
+    "value": "0"
+  },
+  {
+    "time_ns": 0.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 5.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 5.0,
+    "signal": "timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 5.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 5.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 5.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 10.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 15.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 20.0,
+    "signal": "rst_n",
+    "value": "1"
+  },
+  {
+    "time_ns": 20.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 25.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 30.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 35.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 40.0,
+    "signal": "timeout_value",
+    "value": 8
+  },
+  {
+    "time_ns": 40.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 40.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 45.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 50.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 50.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 50.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 55.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 55.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 55.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 55.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 60.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 65.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 70.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 70.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 75.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 80.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 80.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 85.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 85.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 85.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 90.0,
+    "signal": "timeout_value",
+    "value": 8
+  },
+  {
+    "time_ns": 90.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 90.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 95.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 100.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 100.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 105.0,
+    "signal": "remaining",
+    "value": 7
+  },
+  {
+    "time_ns": 105.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 110.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 115.0,
+    "signal": "remaining",
+    "value": 6
+  },
+  {
+    "time_ns": 115.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 120.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 125.0,
+    "signal": "remaining",
+    "value": 5
+  },
+  {
+    "time_ns": 125.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 130.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 130.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 135.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 135.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 135.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 135.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 140.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 145.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 150.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 155.0,
+    "signal": "remaining",
+    "value": 7
+  },
+  {
+    "time_ns": 155.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 160.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 165.0,
+    "signal": "remaining",
+    "value": 6
+  },
+  {
+    "time_ns": 165.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 170.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 170.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 175.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 180.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 180.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 185.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 185.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 185.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 190.0,
+    "signal": "timeout_value",
+    "value": 4
+  },
+  {
+    "time_ns": 190.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 190.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 195.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 200.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 200.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 205.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 205.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 210.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 215.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 215.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 220.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 225.0,
+    "signal": "remaining",
+    "value": 1
+  },
+  {
+    "time_ns": 225.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 230.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "model_timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 235.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 240.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 240.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 245.0,
+    "signal": "timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 245.0,
+    "signal": "model_timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 245.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 250.0,
+    "signal": "timeout_value",
+    "value": 4
+  },
+  {
+    "time_ns": 250.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 250.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 255.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 260.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 260.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 260.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 265.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 265.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 265.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 265.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 270.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 275.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 280.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 285.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 285.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 290.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 295.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 295.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 300.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 305.0,
+    "signal": "remaining",
+    "value": 1
+  },
+  {
+    "time_ns": 305.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 310.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "model_timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 315.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 320.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 320.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 320.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 325.0,
+    "signal": "timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 325.0,
+    "signal": "model_timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 325.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 330.0,
+    "signal": "timeout_value",
+    "value": 2
+  },
+  {
+    "time_ns": 330.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 330.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 335.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 340.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 340.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 340.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 345.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 345.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 345.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 345.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 350.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 355.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 360.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 360.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 365.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 370.0,
+    "signal": "timeout_value",
+    "value": 9
+  },
+  {
+    "time_ns": 370.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 370.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "remaining",
+    "value": 9
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 375.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 380.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 380.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 385.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 385.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 390.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 395.0,
+    "signal": "remaining",
+    "value": 7
+  },
+  {
+    "time_ns": 395.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 400.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 405.0,
+    "signal": "remaining",
+    "value": 6
+  },
+  {
+    "time_ns": 405.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 410.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 410.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 415.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 415.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 415.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 415.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 420.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "remaining",
+    "value": 9
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 425.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 430.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 435.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 435.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 440.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 445.0,
+    "signal": "remaining",
+    "value": 7
+  },
+  {
+    "time_ns": 445.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 450.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 450.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 455.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 460.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 460.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 465.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 465.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 465.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 470.0,
+    "signal": "timeout_value",
+    "value": 3
+  },
+  {
+    "time_ns": 470.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 470.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 470.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 475.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 480.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 485.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 490.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 495.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 500.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 500.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 500.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 505.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 510.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 510.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 515.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 520.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 520.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 520.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 525.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 525.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 525.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 525.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 530.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 535.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 540.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 540.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 545.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 550.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 550.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 555.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 555.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 555.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 560.0,
+    "signal": "timeout_value",
+    "value": 5
+  },
+  {
+    "time_ns": 560.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 560.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "remaining",
+    "value": 5
+  },
+  {
+    "time_ns": 565.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 570.0,
+    "signal": "timeout_value",
+    "value": 1
+  },
+  {
+    "time_ns": 570.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 575.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 575.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 580.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 580.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 580.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 585.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 585.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 585.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 585.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 590.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 590.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "remaining",
+    "value": 5
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 595.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 600.0,
+    "signal": "timeout_value",
+    "value": 1
+  },
+  {
+    "time_ns": 600.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 605.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 605.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 610.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 610.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 610.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "done",
+    "value": "1"
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "model_done",
+    "value": "1"
+  },
+  {
+    "time_ns": 615.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 620.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 620.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 620.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 625.0,
+    "signal": "done",
+    "value": "0"
+  },
+  {
+    "time_ns": 625.0,
+    "signal": "model_done",
+    "value": "0"
+  },
+  {
+    "time_ns": 625.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 630.0,
+    "signal": "timeout_value",
+    "value": 4
+  },
+  {
+    "time_ns": 630.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 630.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 635.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 640.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 640.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 645.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 645.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 650.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 650.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 650.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 655.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 655.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 660.0,
+    "signal": "timeout_value",
+    "value": 1
+  },
+  {
+    "time_ns": 660.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 660.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 665.0,
+    "signal": "remaining",
+    "value": 1
+  },
+  {
+    "time_ns": 665.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 670.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 670.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 670.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "model_timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 675.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 680.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 680.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 685.0,
+    "signal": "timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 685.0,
+    "signal": "model_timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 685.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 690.0,
+    "signal": "timeout_value",
+    "value": 4
+  },
+  {
+    "time_ns": 690.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 690.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 695.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 700.0,
+    "signal": "timeout_value",
+    "value": 1
+  },
+  {
+    "time_ns": 700.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 700.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 705.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 705.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 705.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 705.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 710.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 710.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "remaining",
+    "value": 4
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 715.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 720.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 720.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 720.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 725.0,
+    "signal": "remaining",
+    "value": 3
+  },
+  {
+    "time_ns": 725.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 730.0,
+    "signal": "timeout_value",
+    "value": 1
+  },
+  {
+    "time_ns": 730.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 730.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 735.0,
+    "signal": "remaining",
+    "value": 2
+  },
+  {
+    "time_ns": 735.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 740.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 740.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 740.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 745.0,
+    "signal": "remaining",
+    "value": 1
+  },
+  {
+    "time_ns": 745.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 750.0,
+    "signal": "timeout_value",
+    "value": 255
+  },
+  {
+    "time_ns": 750.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 750.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "model_timeout",
+    "value": "1"
+  },
+  {
+    "time_ns": 755.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 760.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 760.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 760.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 760.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 765.0,
+    "signal": "timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 765.0,
+    "signal": "model_timeout",
+    "value": "0"
+  },
+  {
+    "time_ns": 765.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 770.0,
+    "signal": "rst_n",
+    "value": "0"
+  },
+  {
+    "time_ns": 770.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 775.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 780.0,
+    "signal": "rst_n",
+    "value": "1"
+  },
+  {
+    "time_ns": 780.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 785.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 790.0,
+    "signal": "timeout_value",
+    "value": 8
+  },
+  {
+    "time_ns": 790.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 790.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 795.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 800.0,
+    "signal": "rst_n",
+    "value": "0"
+  },
+  {
+    "time_ns": 800.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 800.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 805.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 810.0,
+    "signal": "rst_n",
+    "value": "1"
+  },
+  {
+    "time_ns": 810.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 810.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 815.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 820.0,
+    "signal": "timeout_value",
+    "value": 8
+  },
+  {
+    "time_ns": 820.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 820.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 825.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 830.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 830.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 830.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 835.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 835.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 835.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 835.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 840.0,
+    "signal": "rst_n",
+    "value": "0"
+  },
+  {
+    "time_ns": 840.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 845.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 845.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 845.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 845.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 845.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 850.0,
+    "signal": "rst_n",
+    "value": "1"
+  },
+  {
+    "time_ns": 850.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 850.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 850.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 855.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 860.0,
+    "signal": "timeout_value",
+    "value": 8
+  },
+  {
+    "time_ns": 860.0,
+    "signal": "start",
+    "value": "1"
+  },
+  {
+    "time_ns": 860.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "req",
+    "value": "1"
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "state",
+    "value": 1
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "model_req",
+    "value": "1"
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "model_phase",
+    "value": 1
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 865.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 870.0,
+    "signal": "ack",
+    "value": "1"
+  },
+  {
+    "time_ns": 870.0,
+    "signal": "start",
+    "value": "0"
+  },
+  {
+    "time_ns": 870.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 875.0,
+    "signal": "state",
+    "value": 2
+  },
+  {
+    "time_ns": 875.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 875.0,
+    "signal": "model_phase",
+    "value": 2
+  },
+  {
+    "time_ns": 875.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 880.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "req",
+    "value": "0"
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "state",
+    "value": 3
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "model_req",
+    "value": "0"
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "remaining",
+    "value": 8
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "model_phase",
+    "value": 3
+  },
+  {
+    "time_ns": 885.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 890.0,
+    "signal": "rst_n",
+    "value": "0"
+  },
+  {
+    "time_ns": 890.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 895.0,
+    "signal": "state",
+    "value": 0
+  },
+  {
+    "time_ns": 895.0,
+    "signal": "remaining",
+    "value": 0
+  },
+  {
+    "time_ns": 895.0,
+    "signal": "model_phase",
+    "value": 0
+  },
+  {
+    "time_ns": 895.0,
+    "signal": "clk",
+    "value": "1"
+  },
+  {
+    "time_ns": 900.0,
+    "signal": "rst_n",
+    "value": "1"
+  },
+  {
+    "time_ns": 900.0,
+    "signal": "timeout_value",
+    "value": 0
+  },
+  {
+    "time_ns": 900.0,
+    "signal": "ack",
+    "value": "0"
+  },
+  {
+    "time_ns": 900.0,
+    "signal": "clk",
+    "value": "0"
+  },
+  {
+    "time_ns": 905.0,
+    "signal": "clk",
+    "value": "1"
+  }
+]

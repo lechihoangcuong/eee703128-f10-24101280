@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880">
+<title>F10 · Kiến trúc FSM và bộ đếm chờ</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="36.00" y="25.00" fill="#15324d" font-family="Arial, sans-serif" font-size="34" font-weight="bold" dominant-baseline="text-before-edge">F10 · Kiến trúc FSM và bộ đếm chờ</text>
+<text x="36.00" y="78.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Bốn trạng thái của phiên bản hiện tại; timer được cấp lại ở mỗi pha chờ.</text>
+<rect x="330" y="170" width="330" height="320" rx="12" fill="#eef5fd" stroke="#195fa8" stroke-width="2"/>
+<text x="384.50" y="190.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="30" font-weight="bold" dominant-baseline="text-before-edge">FSM điều khiển</text>
+<text x="355.00" y="250.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">0 · IDLE</text>
+<text x="355.00" y="301.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">1 · REQ_HIGH</text>
+<text x="355.00" y="352.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">2 · ACK_HIGH</text>
+<text x="355.00" y="403.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">3 · WAIT_ACK_LOW</text>
+<text x="40.00" y="240.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">start · ack</text>
+<polyline points="40.00,285.00 330.00,285.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="330.00,285.00 319.36,290.54 319.36,279.46 330.00,285.00" fill="none" stroke="#195fa8" stroke-width="1"/>
+<polygon points="330.00,285.00 319.36,290.54 319.36,279.46" fill="#195fa8" stroke="#195fa8" stroke-width="1"/>
+<text x="40.00" y="355.00" fill="#526b80" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">clk · rst_n</text>
+<polyline points="40.00,400.00 330.00,400.00" fill="none" stroke="#526b80" stroke-width="3"/>
+<polyline points="330.00,400.00 319.36,405.54 319.36,394.46 330.00,400.00" fill="none" stroke="#526b80" stroke-width="1"/>
+<polygon points="330.00,400.00 319.36,405.54 319.36,394.46" fill="#526b80" stroke="#526b80" stroke-width="1"/>
+<rect x="800" y="170" width="330" height="110" rx="12" fill="#f1f8f4" stroke="#137d59" stroke-width="2"/>
+<text x="876.00" y="192.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">timeout_q[7:0]</text>
+<text x="873.25" y="230.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">Giữ N đã nhận</text>
+<text x="859.00" y="120.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">timeout_value[7:0]</text>
+<polyline points="965.00,153.00 965.00,170.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="965.00,170.00 959.46,159.36 970.54,159.36 965.00,170.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="965.00,170.00 959.46,159.36 970.54,159.36" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<polyline points="660.00,225.00 800.00,225.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="800.00,225.00 789.36,230.54 789.36,219.46 800.00,225.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="800.00,225.00 789.36,230.54 789.36,219.46" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="692.50" y="185.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">chốt N</text>
+<rect x="800" y="365" width="330" height="110" rx="12" fill="#fff8ee" stroke="#ad5600" stroke-width="2"/>
+<text x="887.75" y="387.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">count_q[7:0]</text>
+<text x="863.00" y="425.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">Đếm chu kỳ chờ</text>
+<polyline points="660.00,420.00 800.00,420.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<polyline points="800.00,420.00 789.36,425.54 789.36,414.46 800.00,420.00" fill="none" stroke="#ad5600" stroke-width="1"/>
+<polygon points="800.00,420.00 789.36,425.54 789.36,414.46" fill="#ad5600" stroke="#ad5600" stroke-width="1"/>
+<text x="673.25" y="377.00" fill="#ad5600" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">đếm / xóa</text>
+<rect x="800" y="555" width="330" height="100" rx="12" fill="#f7f3fc" stroke="#7244a5" stroke-width="2"/>
+<text x="869.00" y="572.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">Kiểm N=0 hoặc</text>
+<text x="873.00" y="610.00" fill="#15324d" font-family="Arial, sans-serif" font-size="28" font-weight="normal" dominant-baseline="text-before-edge">count_q = N−1</text>
+<polyline points="965.00,475.00 965.00,555.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="965.00,555.00 959.46,544.36 970.54,544.36 965.00,555.00" fill="none" stroke="#7244a5" stroke-width="1"/>
+<polygon points="965.00,555.00 959.46,544.36 970.54,544.36" fill="#7244a5" stroke="#7244a5" stroke-width="1"/>
+<polyline points="1130.00,225.00 1160.00,225.00 1160.00,605.00 1130.00,605.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="1130.00,605.00 1140.64,599.46 1140.64,610.54 1130.00,605.00" fill="none" stroke="#7244a5" stroke-width="1"/>
+<polygon points="1130.00,605.00 1140.64,599.46 1140.64,610.54" fill="#7244a5" stroke="#7244a5" stroke-width="1"/>
+<polyline points="800.00,605.00 590.00,605.00 590.00,490.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="590.00,490.00 595.54,500.64 584.46,500.64 590.00,490.00" fill="none" stroke="#7244a5" stroke-width="1"/>
+<polygon points="590.00,490.00 595.54,500.64 584.46,500.64" fill="#7244a5" stroke="#7244a5" stroke-width="1"/>
+<text x="646.75" y="566.00" fill="#7244a5" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">hết hạn</text>
+<rect x="330" y="670" width="420" height="95" rx="12" fill="#f1f8f4" stroke="#137d59" stroke-width="2"/>
+<text x="501.00" y="686.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Đầu ra</text>
+<text x="388.00" y="722.50" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">req · state · done · timeout</text>
+<polyline points="390.00,490.00 390.00,670.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="390.00,670.00 384.46,659.36 395.54,659.36 390.00,670.00" fill="none" stroke="#137d59" stroke-width="1"/>
+<polygon points="390.00,670.00 384.46,659.36 395.54,659.36" fill="#137d59" stroke="#137d59" stroke-width="1"/>
+<text x="36.00" y="788.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">req giải mã từ trạng thái; done / timeout được ghi thành xung một chu kỳ.</text>
+<text x="36.00" y="824.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">Nguồn: RTL lõi · SHA-256: 10cca64461908d5c…</text>
+</svg>

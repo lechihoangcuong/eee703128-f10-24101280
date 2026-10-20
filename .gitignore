@@ -1,0 +1,7 @@
+# Fresh runs are CI artifacts, not silently committed stale results.
+evidence/local/
+evidence/ci/
+runs/
+*.vvp
+__pycache__/
+*.pyc
