@@ -1,9 +1,29 @@
 {
-  "main_pages": 14,
+  "main_pages": 15,
   "appendix_pages": 17,
-  "visual_review": "all pages inspected after rendering; changed pages inspected after revisions",
-  "vietnamese_fonts": "Times New Roman embedded; diagrams use Arial; source uses Consolas",
-  "main_sha256": "e9336876ae8a6cb4b99f35ab3f5773fe5137008ea64edf1f208d8936923c8873",
-  "appendix_sha256": "e6a6c628c57abc2f30924ab39147e1b18439122f4caba62e90410cc13798294e",
-  "status": "working draft; external publication and physical CI pending"
+  "main_sha256": "fe820cd11ed45d8cdf03d9e49397b9c5d01079b31f5af69ed2f7715fef38e3bc",
+  "main_sections": [
+    "BÁO CÁO BÀI KIỂM TRA SỐ 2",
+    "1. Đặt vấn đề và đặc tả",
+    "1.1. Giao diện, reset và các giả định",
+    "2. Thiết kế RTL và quyết định kiến trúc",
+    "3. Kiểm chứng chức năng: kế hoạch và kết quả",
+    "3.1. Waveform bốn pha của lần chạy thật",
+    "3.2. Timeout và hai lần bắt tay liên tiếp",
+    "3.3. Ca bổ sung, ca biên và thử phá mạch",
+    "4. Kết quả tổng hợp và đối chiếu thanh ghi",
+    "5. Thời gian: latency giao thức và STA",
+    "6. Công suất và kết quả physical design",
+    "7. Layout của thiết kế đã chạy",
+    "8. Trả lời câu phân tích riêng F10",
+    "9. Kết luận, giới hạn và truy vết yêu cầu",
+    "Thông tin tái lập, nguồn và trách nhiệm"
+  ],
+  "status": "CI verified; physical GDS produced with 11 SS slew violations; conditional conclusions",
+  "executed_source_commit": "298e12b0f79a326343315beee1697f55e2946403",
+  "ci_run_url": "https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919",
+  "appendix_sha256": "e4ebb16cbdf1bf8e026b9ccfc3dc2f21039cd1ecd06af68d845482f9da3cd910",
+  "visual_review": "All 15 main and 17 appendix pages rendered and inspected; final independent review in FINAL_QA_REVIEW.md",
+  "main_format": "A4; Times New Roman 13, leading15.5; margins70.87pt (2.5cm) on all sides; diagrams and footer use separate label sizes",
+  "appendix_format": "Consolas8.3 for complete code listings; separate from main page limit"
 }

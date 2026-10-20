@@ -62,7 +62,7 @@
       790
     ],
     "source_sha256": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
-    "description": "Workflow with completed generic stages versus unexecuted PDK and physical-design stages",
+    "description": "Completed CI and physical design; STA includes outstanding SS slew violations; fabrication outside scope",
     "clipping": []
   },
   {

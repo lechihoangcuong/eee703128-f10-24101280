@@ -1,0 +1,8 @@
+VCD info: dumpfile f10_contract_bounds.vcd opened for output.
+VALID_PEER_RESULT N=0 W=1 accepted_ns=35 done_ns=65 latency_cycles=3 edge_ns=[35,40,55,60]
+VALID_PEER_RESULT N=1 W=1 accepted_ns=85 done_ns=115 latency_cycles=3 edge_ns=[85,90,105,110]
+VALID_PEER_RESULT N=255 W=255 accepted_ns=135 done_ns=5245 latency_cycles=511 edge_ns=[135,2680,2695,5240]
+OBSERVED_UNSUPPORTED_PEER N=8 accepted_ns=5265 done_ns=5295 latency_cycles=3 edge_ns=[5265,5270,5285,5280] ACK_fell_before_REQ: not a valid-protocol PASS
+DIAGNOSTIC_SUMMARY valid_cases=3 unsupported_observations=1 checks=1607 errors=0
+DIAGNOSTIC_COMPLETED: valid-peer bounds measured; unsupported peer observation is a documented limit
+diagnostics/contract_bounds/f10_contract_bounds_tb.sv:151: $finish called at 5306000 (1ps)

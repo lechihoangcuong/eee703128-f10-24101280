@@ -16,3 +16,5 @@
 *.pdf binary
 *.zip binary
 diagnostics/mutation_smoke/**/mutant_core.sv -text
+# Retain exact CI artifact and checksum bytes, including original line endings.
+evidence/github-actions/** -text

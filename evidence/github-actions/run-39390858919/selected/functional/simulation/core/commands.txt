@@ -1,0 +1,2 @@
+timeout 30s iverilog -g2012 -Wall -s f10_tb_selfcheck -o sim.vvp rtl/*.sv tb/f10_tb_selfcheck.sv
+timeout 60s vvp sim.vvp

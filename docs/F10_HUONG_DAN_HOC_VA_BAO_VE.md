@@ -12,7 +12,7 @@ F10 điều khiển một lần bắt tay giữa bên yêu cầu và bên đáp 
 
 Theo charter F10 và hướng dẫn chung trên Canvas, hồ sơ phải có repo cá nhân, lịch sử commit thật, link CI, RTL/TB/giao diện, artifacts của flow hoặc log lỗi có chẩn đoán, PDF 8–15 trang và thông tin tái lập. Tài liệu v2.4 có đoạn coi CI/GDS là mở rộng, nhưng không được dùng đoạn đó để tự bỏ yêu cầu bắt buộc đang ghi rõ trên Canvas và charter. Bảng kiểm chi tiết nằm trong `F10_REQUIREMENTS_AUDIT.md`.
 
-Các kết quả **đã chạy local** trong bộ hồ sơ làm việc:
+Các kết quả **đã chạy thật** trong bộ hồ sơ làm việc (Lab A/B local; F10 có local và CI riêng):
 
 | Phần | Bằng chứng thực tế | Điều chưa được suy ra |
 |---|---|---|
@@ -20,9 +20,10 @@ Các kết quả **đã chạy local** trong bộ hồ sơ làm việc:
 | Lab B | 10 ca đúng; bản cố ý lỗi bị bắt 1/10 ca; 9 FF | Chưa có physical flow của Lab B |
 | Lõi F10 | 1.035 ca, 1.665.218 phép check, 0 lỗi | Chưa chứng minh mọi chuỗi đầu vào có thể có |
 | Wrapper F10 | 11 ca, 708 check, 0 lỗi | Chưa chứng minh miễn nhiễm metastability |
-| Tổng hợp generic | Lõi 209 cell/22 FF; top 210 cell/22 FF; 0 latch | Chưa có area Sky130, STA, power, GDS, DRC/LVS |
+| Tổng hợp generic | Lõi 209 cell/22 FF; top 210 cell/22 FF; 0 latch; local Yosys0.52 và CI Yosys0.33 | Generic không tự cung cấp area/thời gian của thư viện Sky130 |
+| LibreLane trên CI | Đã sinh GDS, final metrics; xem mục13 và PHYSICAL_FLOW.md | Còn11vi phạm slew; fallbackSDC và IR nguồn giả định; chưa là sign-off hay chip thật |
 
-Tại thời điểm ghi hướng dẫn này, **chưa có URL repo/CI thực tế được điền vào hồ sơ**. Mã workflow được chuẩn bị không phải là một lần CI đã chạy. Các điều kiện nộp bài còn mở phải được đóng bằng bằng chứng thật, không bằng câu “sẽ chạy”.
+Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lechihoangcuong/eee703128-f10-24101280). [CI run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) đã chạy thành công hai job ngày20/10/2026 trên mã nguồn `298e12b0f79a326343315beee1697f55e2946403`. Các commit bổ sung tài liệu sau run không phải source revision đã được run này thực thi. Bản lưu `evidence/github-actions/run-39390858919/` giữ ZIP, metadata, SHA256 và kết quả thật; phải đọc các giới hạn trước khi nói “CI xanh”.
 
 ## 2. Tại sao phải học cả Lab A và Lab B?
 
@@ -248,7 +249,7 @@ Trong GTKWave, chọn nhóm tín hiệu như mục 8. Đừng chỉ tìm chữ P
 5. Nếu flow thất bại, lưu lỗi đầu tiên thuộc stage nào, thông báo nguyên văn, cấu hình/commit, điều đã thử và kết quả. Phân biệt lỗi cài môi trường/PDK với lỗi RTL, constraint và floorplan. Không sửa FSM để chữa lỗi hình học PDN.
 6. Cập nhật PDF bằng dữ liệu thực của CI. Nếu chỉ có log thất bại, trình bày chẩn đoán có bằng chứng như charter cho phép; không bịa hình layout, area, power hay slack.
 
-Hiện máy local chưa có bộ PDK và physical tools cần cho LibreLane. Vì vậy **chưa chạy physical flow local** khác với **physical flow đã chạy rồi thất bại**. Không được viết chẩn đoán một stage chưa từng chạy. Chỉ có thể báo trạng thái môi trường chưa sẵn sàng và chuyển sang lần chạy CI có log thực.
+Máy local chưa chạy LibreLane, còn CI đã thực sự chạy toàn bộ flow với Sky130. Không gắn nhãn kết quả CI thành kết quả WSL. Khi xem [run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919), cần mở cả metrics và warning: job thành công nhưng còn11vi phạm slew ở các cornerSS, dùng fallbackSDC và không có vị trí nguồnVSRC_LOC_FILES thực. DRC/LVS không kiểm những điều kiện đó thay cho STA hay IR. Chi tiết và đơn vị nằm trong `docs/PHYSICAL_FLOW.md`, artifact gốc giữ nguyên trong hai ZIP.
 
 Phân biệt các báo cáo:
 
@@ -317,7 +318,7 @@ Nếu bạn chưa tự giải thích được ba câu ACK50/55/65, N4 timeout235
 - Log lõi: `work/F10/05_VERIFICATION/runs/current_core/`; log wrapper: `work/F10/05_VERIFICATION/runs/wrapper/`.
 - Generic/lint: `work/F10/06_GDSII/generic/`; hình có nguồn dữ liệu: `work/F10/docs/figures/`.
 
-Các kết quả local trong hướng dẫn là lần chạy mới trên WSL bằng công cụ hỗ trợ của bộ hồ sơ. Khi bạn chạy lại hoặc có CI, cần cập nhật báo cáo bằng chính log/commit/run mới đó; không xóa nguồn gốc hỗ trợ và không gắn nhãn kết quả local thành kết quả CI.
+Các kết quả local trong hướng dẫn là lần chạy mới trên WSL bằng công cụ hỗ trợ của bộ hồ sơ; CI có log/phiên bản riêng đã lưu. Khi bạn chạy lại, ghi đúng log/commit/run mới đó; không xóa nguồn gốc hỗ trợ và không gắn nhãn kết quả local thành kết quả CI.
 
 
 ## Bổ sung đã đo ngày 20/10/2026
@@ -326,4 +327,8 @@ Chẩn đoán riêng đã kiểm cả hai pha chờ ở deadline: N=0 đo 3 chu 
 
 Trong repo portable, chạy `bash diagnostics/contract_bounds/run.sh` để tái lập; chạy `bash scripts/run_mutations.sh` để thấy ba bản sao cố ý sai bị bắt. Log mutation FAIL là kết quả mong đợi của thử phá, không phải RTL được chấp nhận khi sai.
 
-Bản báo cáo làm việc chính có14 trang; phụ lục mã17 trang. Đã render và đọc hình từng trang. Repo local ghi lịch sử thật với tác giả Codex assistant; không backdate thành mốc sinh viên đã làm từ trước. GitHub/CI và physical vẫn chờ thực hiện, không được nói đã hoàn tất Cổng A.
+Báo cáo chính15trang và phụ lục mã17trang được cập nhật bằng CI thật, nằm trong `reports/`. Repo công khai giữ lịch sử thật với tác giả Codex assistant; không backdate thành mốc sinh viên đã làm từ trước. URL repo/run và GDS đã có bằng chứng; sinh viên vẫn phải tự giải thích bốn pha, timer,22FF và giới hạn physical trước khi nộp. Có hồ sơ kỹ thuật không thay cho năng lực vấn đáp.
+
+Đọc physical theo ba câu hỏi. **Số ở stage nào?** Generic top210cell, Sky130mapping133cell, final454standardcell không mâu thuẫn vì định nghĩa và thư viện khác nhau; cuối cùng vẫn22cell tuần tự. **Điều kiện đo là gì?** Setup+1,314872ns ở maxSS, hold+0,109147ns ở minFF; powerTT285,402µW là ước tính vectorless với I/O fallback2ns, chưa phải đo chip. **Còn gì chưa đạt?**11pin slewSS vẫn vượt0,75ns, dù DRC/LVS0 và jobsuccess. Rà nhánh reset/buffer cần chạy lại physical; chỉ kéo dài clock không trực tiếp chữa slew.
+
+Render2DKLayout là ảnh thật từ GDS. Hình3Dbổ sung chỉ tách lớp1304polygonmetal1–5 cấp top: x/y thực, z để minh họa; không đầy đủ child-cell/via và không thể dùng như bề dày công nghệ. Khi vấn đáp, đừng gọi mọi hình3D là mô phỏng chế tạo.

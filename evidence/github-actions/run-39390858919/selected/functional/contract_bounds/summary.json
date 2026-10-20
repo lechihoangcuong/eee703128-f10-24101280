@@ -1,0 +1,72 @@
+{
+  "status": "COMPLETED_EXPECTATIONS_MATCHED",
+  "valid_peer_cases": 3,
+  "unsupported_peer_observations": 1,
+  "checks": 1607,
+  "errors": 0,
+  "clock_period_ns": 10,
+  "sample_delay_ns": 1,
+  "vcd_edge_crosscheck": "matched all five recorded signal edges per experiment",
+  "cases": [
+    {
+      "case_id": "VALID_BOTH_DEADLINES_N000",
+      "classification": "VALID_PEER",
+      "N": 0,
+      "W": 1,
+      "accepted_ns": 35,
+      "result_ns": 65,
+      "latency_cycles": 3,
+      "req_up_ns": 35,
+      "ack_up_ns": 40,
+      "req_down_ns": 55,
+      "ack_down_ns": 60
+    },
+    {
+      "case_id": "VALID_BOTH_DEADLINES_N001",
+      "classification": "VALID_PEER",
+      "N": 1,
+      "W": 1,
+      "accepted_ns": 85,
+      "result_ns": 115,
+      "latency_cycles": 3,
+      "req_up_ns": 85,
+      "ack_up_ns": 90,
+      "req_down_ns": 105,
+      "ack_down_ns": 110
+    },
+    {
+      "case_id": "VALID_BOTH_DEADLINES_N255",
+      "classification": "VALID_PEER",
+      "N": 255,
+      "W": 255,
+      "accepted_ns": 135,
+      "result_ns": 5245,
+      "latency_cycles": 511,
+      "req_up_ns": 135,
+      "ack_up_ns": 2680,
+      "req_down_ns": 2695,
+      "ack_down_ns": 5240
+    },
+    {
+      "case_id": "EARLY_ACK_DROP",
+      "classification": "OBSERVED_UNSUPPORTED_PEER",
+      "N": 8,
+      "W": 8,
+      "accepted_ns": 5265,
+      "result_ns": 5295,
+      "latency_cycles": 3,
+      "req_up_ns": 5265,
+      "ack_up_ns": 5270,
+      "req_down_ns": 5285,
+      "ack_down_ns": 5280
+    }
+  ],
+  "original_suite_cases_unchanged": 1035,
+  "limits": "Three supplemental legal-peer cases and one unsupported-peer observation. Not exhaustive input-sequence coverage or formal proof. Early ACK drop is not a valid-protocol PASS.",
+  "sha256": {
+    "core_rtl": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "diagnostic_tb": "0929b577ef966f533b77b7a5ad59ed8d9152de2e33d68d4d7cf32a5be2ebfefd",
+    "vcd": "36c8d00fc576bf59610a6a7e55ad2fe480da09ad391effbd834d058a82b41b6d",
+    "simulation_log": "4182edb68c0d0a9ee17ec0bcfaf2e6c84e1fba3dee68ceccb71d0bc292578acd"
+  }
+}

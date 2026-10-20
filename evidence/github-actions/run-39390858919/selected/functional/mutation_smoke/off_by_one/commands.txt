@@ -1,0 +1,2 @@
+timeout 30s iverilog -g2012 -s f10_tb_selfcheck -o sim.vvp diagnostics/mutation_smoke/off_by_one/mutant_core.sv tb/f10_tb_selfcheck.sv
+timeout 30s vvp sim.vvp

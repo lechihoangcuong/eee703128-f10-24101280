@@ -15,13 +15,13 @@ TRƯỜNG ĐẠI HỌC PHENIKAA<br/>Nhập môn Thiết kế Vi mạch Tích h�
 | Lớp | Nhập môn thiết kế vi mạch tích hợp-1-1-26(N01) |
 | Giảng viên hướng dẫn | Đinh Văn Nam |
 | Ngày cập nhật | 20/10/2026 |
-| Repo / commit / CI | Mã chính local: 4750b08. Chưa công bố GitHub hoặc có CI run; phải bổ sung trước khi nộp. |
+| Repo / commit / CI | GitHub: lechihoangcuong/eee703128-f10-24101280; mã chạy 298e12b; Actions run 39390858919. Link đầy đủ ở tr.15. |
 
-<b>Trạng thái hồ sơ:</b> bản làm việc có số liệu mô phỏng và tổng hợp generic chạy trên Ubuntu WSL của người học, với hỗ trợ của Codex. Chưa phải bản nộp hoàn tất Cổng A. Không ký cam kết “toàn bộ số liệu từ GitHub CI” khi CI chưa chạy.
+<b>Trạng thái hồ sơ:</b> đã công bố repo có lịch sử thật và chạy GitHub Actions. Hai job mo-phong và rtl2gds thành công; artifacts đã được tải và đối chiếu hash. Báo cáo được cập nhật sau lần chạy, không thuộc chính commit thực thi đó.
 
-Kết quả hiện có: lõi 1.035 ca, wrapper 11 ca đều PASS; tổng hợp generic có 22 flip-flop, không suy ra latch. Chưa có số liệu PDK, STA, công suất hoặc layout của lần chạy mới.
+CI xác nhận lõi 1.035 ca, wrapper 11 ca PASS; generic 22 flip-flop; LibreLane sinh GDS, DRC/LVS báo 0 lỗi. <b>Còn 11 vi phạm max slew ở góc SS</b>; SDC mặc định và giả định hoạt động công suất giới hạn ý nghĩa số liệu.
 
-Bố cục: 1. Đặc tả (tr.2-3); 2. RTL (tr.4); 3. Kiểm chứng (tr.5-8); 4. Tổng hợp (tr.9); 5. Thời gian (tr.10); 6-7. Công suất, vật lý và layout (tr.11); 8. Phân tích riêng (tr.12); 9. Kết luận (tr.13); tái lập và nguồn (tr.14).
+Bố cục: 1. Đặc tả (tr.2-3); 2. RTL (tr.4); 3. Kiểm chứng (tr.5-8); 4. Tổng hợp (tr.9); 5. Thời gian (tr.10); 6. Công suất, vật lý (tr.11); 7. Layout (tr.12); 8. Phân tích riêng (tr.13); 9. Kết luận (tr.14); tái lập và nguồn (tr.15).
 
 
 ## 1. Đặt vấn đề và đặc tả
@@ -103,7 +103,7 @@ Expected được tính bởi mô hình đếm số chu kỳ còn lại, không 
 
 Lõi: <b>1.035 ca, 138.571 chu kỳ được kiểm, 1.665.218 phép check, 0 lỗi</b>. Compile và simulator đều thoát 0. Log có câu ALL TESTS PASSED; CSV có 1.035 ID riêng biệt. Wrapper: <b>11 ca, 708 check, 0 lỗi</b>, gồm nối chân, ena, reset và đủ 8 bit cấu hình.
 
-Nguồn: current_core/simulation.log, case_results.csv, f10_core_selfcheck.vcd; wrapper/summary.json và wrapper_cases.csv. “Check” là phép so sánh của checker, không phải 1.665.218 kịch bản độc lập. [E1, E2]
+Số trên được xác nhận lại trong artifact CI mo-phong-F10, cùng kết quả local. “Check” là phép so sánh, không phải 1.665.218 kịch bản độc lập. Các hình waveform ở tr.6-7 giữ nguồn VCD local E1 có hash ở tr.15; kết quả CI có log/CSV/VCD riêng trong E6. [E1, E2, E6]
 
 
 ## 3.1. Waveform bốn pha của lần chạy thật
@@ -170,16 +170,15 @@ Sweep phủ mọi N cho bốn kịch bản đã định nghĩa, không phủ m�
 
 ## 4. Kết quả tổng hợp và đối chiếu thanh ghi
 
-Yosys 0.52 thực hiện hierarchy, synth và flatten tới cell generic. Đây chưa phải ánh xạ standard cell Sky130. Không dùng số 106 cell, diện tích hoặc slack có sẵn trong gói nguồn làm kết quả mới.
+Generic synthesis: Yosys 0.52 local và Yosys 0.33 trong CI đều cho số dưới đây. Đây là tầng cell generic; số Sky130 sau mapping/physical được ghi riêng ở tr.11. Không dùng số 106 cell có sẵn trong gói nguồn làm kết quả mới.
 
 
-| Chỉ số | Lõi | Top Tiny Tapeout |
+| Generic, local = CI | Lõi | Top Tiny Tapeout |
 | --- | --- | --- |
 | Tổng cell generic | 209 | 210 |
 | Flip-flop | 22 | 22 |
 | Logic tổ hợp | 187 | 188 |
 | Latch | 0 | 0 |
-| Area / utilization | Chưa có PDK | Chưa có PDK |
 
 Giải thích chính xác 22 flip-flop
 
@@ -194,7 +193,7 @@ Giải thích chính xác 22 flip-flop
 
 Kết quả được đối chiếu chân Q của cell trong design.json với netnames, không suy từ tên module “4 trạng thái”. Lần tổng hợp này giữ 4 bit trạng thái quan sát được. Bốn trạng thái về mặt thông tin chỉ cần 2 bit, nhưng không đồng nghĩa mọi RTL/Yosys run đều cho đúng 2 FF trạng thái.
 
-Charter gợi ý 18-19 bit cho state+counter+giữ N, chưa cộng hai output đã đăng ký. Đếm trực tiếp khai báo của RTL này cho 4+8+8+1+1=22. Đây là đối chiếu hồi cứu; không ghi giả thành dự đoán đã lập trước khi chạy. OR=56 và ANDNOT=52 là hai nhóm nhiều cell nhất, chưa thể kết luận nhóm lớn nhất về diện tích. [E4]
+Charter gợi ý 18-19 bit cho state+counter+giữ N, chưa cộng hai output đã đăng ký. RTL này có 4+8+8+1+1=22 bit. Đây là đối chiếu hồi cứu. OR=56 và ANDNOT=52 là hai nhóm generic nhiều cell nhất, chưa thể kết luận lớn nhất về diện tích. CI lint thoát 0 nhưng còn cảnh báo tham số START_INTERNAL không dùng. [E4, E6]
 
 
 ## 5. Thời gian: latency giao thức và STA
@@ -202,42 +201,59 @@ Charter gợi ý 18-19 bit cho state+counter+giữ N, chưa cộng hai output đ
 Clock 10 ns trong testbench xác định lịch kích thích và số chu kỳ hành vi. Nó không đo độ trễ cổng, không phải kết quả STA và không chứng minh mạch vật lý hoạt động ở 100 MHz.
 
 
-| Đại lượng | Dữ liệu hiện có | Cách hiểu |
+| Đại lượng | Kết quả sau routing CI | Điều kiện |
 | --- | --- | --- |
-| req↑ đến done↑ ca bình thường | 45 đến 75 ns = 3T | Latency của kịch bản mô phỏng |
-| Timeout N=4, không ACK | 195 đến 235 ns = 4T | Ngân sách pha chờ đầu |
-| Worst setup / hold slack | Chưa có | Cần thư viện và SDC đúng |
-| Đường tới hạn / CTS skew | Chưa có | Không suy từ số cell hoặc VCD |
-| Chu kỳ cấu hình physical | Xem config trong repo | Là giả định cần kiểm bằng STA |
+| Worst setup slack | +1,314872 ns | max_ss_100C_1v60 |
+| Worst hold slack | +0,109147 ns | min_ff_n40C_1v95 |
+| Setup / hold WNS và TNS | Đều 0; 0 vi phạm | 9 góc RC/PVT được phân tích |
+| Skew clock rise thực | 43,615 / 75,705 ps | nom-TT / max-SS |
+| Giới hạn slew | 11 chân vi phạm ở mỗi góc SS | Ba góc RC; không cộng thành 33 chân riêng |
 
 Giới hạn số chu kỳ trong model
 
 Mỗi pha chờ có nhiều nhất W=max(1,N) cạnh lấy mẫu, ACK đúng hạn được ưu tiên. Giữa hai pha là một chu kỳ ACK_HIGH. Từ accepted start đến done/timeout, với input đồng bộ hợp lệ, giới hạn bảo thủ là <b>2W+1 chu kỳ</b>. N=255 cho 511 chu kỳ; N=0 cho 3 chu kỳ. Watchdog 512 chu kỳ không cắt giao dịch hợp lệ.
 
-Chẩn đoán tách riêng xác nhận: N=0 đo 35-65 ns (3T); N=1 đo 85-115 ns (3T); N=255 đo 135-5245 ns (511T). Cả hai ACK đều được lấy mẫu đúng deadline; 1.607 check, 0 mismatch cho 3 ca hợp lệ và 1 quan sát đối tác sai giao thức. Không cộng bốn thí nghiệm này vào 1.035 ca gốc. [E5]
+Chẩn đoán riêng đo N=0: 35-65 ns (3T); N=1: 85-115 ns (3T); N=255: 135-5245 ns (511T). Có 1.607 check, 0 mismatch cho 3 ca hợp lệ và 1 quan sát đối tác sai. Không cộng vào 1.035 ca gốc. [E5]
 
-Khi có STA, cần ghi setup slack và hold slack riêng, endpoint/startpoint, corner PVT, thư viện, input/output delay và clock uncertainty. Chỉ xem slack setup dương là đạt ở ràng buộc đó; hold âm không được sửa bằng việc hạ tần số clock.
+Đường setup xấu nhất timeout_q[3] đến count_q[2]: arrival 8,831797 ns, required 10,146668 ns. Hold xấu nhất count_q[1] hồi tiếp: 0,579949 và 0,470801 ns. Nguồn: log STA post-PnR ở hai corner trong bảng. Skew clock ở đây là chênh latency cây clock, khác effective skew có cộng uncertainty/derate trong metrics.
 
-Giả thuyết cần kiểm: đường cộng count và so sánh deadline có thể là đường sâu. Đây chưa phải đường tới hạn đo được. Không tự điền số tầng logic, tần số tối đa hoặc slack từ giả thuyết này. Theo hướng dẫn Canvas/charter, báo cáo không khẳng định “chạy được ở X MHz”. [S1, S3]
+SDC cuối tạo clock 10 ns, input/output delay 2 ns, uncertainty 0,25 ns, clock transition 0,15 ns; max transition 0,75 ns. Đây là fallback SDC của flow: PNR_SDC_FILE và SIGNOFF_SDC_FILE chưa được chỉ định riêng. Chưa được coi là hợp đồng timing đã được hệ thống bên ngoài xác nhận. [E6]
+
+Setup/hold dương chỉ xác nhận các đường được phân tích ở ràng buộc trên. Vi phạm slew là kiểm tra khác: 11 chân nằm trên cùng net reset dẫn xuất net20; slew xấu nhất 0,933907 ns, vượt 0,75 ns. Cần xác nhận tải/driver reset rồi sửa buffering/sizing, chạy lại và so STA/DRC/LVS; không nới giới hạn chỉ để hết cảnh báo.
 
 
-## 6-7. Công suất, kiểm tra vật lý và layout
+## 6. Công suất và kết quả physical design
 
 
-| Hạng mục | Trạng thái / điều kiện còn thiếu |
+| Chỉ số, nguồn CI E6 | Giá trị / ý nghĩa |
 | --- | --- |
-| Công suất động, rò, tổng | Chưa có số đo; cần thư viện, corner và hoạt động chuyển mức |
-| DRC / LVS | Chưa chạy; không điền “0 vi phạm” |
-| CTS, routing, wirelength | Chưa chạy; không có skew hoặc buffer clock mới |
-| Layout 2D / 3D / GDS | Chưa có artifact của lần chạy mới |
+| Synthesis Sky130, stage06 | 133 cell; 1.383,8272 µm²; 22 FF |
+| Sau layout, không tính filler | 454 cell; 2.162,07 µm²; gồm 286 tap và 7 clock buffer |
+| Tổng instance, có filler | 5.462 = 454 + 5.008 filler; area 20.206,9 µm² |
+| Die / core / utilization stdcell | 25.600 / 20.206,9 µm² / 10,6997% |
+| CTS | 5 buffer + 2 dummy load; 22 sink chức năng; depth 2 |
+| Độ dài dây / số via | 4.253 µm / 1.040; route DRC cuối = 0 |
+| Magic DRC / KLayout DRC / LVS | 0 / 0 / 0 lỗi được báo cáo |
+| Power tổng, nom-TT / max-FF | 0,285402 / 0,333319 mW; ước lượng vectorless |
 
-![Hình 6. Mức bằng chứng hiện có. Đây là sơ đồ quy trình, không phải ảnh layout.](../docs/figures/design_lifecycle.png)
+Cell sau layout tăng do tap, sửa timing và cây clock; filler lấp chỗ trống, không phải thêm 5.008 cổng logic. Area cộng cả filler gần bằng core area; dùng 2.162,07 µm² để nói diện tích nhóm stdcell không filler, không lấy die 160×160 µm làm diện tích logic.
 
-Hình 6. Mức bằng chứng hiện có. Đây là sơ đồ quy trình, không phải ảnh layout.
+Power tại nom_tt_025C_1v80: internal 0,212633 mW, switching 0,072754 mW, leakage 15,8526 nW. Final power__total khớp max_ff_n40C_1v95, không phải TT. Log ghi Watts, bảng đổi sang mW. Chưa nạp VCD/SAIF hoạt động thực; numeric toggle rate không được lưu, nên đây là ước lượng vectorless, không phải công suất đo. [E6]
 
-Môi trường WSL có Icarus, Yosys và Verilator; chưa có bộ flow/PDK vật lý được xác nhận dùng được. Kiểm tra môi trường chỉ là preflight, không phải một lần LibreLane chạy rồi thất bại. Do đó chưa dùng nó thay nhật ký lỗi flow theo M3. CI phải chạy thực trước khi chốt báo cáo.
+<b>Giới hạn flow:</b> còn 11 chân vi phạm max slew tại SS; SDC mặc định; thiếu VSRC_LOC_FILES nên IR drop dùng giả định vị trí nguồn. DRC/LVS bằng 0 không xóa các giới hạn này. Chưa mô phỏng gate-level/SDF, kiểm EM đầy đủ hoặc thử phần cứng.
 
-DRC kiểm quy tắc hình học; LVS so sánh kết nối layout với netlist tham chiếu. <b>DRC sạch không có nghĩa mạch đúng chức năng.</b> Ngay cả LVS khớp cũng không chứng minh netlist đã thực hiện đúng đặc tả. Khi chưa có layout, không bịa hàng cell, lớp kim loại hoặc ảnh 3D. [S1, S3]
+
+## 7. Layout của thiết kế đã chạy
+
+![Hình 6. Layout 2D do KLayout tạo trong CI và góc nhìn tách lớp từ chính GDS; xem giới hạn trong hình.](../docs/figures/layout_actual_panel.png)
+
+Hình 6. Layout 2D do KLayout tạo trong CI và góc nhìn tách lớp từ chính GDS; xem giới hạn trong hình.
+
+Top tt_um_24101280_f10; die 160×160 µm, core từ (5,52;10,88) đến (154,10;146,88) µm. Các hàng standard cell nằm trong core; dây tín hiệu và mạng cấp nguồn được bố trí trên các lớp kim loại. GDS cuối 1.187.254 byte; ảnh 2D gốc giữ nguyên trong artifacts. [E6]
+
+Ảnh 3D tách lớp định tính dùng 1.304 polygon kim loại ở top: x/y từ GDS, z giãn tùy ý. Không bung cell con, không vẽ via hoặc độ dày công nghệ. Ánh xạ met1..5 theo SkyWater Layers Reference, URL trong manifest hình. Mặt nạ được chế tạo tuần tự, các lớp nối qua via; góc nhìn này không tự chứng minh kết nối hoặc cấu trúc transistor.
+
+DRC kiểm quy tắc hình học. LVS đối chiếu kết nối layout với netlist tham chiếu. Mô phỏng kiểm hành vi theo kích thích. Ba tầng bằng chứng này không thay thế cho nhau. GDS là cơ sở dữ liệu hình học, không tự chứng minh toàn bộ chức năng sau layout. [S1, S3]
 
 
 ## 8. Trả lời câu phân tích riêng F10
@@ -263,44 +279,46 @@ Hình 7. Sơ đồ trạng thái đúng theo RTL; nhánh timeout có thể hủy
 | Yêu cầu | Bằng chứng hiện có | Trạng thái |
 | --- | --- | --- |
 | Bối cảnh + phân loại | Tr.2, Hình 1 | Có |
-| Giao diện + kiến trúc | Tr.3-4; RTL; Hình 2 | Có; start là đề xuất |
-| 4 ca bắt buộc + ≥2 ca thêm | Log/CSV; tr.5-8 | PASS cục bộ |
-| Câu phân tích riêng | Hình 3, mốc VCD; tr.12 | Có |
-| Mô phỏng + thử phá mạch | E1-E3, exit status | Có |
-| Đọc tổng hợp | E4: 22 FF, 0 latch | Generic, chưa PDK |
-| Repo + lịch sử + CI run | Chưa có URL/run | Cổng A còn mở |
-| Physical hoặc lỗi flow thật | Chưa khởi chạy LibreLane | Còn thiếu |
-| PDF 8-15 trang | Bản chính 14 trang | Bản làm việc |
+| Giao diện + kiến trúc | Tr.3-4; RTL; Hình 2 | START là đề xuất |
+| 4 ca bắt buộc + ≥2 ca thêm | Log/CSV; tr.5-8; E6 | PASS local và CI |
+| Câu phân tích riêng | Hình 3, mốc VCD; tr.13 | Có |
+| Mô phỏng + thử phá mạch | E1-E3 + E6 | 3/3 lỗi bị bắt |
+| Đọc tổng hợp và physical | Tr.9-12; E6 | Có; còn slew |
+| Repo + lịch sử + CI run | Repo public; run 39390858919 | Đã có |
+| Artifacts và layout | Hai ZIP hash đã kiểm; GDS | Đã có |
+| PDF 8-15 trang | Bản chính 15 trang + phụ lục | Đúng số trang |
 
 Kết luận có điều kiện
 
-Với Icarus 12.0, input đồng bộ và contract đã nêu, RTL khớp mô hình tham chiếu ở các ca đã thực thi; ba lỗi cố tình đều bị phát hiện. Với Yosys 0.52 và script generic hiện tại, thiết kế hiện thực được thành flip-flop và logic, không suy ra latch.
+Với input đồng bộ và contract đã nêu, RTL khớp mô hình ở các ca đã chạy; ba lỗi cố tình đều bị bắt. Generic synthesis không suy ra latch; Sky130 mapping có 22 FF. LibreLane sinh GDS và báo DRC/LVS sạch trong lần chạy đã ghi. Setup/hold đạt các ràng buộc phân tích, nhưng 11 chân vi phạm slew vẫn còn.
 
-Kết quả này chưa chứng minh timing vật lý, công suất, DRC/LVS, hoạt động trên silicon hoặc mọi chuỗi input có thể xảy ra. Không tự chấm mức Giỏi khi Cổng A và phần physical còn thiếu. Để hoàn tất M3-M5: công bố repo có lịch sử thật, chạy CI, giữ artifacts hoặc lỗi flow thật và cập nhật đúng commit/run trong báo cáo.
+Hồ sơ có đủ bốn nhóm sản phẩm của charter: repo/lịch sử/CI, RTL/TB/giao diện, artifacts và PDF. Điều này không bảo đảm điểm số hoặc mọi giả định đã được thầy duyệt. Cần chốt chân START và phạm vi requester, người học tự kiểm tra và giải thích số liệu. Chưa chứng minh trên silicon, công suất hoạt động thực, mọi chuỗi input, CDC hoặc đầy đủ chất lượng chế tạo.
 
 Các lỗi tài liệu nguồn đã xử lý: wrapper buộc clock/reset/start bằng hằng; README nêu thư mục physical không có trong ZIP; bound 257 chu kỳ không đủ cho hai pha chờ; các con số area/slack cũ không có artifact tái lập. Việc sửa được ghi riêng, không thay nguồn tham chiếu.
 
 
 ## Thông tin tái lập, nguồn và trách nhiệm
 
+<b>Repo:</b> <link href="https://github.com/lechihoangcuong/eee703128-f10-24101280" color="#173f61">github.com/lechihoangcuong/eee703128-f10-24101280</link><br/><b>CI:</b> <link href="https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919" color="#173f61">Actions run 39390858919</link>, attempt 1; 20/10/2026, 08:05:03-08:08:36 UTC. Hai job success.
+
 
 | Thông tin | Giá trị / cách đối chiếu |
 | --- | --- |
-| Môi trường | Ubuntu WSL trên Windows; chạy cục bộ 19-20/10/2026 |
-| Công cụ | Icarus 12.0; Yosys 0.52; Verilator 5.032 |
-| Thời gian mô phỏng | timescale 1ns/1ps; clock 10 ns; seed F1002026 |
-| Lõi nguồn SHA-256 | 10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4 |
-| VCD SHA-256 | 3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5 |
-| LibreLane / PDK / CI | Chưa chạy; bổ sung phiên bản, commit và URL thực sau CI |
+| Commit đã thực thi | 298e12b0f79a326343315beee1697f55e2946403; commit báo cáo sau chạy xem git log |
+| CI / local | CI Ubuntu24.04: Icarus12, Yosys0.33, Verilator5.020; WSL: Icarus12, Yosys0.52, Verilator5.032 |
+| Job vật lý, Nix | Yosys0.62; Verilator5.044; OpenROAD package2026-02-17; Magic8.3.623; Netgen1.5.316; KLayout0.30.7 |
+| LibreLane | v3.0.16; 01ddb25e4424f6f5aaf6b951b14a2b6fdcf737c0 |
+| PDK / library | sky130A; 8afc8346a57fe1ab7934ba5a6056ea8b43078e71; sky130_fd_sc_hd |
+| Đầu SHA-256 (16 ký tự) | Lõi: 10cca64461908d5c; VCD local: 3678ae4b0a8b0a4f; GDS: a119d53d1b03022d. Hash đầy đủ trong manifests và phụ lục mã. |
 
-Tái lập: dùng README trong delivery/F10_24101280, chạy riêng top TB lõi và TB wrapper; đọc log, summary, CSV, exit code và hash nguồn. Chạy generic synth riêng; không đưa TB vào synthesis. Phụ lục mã chứa RTL và TB đầy đủ.
+Checkout commit thực thi; chạy scripts theo README. Mô phỏng 1ns/1ps, clock10ns, seedF1002026. Flow lấy main nên lần sau có thể đổi: cần dùng revision LibreLane/PDK trên và lưu dependency. Hai ZIP thô, hash đầy đủ và log: evidence/github-actions/run-39390858919/CI_EVIDENCE.md.
 
 Nguồn tham chiếu
 
-[S1] Charter F10, p_charter_F10.html (bản người học cung cấp): mục 4-6, 9-12. [S2] F10_FSM_bat_tay_bon_pha_req_ack.zip, SHA-256 c2fb74d93be43da5bb6b0c4aff0458ef27d332fbdd611c7b7d6413288764ade3. [S3] Canvas course 30065: hướng dẫn chung file 4677304, mẫu CI file 4677309; bản chép văn bản nhìn thấy được lưu ở reference/canvas/. [S4] MAU_BAO_CAO_B2 và Lab A+B trong gói EEE703128_Guide4Studentsv2.4.
+[S1] Charter F10, mục 4-6,9-12. [S2] ZIP F10 người học cung cấp; hash và thay đổi ở docs/PROVENANCE_AND_CHANGES.md. [S3] Canvas30065: file4677304 (hướng dẫn), 4677309 (CI). [S4] MAU_BAO_CAO_B2 và Lab A+B, gói Guide4Studentsv2.4.
 
-[E1] work/F10/05_VERIFICATION/runs/current_core/. [E2] .../runs/wrapper/. [E3] .../current_core/mutation_smoke/results.csv. [E4] work/F10/06_GDSII/generic/{core,wrapper,lint}/. [E5] work/F10/05_VERIFICATION/diagnostics/contract_bounds/. Bản sao và lần chạy portable: xem docs/EVIDENCE_INDEX.md trong bộ mã.
+[E1-E5] Evidence local: core/wrapper/mutation/generic/contract_bounds. [E6] Artifacts mo-phong-F10, rtl2gds-F10; logs/CSV/VCD/metrics/SDC/GDS. Tra cứu đầy đủ bằng docs/EVIDENCE_INDEX.md và CI_EVIDENCE.md.
 
 Hỗ trợ AI và phần người học phải xác nhận
 
-Codex hỗ trợ đọc yêu cầu, sửa wrapper, viết checker/mô hình tham chiếu, chạy công cụ trên máy người học, đối chiếu netlist, dựng hình và soạn bản làm việc này. Lõi được giữ nguyên từ gói nguồn. Người học phải chạy lại, kiểm tra số liệu, tự giải thích và sửa diễn đạt thành hiểu biết của mình trước khi nộp; không ký cam kết tác giả hoặc nguồn CI sai sự thật.
+Codex hỗ trợ wrapper, TB/model, scripts, local/CI, phân tích và báo cáo; lõi giữ nguyên. Commit ghi Codex assistant. Người học phải kiểm tra, tự giải thích trước khi nộp; không ký cam kết tự làm toàn bộ hoặc nguồn CI sai sự thật.

@@ -8,7 +8,7 @@ Core `rtl/f10_handshake_controller.sv` giữ nguyên byte, SHA-256:
 
 `10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4`
 
-Không gán giấy phép mới cho mã lớp khi nguồn chưa nêu rõ. Kiểm quyền chia sẻ trước khi công khai toàn bộ tài liệu lớp.
+Không gán giấy phép mới cho mã lớp khi nguồn chưa nêu rõ. Chủ tài khoản đã chọn công khai kho bài làm; sự đồng ý đó không biến tài liệu lớp thành tài liệu có giấy phép mở hoặc cho phép tự tái cấp phép.
 
 ## Những gì được bổ sung
 
@@ -19,16 +19,22 @@ Không gán giấy phép mới cho mã lớp khi nguồn chưa nêu rõ. Kiểm 
 | TB core | Model countdown độc lập, directed cases, 4×256 sweep và stress seed cố định; không dùng DUT output để suy expected |
 | TB wrapper | So đầy đủ output với expected cụ thể; kiểm ena, bit không dùng, timeout 8 bit và reset đồng bộ |
 | Script | Lưu version, hash, command, CSV, log, VCD, exit code; chạy hữu hạn và tách hai top |
-| CI | Từ mẫu Canvas, đổi F10/top/config; thêm kiểm wrapper/generic; giữ thất bại physical và artifact thật |
-| Hình | Vẽ từ VCD mới và mô tả kiến trúc; không giả ảnh GTKWave hay ảnh layout |
+| CI | Từ mẫu Canvas, đổi F10/top/config; thêm kiểm wrapper/generic; hai job thật đã hoàn tất thành công, giữ artifact/log/cảnh báo |
+| Hình | Vẽ waveform từ VCD mới và mô tả kiến trúc; render2D KLayout từ GDS CI; hình3D định tính từ polygon metal cấp top, giới hạn hình học được ghi rõ |
 
 Tham số `START_INTERNAL` trong core gốc chưa được dùng; lint giữ cảnh báo này. Core không có timeunit, còn TB khai báo `1ns/1ps`; Icarus warning được lưu. Không sửa nguồn chỉ để che cảnh báo.
 
 ## Những nhận định nguồn không được sao chép thành kết quả mới
 
-Gói ZIP thiếu các thư mục và log vật lý mà README nguồn nhắc tới. Số 106 cell, diện tích 1019,728 µm², timing 3 ns hoặc công suất từ mô tả cũ không có log đo mới tương ứng. Báo cáo chỉ dùng số generic/thời gian mô phỏng được chạy lại, và đánh dấu các phần vật lý chưa có.
+Gói ZIP thiếu các thư mục và log vật lý mà README nguồn nhắc tới. Số106cell, diện tích1019,728µm², timing3ns hoặc công suất từ mô tả cũ không được dùng làm kết quả mới. Báo cáo dùng log local có nhãn riêng và dữ liệu CI thật ngày20/10/2026. Physical mới có mapping133cell/22FF, final454standardcell, GDS, STA, powerước tính, DRC/LVS theo đúng artifact; vẫn còn11pin slewSS và giới hạn SDC/IR.
 
 START pin và phạm vi requester-only vẫn cần rà soát. Có mã chạy PASS không tự giải quyết được yêu cầu đặc tả chưa thống nhất.
+
+## E6 — repo công khai và CI thật
+
+[Repo](https://github.com/lechihoangcuong/eee703128-f10-24101280) đã nhận nguyên lịch sử nguồn. [Run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) thực thi source commit `298e12b0f79a326343315beee1697f55e2946403`; các commit cập nhật kết quả sau đó không tự được coi là source đã chạy. Workflow/RTL không bị thay trong lần bổ sung evidence này.
+
+Hai ZIP artifact nguyên byte, metadata, selected raw logs/metrics và SHA256 giữ ở `evidence/github-actions/run-39390858919/`. Đã kiểm16tệp nguồn khác nhau khớp hash của CI. So VCD local/CI cho thấy toàn bộ khai báo/sự kiện trùng sau khi chỉ chuẩn hóa date/version; không đổi nhãn log local thành CI. Xem `CI_EVIDENCE.md`, `waveform_comparison.json` và `PHYSICAL_ANALYSIS.md` trong bản lưu đó.
 
 ## Tài liệu yêu cầu
 

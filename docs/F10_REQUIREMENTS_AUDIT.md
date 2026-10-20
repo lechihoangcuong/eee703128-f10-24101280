@@ -2,7 +2,7 @@
 
 Sinh viên: **Lê Chí Hoàng Cường — 24101280 — N01**.
 
-Bảng này phân biệt kết quả đã kiểm local, tài liệu đang chuẩn bị và điều kiện nộp còn thiếu. Đây không phải giấy nghiệm thu của giảng viên. Trạng thái “còn mở” phải được cập nhật bằng bằng chứng thật trước khi nói đã đáp ứng toàn bộ yêu cầu.
+Bảng này phân biệt kết quả đã kiểm local, CI thật và điều kiện nộp cần sinh viên hoàn tất. Đây không phải giấy nghiệm thu của giảng viên. Ngày20/10/2026 đã kiểm repo công khai và hai job CI thành công; physical còn11pin vi phạm slew cùng các giả định SDC/IR đã nêu rõ.
 
 ## 1. Căn cứ và tài liệu chưa thống nhất
 
@@ -30,37 +30,39 @@ Nguồn đã đối chiếu:
 | R01 | Luyện Lab A + B | `work/LAB_AB/`: bản đúng, mutant, log/VCD, generic và hash nguồn | **Đã làm local** phần này; chưa có physical flow A/B |
 | R02 | Giao diện, reset, clock, trường hợp biên | Specification, `testplan_actual.md`, `WRAPPER_INTEGRATION.md` | **Đã mô tả**; cần xác nhận START trên uio1 và phạm vi requester |
 | R03 | Kiến trúc/FSM | Bốn trạng thái; timer và N chốt; hình block/context | **Đã có local**; sơ đồ không thay thế kiểm chứng |
-| R04 | RTL + TB + script | Core, wrapper, alias top; hai TB; repo portable | **Đã có bản chạy**; cần xác nhận bản đóng gói bằng lần tái lập |
-| R05 | Bắt tay bình thường | TC01: 37–87 ns; REQ↑45, ACK↑50, REQ↓65, ACK↓70, DONE↑75 | **PASS local**; VCD/CSV/log thật |
-| R06 | Bên kia trả lời chậm | TC02: 87–187 ns; ACK cao/thấp trước hạn | **PASS local** |
-| R07 | Bên kia không trả lời | TC03: N=4, REQ lên195 ns, timeout235 ns, không DONE | **PASS local** |
-| R08 | Hai lần bắt tay liên tiếp | TC05: 327–467 ns; DONE1=365, REQ2=375; N=2 rồi9 | **PASS local** |
+| R04 | RTL + TB + script | Core, wrapper, alias top; hai TB; repo portable;16sourcehash khớp CI | **Đã chạy lại từ repo và trên CI**; core gốc giữ nguyên byte |
+| R05 | Bắt tay bình thường | TC01:37–87ns; REQ↑45, ACK↑50, REQ↓65, ACK↓70, DONE↑75 | **PASS local và CI**; VCD/CSV/log thật |
+| R06 | Bên kia trả lời chậm | TC02:87–187ns; ACK cao/thấp trước hạn | **PASS local và CI** |
+| R07 | Bên kia không trả lời | TC03:N4, REQ195ns, timeout235ns, không DONE | **PASS local và CI** |
+| R08 | Hai lần bắt tay liên tiếp | TC05:327–467ns; DONE1=365, REQ2=375; N2 rồi9 | **PASS local và CI** |
 | R09 | ≥2 ca tự thêm, có ca biên và giải thích | ACK mắc cao/cũ; START khi bận; thay N; reset giữa cạnh; N=0..255 và deadline | **Đủ số ca bổ sung**; sinh viên phải giải thích lỗi mỗi ca bắt |
 | R10 | Câu phân tích riêng: bốn pha từ waveform mới | VCD, `directed_transitions.json`, `normal_4phase.png/.svg` | **Đã có dữ liệu**; phân biệt ACK lên50 và lấy mẫu55 ns |
 | R11 | Timer bao nhiêu bit, nạp từ đâu, bỏ thì sao | N từ ui8, timer8; chốt N; ngân sách riêng mỗi pha | **Đã có phân tích**; N=0 không phải256 chu kỳ |
-| R12 | Checker thật và tái lập được | 1.035 ca; 138.571 chu kỳ; 1.665.218 check; 0 lỗi; seedF1002026 | **PASS local**; chưa phải formal hoặc mọi chuỗi đầu vào |
-| R13 | Kiểm wrapper/chân top | 11 ca/708 check/0 lỗi; N128, N0, ena, reset, chân không dùng | **PASS local**; mapping START vẫn là giả định |
-| R14 | Tổng hợp và giải thích cấu trúc | Lõi209=22FF+187logic; top210=22FF+188logic; 0latch | **Có generic Yosys0.52**; chưa area/timing Sky130 |
-| R15 | Repo GitHub cá nhân | Repo portable chuẩn bị tại `delivery/F10_24101280` | **Còn mở:** chưa có URL repo; folder local không thay repo GitHub |
-| R16 | Lịch sử commit thật M1–M5 | Có Git local: nhập RTL/TB, script+evidence+CI, rồi tài liệu/chẩn đoán; ngày và tác giả thật | **Có lịch sử local** với Codex assistant; không giả là mốc sinh viên đã làm trước đó. Chưa có repo remote. |
-| R17 | Link CI run — Cổng A | Workflow dựa trên mẫu Canvas | **Còn mở:** chưa có URL run thật; YAML không phải kết quả CI |
-| R18 | LibreLane/Sky130; STA/power/layout/DRC/LVS | Local chưa có physical tools/PDK cần thiết | **Chưa thực hiện physical flow local**; không điền0 hay chép số cũ |
-| R19 | Artifacts hoặc lỗi flow + chẩn đoán | Chưa có lần physical flow để chẩn đoán stage | **Còn mở:** cần chạy thật và giữ artifacts hoặc lỗi thật |
-| R20 | Đọc CTS vì F10 có clock | Hướng dẫn đọc đã có; chưa báo cáo CTS | **Chưa có bằng chứng:** không suy buffer/skew từ generic |
-| R21 | PDF8–15 trang + phụ lục | Báo cáo chính14 trang, phụ lục17 trang; đã render và kiểm từng trang | **Có bản làm việc đã QA**, cần cập nhật kết quả CI trước bản nộp cuối |
-| R22 | Repo/commit/CI/LibreLane/PDK/ngày chạy | Local có phiên bản/thời gian/hash | **Chưa đủ thông tin tái lập cuối cùng** cho CI/physical |
+| R12 | Checker thật và tái lập được | 1035ca;138571chu kỳ;1665218check;0lỗi;seedF1002026 | **PASS local và CI**; chưa phải formal hoặc mọi chuỗi đầu vào |
+| R13 | Kiểm wrapper/chân top | 11ca/708check/0lỗi;N128,N0,ena,reset,chân không dùng | **PASS local và CI**; mapping START vẫn là giả định |
+| R14 | Tổng hợp và giải thích cấu trúc | Lõi209=22FF+187logic;top210=22FF+188logic;0latch | **Có generic local0.52/CI0.33 và mappingSky130133cell/22FF**; không trộn stage |
+| R15 | Repo GitHub cá nhân | [Repo công khai](https://github.com/lechihoangcuong/eee703128-f10-24101280) | **Đã có repo thật và mã nguồn**; user đã duyệt public |
+| R16 | Lịch sử commit thật M1–M5 | Bốn commit nguồn thật, sau đó cập nhật kết quả/tài liệu | **Đã đẩy nguyên lịch sử** với Codex assistant; không gọi các commit này là mốc sinh viên đã làm trước đó |
+| R17 | Link CI run — Cổng A | [Run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) trên `298e12b0f79a326343315beee1697f55e2946403` | **Hai job success**; metadata và ZIP được lưu, không chỉ có YAML |
+| R18 | LibreLane/Sky130; STA/power/layout/DRC/LVS | LibreLane3.0.16;Sky130A;GDS;setup+1,314872ns/hold+0,109147ns;DRC/LVS0 | **Có physical CI thật**; còn11pin slewSS,fallbackSDC,power vectorless và IR nguồn giả định; chưa sign-off |
+| R19 | Artifacts hoặc lỗi flow + chẩn đoán | Hai ZIP nguyên byte, hash khớp GitHub;metrics/log/GDS;phân tích nhánh reset gây slew | **Đã lưu artifact và chẩn đoán cảnh báo**; không sửa log để thành sạch |
+| R20 | Đọc CTS vì F10 có clock | 22sink;5buffer cây+2dummyload;final7clockbuffer;skew riseTT0,043615ns | **Đã đọc log CTS/STA**; phân biệt định nghĩa skew và corner |
+| R21 | PDF8–15 trang + phụ lục | Báo cáo chính cập nhậtCI15trang, phụ lục mã17trang | **Có bản cập nhật từ artifact**; QA/render bản cuối được lưu cùng báo cáo |
+| R22 | Repo/commit/CI/LibreLane/PDK/ngày chạy | Run20/10/2026;source298e12b;LibreLane01ddb25;PDK8afc834;resolvedconfig | **Đủ thông tin truy vết lần chạy**; commit tài liệu sau run không phải source commit đã thực thi |
 | R23 | Kết luận có điều kiện | Tài liệu phân biệt RTL/generic/physical/hardware | **Phải giữ trong bản cuối**; không sign-off/tape-out/chế tạo/Fmax |
 | R24 | Vấn đáp5 phút và liêm chính | Có hướng dẫn, câu hỏi, đáp án; nguồn và hỗ trợ AI được ghi rõ | **Sinh viên cần tự chạy và giải thích**; checklist máy không thay được |
 
-Các trạng thái repo/CI/PDF ở đây phản ánh lúc viết hướng dẫn. Khi chúng hoàn tất, người biên soạn phải cập nhật bảng và dẫn đúng artifact mới. Không tự đổi ô thành “đạt” chỉ vì tên file đã xuất hiện.
+Các trạng thái dựa trên run đã nêu và bản lưu evidence. CI xanh không tự chứng nhận toàn bộ rubric đã đạt; phần hiểu bài, giả định giao diện và cách nộp của lớp vẫn cần rà soát.
 
 ## 3. Số thực đo, số tham khảo và số chưa có
 
-**Kết quả mới dùng được:** log/VCD/CSV của `current_core`; wrapper runs; netlist/stat/design.json/summary generic; các lần chạy mới Lab A/B. Mỗi số cần giữ tên lần chạy, phiên bản và hash nguồn. Đây là lần chạy local có công cụ hỗ trợ; không gắn nhãn CI.
+**Kết quả mới dùng được:** log/VCD/CSV local và hai artifactCIrun39390858919;netlist/stat/design.json/summary generic;finalmetrics/GDS/SDC/STA/CTS/DRC/LVS; các lần chạy mới LabA/B. Mỗi số giữ tên lần chạy, phiên bản và hash nguồn. Giữ riêng nhãn local/CI, vì các phiên bản Yosys/Verilator khác nhau.
 
 **Tham khảo nguồn:** khoảng200–290 cell và1×1tile của charter; gợi ý18–19 ô nhớ; README nguồn ghi106cell,22FF,area1019.728µm² hoặc3ns. Không dùng chúng làm số thực đo của bản hiện tại khi thiếu artifact và điều kiện tương ứng.
 
-**Chưa có:** area Sky130, setup/hold slack, Fmax, power, CTS buffer/skew, wirelength, utilization, DRC/LVS, layout/GDS. Thiếu số liệu không có nghĩa0. Chưa chạy physical flow không có nghĩa đã thất bại ở một stage cụ thể.
+**Physical đã có số thực:** mapping133cell/1383,8272µm²;final454standardcell/2162,07µm²;die25600µm²;slack vàDRC/LVS như bảng;powerTT285,402435µWước tính vectorless. Xem `docs/PHYSICAL_FLOW.md` và `evidence/github-actions/run-39390858919/PHYSICAL_ANALYSIS.md` để giữ đủ đơn vị/corner/định nghĩa. Render2DKLayout thật; hình3Dbổ sung chỉ tách lớp1304polygonmetal1–5 cấp top theo z minh họa, không đầy đủ hierarchy/via/bề dày công nghệ.
+
+**Chưa được chứng minh:** Fmax đo thực, power silicon, sign-off/chế tạo, CDC bên ngoài hay mọi chuỗi peer vi phạm. Slew11pinSS chưa được sửa. FallbackSDC và vị trí cấp nguồnIR còn là giả định. Thiếu bằng chứng không được thay bằng0.
 
 ## 4. Giả định cần hiện rõ khi giảng viên rà soát
 
@@ -72,14 +74,14 @@ Các trạng thái repo/CI/PDF ở đây phản ánh lúc viết hướng dẫn.
 
 ## 5. Điều kiện để đóng hồ sơ
 
-- Có repo cá nhân thật, lịch sử tiến độ thật và quyền xem phù hợp; không tự công bố dữ liệu hoặc mời người khác khi chưa chốt.
+- Repo đã công khai theo lựa chọn của chủ tài khoản; giữ lịch sử và quyền xem đúng yêu cầu lớp.
 - Có URL CI thật gắn đúng commit; mở được log/artifacts. Mọi số trong báo cáo khớp artifact được nộp.
 - Có GDS/metrics/report đã kiểm **hoặc** log flow thất bại và chẩn đoán có bằng chứng. Không biến thiếu môi trường thành lỗi RTL tưởng tượng.
 - PDF8–15 trang + phụ lục đã render và kiểm từng trang; bảng giao diện, waveform, RTM, nguồn và giới hạn đầy đủ.
 - Repo/commit/run/phiên bản LibreLane/PDK/ngày chạy lấy từ dữ liệu thật; mục chưa có giữ “chưa có”.
 - Sinh viên giải thích được bốn pha, timer, reset, ưu tiên deadline, mô phỏng so với tổng hợp và số22FF; công khai mức hỗ trợ.
 
-**Kết luận trạng thái:** RTL, verification, waveform và tổng hợp generic đã có bằng chứng local. Chưa được tuyên bố đáp ứng toàn bộ yêu cầu khi Cổng A và bằng chứng physical flow hoặc chẩn đoán flow thật còn mở.
+**Kết luận trạng thái:** đã có repo công khai, lịch sử thật, CI thật, RTL/verification/generic/physical artifacts và phân tích giới hạn. Các điều kiện bằng chứng CổngA không còn thiếu URL/run. Không tự nhận giảng viên đã nghiệm thu hoặc phần cứng đã đạt: còn11pin slew, các giả định SDC/IR/START/requester và phần sinh viên tự hiểu/vấn đáp.
 
 
 ### Bổ sung bằng chứng giới hạn

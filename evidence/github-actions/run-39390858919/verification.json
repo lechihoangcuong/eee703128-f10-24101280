@@ -1,0 +1,48 @@
+{
+  "executed_source_commit": "298e12b0f79a326343315beee1697f55e2946403",
+  "run_url": "https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919",
+  "run_conclusion": "success",
+  "archive_sha256_verified": {
+    "F10_CI_mo-phong_39390858919.zip": "9a7cf1888d56b8b688265a80506b673b8707630cd52542a3bd7bf83ac8f7a18a",
+    "F10_CI_rtl2gds_39390858919.zip": "dbfc4290375deb73e48f443a1791a21332b57c3708ee7064165190f9652fe769"
+  },
+  "zip_crc": "both passed",
+  "distinct_current_source_files_checked_against_ci_record": 16,
+  "source_sha256": {
+    "rtl/f10_handshake_controller.sv": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "diagnostics/contract_bounds/f10_contract_bounds_tb.sv": "0929b577ef966f533b77b7a5ad59ed8d9152de2e33d68d4d7cf32a5be2ebfefd",
+    "diagnostics/contract_bounds/run.sh": "74b2a1d6108d304e3a8c94a0b68f9f71a27f7dfca1a49b98bfe7b1338cf78ae8",
+    "diagnostics/contract_bounds/summarize.py": "582096f0b3e3e320fdf0c47ae3036cee4c612ba4413a84f6a81fd1b071e16934",
+    "tb/f10_tb_selfcheck.sv": "03bb683e5cd412756abcb5a00318bb7422a4a1d9115e0d9c52aa5cfc907080a4",
+    "scripts/run_mutations.sh": "8b785a6c42c30ba47ea2f7f4d71d48270416266cd892e125b7113d2d71cc215a",
+    "diagnostics/mutation_smoke/deadline_priority/mutant_core.sv": "32d9429a91ae27f7828e114fe8c7f35b3101066a787db81ecd7451369a2a0b12",
+    "diagnostics/mutation_smoke/live_timeout_reload/mutant_core.sv": "6bd2f1245021a1a52b4aba8573dbfc649247029bb022127852fd3e1ee35851c2",
+    "diagnostics/mutation_smoke/off_by_one/mutant_core.sv": "d23f23a65f7d08857d7818c6887460c26d7247b759298655cd5d622e6d09fced",
+    "rtl/f10_tiny_tapeout_top.sv": "4d08fe40a7a97fb2b4d9f5236fd8a1ceca01c6e529fb48b6502c569c7b09aa38",
+    "rtl/tt_um_24101280_f10.sv": "30cfe7059d9e7572ea64f71c638876d24dcdb2a35eafa5c1b32f8415e0b1c5bb",
+    "scripts/run_synth.sh": "6a7ce98365e11a3340ebf733288188b824a2e50c8b40e6258a511fc70ac371c5",
+    "scripts/summarize_synth.py": "9b9907342b524d75719f942686c6523a467d5891cd3f76d284bce835028cb6bd",
+    "scripts/run_sim.sh": "808af1423e0c2834a4bc180a469e16b2475bbcaa7c74cd62b4de8a40fc13b3f5",
+    "scripts/check_sim.py": "3402020a2ce4b5e83117d620ab06415040d4a0ac0e05b319aa00902864af4ea2",
+    "tb/f10_wrapper_tb.sv": "1b02007b98304098460a44a6f6c189f8546c19d4cb3a506eb18d4badc5e3da55"
+  },
+  "core_summary": {
+    "cases": 1035,
+    "failed_cases": 0,
+    "cycles": 138571,
+    "checks": 1665218,
+    "errors": 0,
+    "final_aggregate_checks": 3,
+    "seed": "F1002026",
+    "stress_resets": 16,
+    "status": "PASSED"
+  },
+  "wrapper_summary": {
+    "cases": 11,
+    "failed_cases": 0,
+    "checks": 708,
+    "errors": 0,
+    "status": "PASSED"
+  },
+  "note": "Evidence added after this CI run. Later documentation commits are not the source revision executed by this run."
+}
