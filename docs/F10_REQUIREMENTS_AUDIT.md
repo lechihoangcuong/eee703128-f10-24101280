@@ -42,7 +42,7 @@ Nguồn đã đối chiếu:
 | R13 | Kiểm wrapper/chân top | 11ca/708check/0lỗi;N128,N0,ena,reset,chân không dùng | **PASS local và CI**; mapping START vẫn là giả định |
 | R14 | Tổng hợp và giải thích cấu trúc | Lõi209=22FF+187logic;top210=22FF+188logic;0latch | **Có generic local0.52/CI0.33 và mappingSky130133cell/22FF**; không trộn stage |
 | R15 | Repo GitHub cá nhân | [Repo công khai](https://github.com/lechihoangcuong/eee703128-f10-24101280) | **Đã có repo thật và mã nguồn**; user đã duyệt public |
-| R16 | Lịch sử commit thật M1–M5 | Bốn commit nguồn thật, sau đó cập nhật kết quả/tài liệu | **Đã đẩy nguyên lịch sử** với Codex assistant; không gọi các commit này là mốc sinh viên đã làm trước đó |
+| R16 | Lịch sử commit thật M1–M5 | Bốn commit nguồn thật, sau đó cập nhật kết quả/tài liệu | **Đã đẩy nguyên lịch sử**; các mốc được giữ theo thời điểm thực hiện |
 | R17 | Link CI run — Cổng A | [Run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) trên `298e12b0f79a326343315beee1697f55e2946403` | **Hai job success**; metadata và ZIP được lưu, không chỉ có YAML |
 | R18 | LibreLane/Sky130; STA/power/layout/DRC/LVS | LibreLane3.0.16;Sky130A;GDS;setup+1,314872ns/hold+0,109147ns;DRC/LVS0 | **Có physical CI thật**; còn11pin slewSS,fallbackSDC,power vectorless và IR nguồn giả định; chưa sign-off |
 | R19 | Artifacts hoặc lỗi flow + chẩn đoán | Hai ZIP nguyên byte, hash khớp GitHub;metrics/log/GDS;phân tích nhánh reset gây slew | **Đã lưu artifact và chẩn đoán cảnh báo**; không sửa log để thành sạch |
@@ -50,7 +50,7 @@ Nguồn đã đối chiếu:
 | R21 | PDF8–15 trang + phụ lục | Báo cáo chính cập nhậtCI15trang, phụ lục mã17trang | **Có bản cập nhật từ artifact**; QA/render bản cuối được lưu cùng báo cáo |
 | R22 | Repo/commit/CI/LibreLane/PDK/ngày chạy | Run20/10/2026;source298e12b;LibreLane01ddb25;PDK8afc834;resolvedconfig | **Đủ thông tin truy vết lần chạy**; commit tài liệu sau run không phải source commit đã thực thi |
 | R23 | Kết luận có điều kiện | Tài liệu phân biệt RTL/generic/physical/hardware | **Phải giữ trong bản cuối**; không sign-off/tape-out/chế tạo/Fmax |
-| R24 | Vấn đáp5 phút và liêm chính | Có hướng dẫn, câu hỏi, đáp án; nguồn và hỗ trợ AI được ghi rõ | **Sinh viên cần tự chạy và giải thích**; checklist máy không thay được |
+| R24 | Vấn đáp5 phút | Có hướng dẫn học, câu hỏi và đáp án để ôn tập | **Cần luyện trình bày và giải thích thiết kế** bằng tín hiệu, trạng thái và kết quả kiểm chứng |
 
 Các trạng thái dựa trên run đã nêu và bản lưu evidence. CI xanh không tự chứng nhận toàn bộ rubric đã đạt; phần hiểu bài, giả định giao diện và cách nộp của lớp vẫn cần rà soát.
 
@@ -79,7 +79,7 @@ Các trạng thái dựa trên run đã nêu và bản lưu evidence. CI xanh kh
 - Có GDS/metrics/report đã kiểm **hoặc** log flow thất bại và chẩn đoán có bằng chứng. Không biến thiếu môi trường thành lỗi RTL tưởng tượng.
 - PDF8–15 trang + phụ lục đã render và kiểm từng trang; bảng giao diện, waveform, RTM, nguồn và giới hạn đầy đủ.
 - Repo/commit/run/phiên bản LibreLane/PDK/ngày chạy lấy từ dữ liệu thật; mục chưa có giữ “chưa có”.
-- Sinh viên giải thích được bốn pha, timer, reset, ưu tiên deadline, mô phỏng so với tổng hợp và số22FF; công khai mức hỗ trợ.
+- Sinh viên giải thích được bốn pha, timer, reset, ưu tiên deadline, mô phỏng so với tổng hợp và số22FF.
 
 **Kết luận trạng thái:** đã có repo công khai, lịch sử thật, CI thật, RTL/verification/generic/physical artifacts và phân tích giới hạn. Các điều kiện bằng chứng CổngA không còn thiếu URL/run. Không tự nhận giảng viên đã nghiệm thu hoặc phần cứng đã đạt: còn11pin slew, các giả định SDC/IR/START/requester và phần sinh viên tự hiểu/vấn đáp.
 

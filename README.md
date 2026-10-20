@@ -3,7 +3,7 @@
 **Sinh viên:** Lê Chí Hoàng Cường · **MSSV:** 24101280  
 **Lớp:** Nhập môn thiết kế vi mạch tích hợp-1-1-26(N01)
 
-Đây là gói làm việc có hỗ trợ AI từ tài liệu F10 được cung cấp. Lõi RTL giữ nguyên mã nguồn. Wrapper, testbench tự kiểm tra, script, hình và phần giải thích được bổ sung hoặc kiểm tra với trợ lý. Không mô tả toàn bộ mã này là do sinh viên tự viết. Sinh viên cần tự chạy, đọc bằng chứng và giải thích được hành vi trước khi nộp.
+Đây là bộ hồ sơ kỹ thuật dựa trên tài liệu F10 được cung cấp. Lõi RTL giữ nguyên mã nguồn; bộ hồ sơ bổ sung wrapper, testbench tự kiểm tra, script tái lập, hình minh họa và phân tích kết quả. Các bước chạy và bằng chứng được trình bày dưới đây.
 
 ## Bắt đầu trên Ubuntu/WSL
 

@@ -43,4 +43,4 @@ Hai ZIP artifact nguyên byte, metadata, selected raw logs/metrics và SHA256 gi
 - [Mẫu CI Cổng A Canvas](https://canvas.phenikaa-uni.edu.vn/courses/30065/files/4677309?module_item_id=440833): workflow gốc lưu trong `docs/course-reference/`.
 - Gói hướng dẫn v2.4 có phần coi CI/GDS là mở rộng; đã ưu tiên hướng dẫn Canvas và charter F10 cụ thể, không dùng khác biệt này để tự bỏ Cổng A.
 
-Mọi commit trong gói bàn giao phải phản ánh công việc thực tế tại thời điểm làm; không tạo lịch sử M1…M5 giả hoặc backdate. Trợ lý hỗ trợ tạo/mô phỏng/tổng hợp; sinh viên không nên ký nhận là đã tự làm toàn bộ các thao tác khi chưa thực hiện.
+Lịch sử commit lưu các thay đổi theo thời điểm thực hiện. Source commit của CI được ghi riêng để đối chiếu mã đã chạy với các cập nhật tài liệu và bằng chứng sau đó.

@@ -1,4 +1,4 @@
-# Kiểm tra độc lập bản PDF F10 cuối
+# Kiểm tra bản PDF F10 hiện hành
 
 Ngày kiểm tra: 20/10/2026. Phạm vi: đọc PDF, kiểm chữ và metadata, xem tất cả trang render; không sửa RTL, báo cáo hoặc bằng chứng nguồn.
 
@@ -8,8 +8,8 @@ Không còn phát hiện cần sửa trước khi đóng gói ở hai PDF có ha
 
 | Tệp | Số trang | SHA-256 |
 |---|---:|---|
-| F10_24101280_BAO_CAO_BAN_LAM_VIEC.pdf | 15 | fe820cd11ed45d8cdf03d9e49397b9c5d01079b31f5af69ed2f7715fef38e3bc |
-| F10_24101280_PHU_LUC_MA_NGUON.pdf | 17 | e4ebb16cbdf1bf8e026b9ccfc3dc2f21039cd1ecd06af68d845482f9da3cd910 |
+| F10_24101280_BAO_CAO_BAN_LAM_VIEC.pdf | 15 | 0304795c44e3c83ff81f4674e6abc691676c78c31c912ec95786adff685f77ce |
+| F10_24101280_PHU_LUC_MA_NGUON.pdf | 17 | 56bf929ad443d5089862ed349380f15daf7862d76f1148b0796b50c23ddca476 |
 
 ## Trang đã xem
 
@@ -18,6 +18,7 @@ Không còn phát hiện cần sửa trước khi đóng gói ở hai PDF có ha
 - Không thấy trang trắng ngoài ý định, chữ bị cắt ở lề, bảng đè chữ, hình bị cắt, lỗi dấu tiếng Việt hoặc nội dung đè footer. Các bảng dài và code tiếp trang có thứ tự liên tục.
 - Trang 07 sau thu hình còn đọc được các mốc 195/205/215/225/235 ns và 365/375/455 ns; caption và phần giải thích không chạm footer.
 - Trang 15 sau rút gọn còn đủ repo, link CI, full commit thực thi, revision LibreLane/PDK, bộ công cụ, hash prefix có nhãn rõ và đường dẫn manifest chứa hash đầy đủ.
+- Bản hiện hành: đối chiếu byte nội dung trang xác nhận trang 1–14 và toàn bộ 17 trang phụ lục trùng bản đã kiểm trước đó. Trang 15 đã render lại ở 120 dpi và xem riêng; bảng, nguồn tham chiếu và footer rõ, không cắt chữ. Metadata Author của hai PDF để trống.
 
 ## Định dạng
 

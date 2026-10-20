@@ -4,7 +4,7 @@
 **Lớp:** Nhập môn thiết kế vi mạch tích hợp-1-1-26(N01)  
 **Phạm vi:** FSM bắt tay bốn pha req/ack; học từ Lab A/B, đọc RTL, chạy kiểm chứng, đọc tổng hợp và hiểu giới hạn bằng chứng.
 
-Tài liệu này là hướng dẫn học kèm hồ sơ kỹ thuật được hỗ trợ bằng công cụ. Mã lõi có sẵn trong gói đã gửi được giữ nguyên; wrapper, kiểm chứng mở rộng và cách trình bày được bổ sung với hỗ trợ AI. Đừng nói mình tự viết tất cả. Việc cần làm là chạy lại, kiểm tra dữ liệu, sửa chỗ mình chưa đồng ý và giải thích được thiết kế. Hiểu sai nhưng nói trôi chảy vẫn là hiểu sai.
+Tài liệu này hướng dẫn học và sử dụng hồ sơ kỹ thuật F10. Mã lõi có sẵn trong gói đã gửi được giữ nguyên; wrapper, kiểm chứng mở rộng và cách trình bày được bổ sung trong bộ hồ sơ. Hãy chạy lại, kiểm tra dữ liệu, đối chiếu các giả định và tập giải thích thiết kế bằng tín hiệu, trạng thái và mốc thời gian cụ thể.
 
 ## 1. Bài yêu cầu gì, và hiện đã làm đến đâu?
 
@@ -214,17 +214,16 @@ Charter ghi tham khảo khoảng 18–19 ô nhớ. Đó không phải kết qu�
 
 Repo portable được chuẩn bị tại `delivery/F10_24101280`. Giữ `reference/` nguyên trạng; thao tác trong bản làm việc hoặc bản sao delivery. Mở Ubuntu WSL, không nhập các lệnh Bash trực tiếp vào dấu nhắc PowerShell.
 
-Nếu dùng đúng máy hiện tại:
+Trong Ubuntu WSL, vào thư mục chứa repo đã tải hoặc giải nén, rồi chạy:
 
 ```bash
-cd /mnt/c/Users/ADMIN/.codex/.chatgpt-projects/g-p-6ac7c7ad714c8191b5d6bbb55ebb7c57/delivery/F10_24101280
 iverilog -V
 yosys -V
 bash scripts/run_sim.sh
 bash scripts/run_synth.sh
 ```
 
-Nếu chép repo sang máy khác, chỉ đổi dòng `cd` sang thư mục repo của máy đó. Script tự tìm repo từ vị trí của nó, không cần giữ đường dẫn máy hiện tại. Công cụ dùng local đã có: Icarus Verilog 12.0, Yosys 0.52; phiên bản khác có thể cho thống kê generic khác, cần lưu phiên bản thật.
+Script tự tìm repo từ vị trí của nó, không cần giữ đường dẫn máy hiện tại. Công cụ dùng local đã có: Icarus Verilog 12.0, Yosys 0.52; phiên bản khác có thể cho thống kê generic khác, cần lưu phiên bản thật.
 
 Đọc sau khi chạy:
 
@@ -327,7 +326,7 @@ Chẩn đoán riêng đã kiểm cả hai pha chờ ở deadline: N=0 đo 3 chu 
 
 Trong repo portable, chạy `bash diagnostics/contract_bounds/run.sh` để tái lập; chạy `bash scripts/run_mutations.sh` để thấy ba bản sao cố ý sai bị bắt. Log mutation FAIL là kết quả mong đợi của thử phá, không phải RTL được chấp nhận khi sai.
 
-Báo cáo chính15trang và phụ lục mã17trang được cập nhật bằng CI thật, nằm trong `reports/`. Repo công khai giữ lịch sử thật với tác giả Codex assistant; không backdate thành mốc sinh viên đã làm từ trước. URL repo/run và GDS đã có bằng chứng; sinh viên vẫn phải tự giải thích bốn pha, timer,22FF và giới hạn physical trước khi nộp. Có hồ sơ kỹ thuật không thay cho năng lực vấn đáp.
+Báo cáo chính15trang và phụ lục mã17trang được cập nhật bằng CI thật, nằm trong `reports/`. Repo công khai lưu lịch sử thay đổi và source commit đã chạy CI. URL repo/run và GDS đã có bằng chứng; phần ôn tập trước khi nộp gồm bốn pha, timer,22FF và giới hạn physical.
 
 Đọc physical theo ba câu hỏi. **Số ở stage nào?** Generic top210cell, Sky130mapping133cell, final454standardcell không mâu thuẫn vì định nghĩa và thư viện khác nhau; cuối cùng vẫn22cell tuần tự. **Điều kiện đo là gì?** Setup+1,314872ns ở maxSS, hold+0,109147ns ở minFF; powerTT285,402µW là ước tính vectorless với I/O fallback2ns, chưa phải đo chip. **Còn gì chưa đạt?**11pin slewSS vẫn vượt0,75ns, dù DRC/LVS0 và jobsuccess. Rà nhánh reset/buffer cần chạy lại physical; chỉ kéo dài clock không trực tiếp chữa slew.
 

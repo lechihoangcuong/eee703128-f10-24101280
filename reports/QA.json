@@ -1,7 +1,7 @@
 {
   "main_pages": 15,
   "appendix_pages": 17,
-  "main_sha256": "fe820cd11ed45d8cdf03d9e49397b9c5d01079b31f5af69ed2f7715fef38e3bc",
+  "main_sha256": "0304795c44e3c83ff81f4674e6abc691676c78c31c912ec95786adff685f77ce",
   "main_sections": [
     "BÁO CÁO BÀI KIỂM TRA SỐ 2",
     "1. Đặt vấn đề và đặc tả",
@@ -17,12 +17,12 @@
     "7. Layout của thiết kế đã chạy",
     "8. Trả lời câu phân tích riêng F10",
     "9. Kết luận, giới hạn và truy vết yêu cầu",
-    "Thông tin tái lập, nguồn và trách nhiệm"
+    "Thông tin tái lập và nguồn tham chiếu"
   ],
   "status": "CI verified; physical GDS produced with 11 SS slew violations; conditional conclusions",
   "executed_source_commit": "298e12b0f79a326343315beee1697f55e2946403",
   "ci_run_url": "https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919",
-  "appendix_sha256": "e4ebb16cbdf1bf8e026b9ccfc3dc2f21039cd1ecd06af68d845482f9da3cd910",
+  "appendix_sha256": "56bf929ad443d5089862ed349380f15daf7862d76f1148b0796b50c23ddca476",
   "visual_review": "All 15 main and 17 appendix pages rendered and inspected; final independent review in FINAL_QA_REVIEW.md",
   "main_format": "A4; Times New Roman 13, leading15.5; margins70.87pt (2.5cm) on all sides; diagrams and footer use separate label sizes",
   "appendix_format": "Consolas8.3 for complete code listings; separate from main page limit"

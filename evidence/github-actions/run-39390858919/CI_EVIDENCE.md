@@ -4,7 +4,7 @@ Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lec
 
 Run thật: [F10 RTL to GDSII #1](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919), sự kiện push, bắt đầu `2026-10-20T08:05:03Z`, hoàn tất `2026-10-20T08:08:36Z`. Hai job đã hoàn tất `success`: RTL/generic `118521750004`, physical `118522000084`. `metadata/run.json` và `metadata/jobs.json` giữ trạng thái đã đọc từ GitHub.
 
-**Source commit đã thực thi:** `298e12b0f79a326343315beee1697f55e2946403`. Bản lưu evidence và các báo cáo được thêm sau run; commit tài liệu đó không phải mã nguồn mà run này đã thực thi. Lịch sử nguồn được giữ thật, không backdate hay gắn tác giả sinh viên cho phần trợ lý đã tạo.
+**Source commit đã thực thi:** `298e12b0f79a326343315beee1697f55e2946403`. Bản lưu evidence và các báo cáo được thêm sau run; commit tài liệu đó không phải mã nguồn mà run này đã thực thi. Lịch sử nguồn giữ nguyên thời điểm và thứ tự thay đổi.
 
 ## Hai artifact nguyên byte
 

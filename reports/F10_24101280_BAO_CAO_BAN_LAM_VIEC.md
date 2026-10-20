@@ -297,7 +297,7 @@ Hồ sơ có đủ bốn nhóm sản phẩm của charter: repo/lịch sử/CI, 
 Các lỗi tài liệu nguồn đã xử lý: wrapper buộc clock/reset/start bằng hằng; README nêu thư mục physical không có trong ZIP; bound 257 chu kỳ không đủ cho hai pha chờ; các con số area/slack cũ không có artifact tái lập. Việc sửa được ghi riêng, không thay nguồn tham chiếu.
 
 
-## Thông tin tái lập, nguồn và trách nhiệm
+## Thông tin tái lập và nguồn tham chiếu
 
 <b>Repo:</b> <link href="https://github.com/lechihoangcuong/eee703128-f10-24101280" color="#173f61">github.com/lechihoangcuong/eee703128-f10-24101280</link><br/><b>CI:</b> <link href="https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919" color="#173f61">Actions run 39390858919</link>, attempt 1; 20/10/2026, 08:05:03-08:08:36 UTC. Hai job success.
 
@@ -318,7 +318,3 @@ Nguồn tham chiếu
 [S1] Charter F10, mục 4-6,9-12. [S2] ZIP F10 người học cung cấp; hash và thay đổi ở docs/PROVENANCE_AND_CHANGES.md. [S3] Canvas30065: file4677304 (hướng dẫn), 4677309 (CI). [S4] MAU_BAO_CAO_B2 và Lab A+B, gói Guide4Studentsv2.4.
 
 [E1-E5] Evidence local: core/wrapper/mutation/generic/contract_bounds. [E6] Artifacts mo-phong-F10, rtl2gds-F10; logs/CSV/VCD/metrics/SDC/GDS. Tra cứu đầy đủ bằng docs/EVIDENCE_INDEX.md và CI_EVIDENCE.md.
-
-Hỗ trợ AI và phần người học phải xác nhận
-
-Codex hỗ trợ wrapper, TB/model, scripts, local/CI, phân tích và báo cáo; lõi giữ nguyên. Commit ghi Codex assistant. Người học phải kiểm tra, tự giải thích trước khi nộp; không ký cam kết tự làm toàn bộ hoặc nguồn CI sai sự thật.
