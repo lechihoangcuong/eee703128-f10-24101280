@@ -15,3 +15,4 @@
 *.png binary
 *.pdf binary
 *.zip binary
+diagnostics/mutation_smoke/**/mutant_core.sv -text
