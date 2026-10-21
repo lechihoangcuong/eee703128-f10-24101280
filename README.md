@@ -67,3 +67,5 @@ Không đồng nhất “CI xanh” với “đã hiểu và đã đạt mọi t
 ## Metadata commit và nguồn CI
 
 Committer đã được gắn với tài khoản GitHub của chủ kho. [Bảng đối chiếu commit](docs/COMMIT_METADATA.md) xác nhận từng cây tệp được giữ nguyên. Để checkout source của CI cũ, dùng `CI_SOURCE_HISTORY.bundle` theo hướng dẫn trong bảng; mã source CI trong báo cáo vẫn là lần chạy thực tế.
+
+Nhãn Author hiện hành trên main là `Repository maintenance`; Committer là chủ kho. [Bảng chuẩn hóa nhãn Author](docs/AUTHOR_LABELS.md) ghi các SHA và kiểm tra cây tệp; source CI gốc vẫn được giữ trong bundle.

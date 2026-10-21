@@ -4,7 +4,7 @@ Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lec
 
 Run thật: [F10 RTL to GDSII #1](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919), sự kiện push, bắt đầu `2026-10-20T08:05:03Z`, hoàn tất `2026-10-20T08:08:36Z`. Hai job đã hoàn tất `success`: RTL/generic `118521750004`, physical `118522000084`. `metadata/run.json` và `metadata/jobs.json` giữ trạng thái đã đọc từ GitHub.
 
-**Source commit đã thực thi:** `298e12b0f79a326343315beee1697f55e2946403`. Bản lưu evidence và các báo cáo được thêm sau run; commit tài liệu đó không phải mã nguồn mà run này đã thực thi. Lịch sử nguồn giữ nguyên thời điểm và thứ tự thay đổi.
+**Source commit đã thực thi:** `298e12b0f79a326343315beee1697f55e2946403`. Bản lưu evidence và các báo cáo được thêm sau run; commit tài liệu đó không phải mã nguồn mà run này đã thực thi. Bundle nguồn CI giữ nguyên thời điểm Author và thứ tự thay đổi gốc; metadata hiển thị trên main được đối chiếu riêng trong tài liệu.
 
 ## Hai artifact nguyên byte
 
@@ -53,4 +53,4 @@ Thông tin giao diện còn phải nêu với giảng viên: START ở `uio_in[1
 
 ## Khôi phục source CI sau cập nhật metadata commit
 
-Trường Committer trên main được cập nhật ngày 21/10/2026; các SHA mới không thay SHA đã thực thi của run này. `CI_SOURCE_HISTORY.bundle` giữ nguyên bốn commit nguồn đến `298e12b`. Xem [bảng đối chiếu và lệnh clone bundle](../../../docs/COMMIT_METADATA.md). Author, nội dung và các artifacts của run được giữ nguyên.
+Trường Committer trên main được cập nhật ngày 21/10/2026; các SHA mới không thay SHA đã thực thi của run này. `CI_SOURCE_HISTORY.bundle` giữ nguyên bốn commit nguồn đến `298e12b`. Xem [bảng đối chiếu và lệnh clone bundle](../../../docs/COMMIT_METADATA.md). Author gốc trong bundle, nội dung và các artifacts của run được giữ nguyên. Nhãn Author trên main được chuẩn hóa sau đó, xem [AUTHOR_LABELS.md](../../../docs/AUTHOR_LABELS.md).

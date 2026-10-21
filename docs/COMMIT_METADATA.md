@@ -1,6 +1,6 @@
 # Đối chiếu metadata commit
 
-Ngày cập nhật: 21/10/2026. Trường Committer của sáu commit được gắn với tài khoản `lechihoangcuong`, dùng địa chỉ noreply của GitHub. Author, thời gian Author, thông điệp và toàn bộ cây tệp của mỗi commit được giữ nguyên. Thời gian Committer là thời điểm ghi lại metadata hiện tại.
+Bản ghi bước cập nhật Committer ngày 21/10/2026: sáu commit được gắn với tài khoản `lechihoangcuong`, dùng địa chỉ noreply của GitHub. Ở bước đó Author, thời gian Author, thông điệp và cây tệp được giữ nguyên. Nhãn Author trên main đã được chuẩn hóa ở bước sau, xem [AUTHOR_LABELS.md](AUTHOR_LABELS.md).
 
 Đổi Committer hoặc parent làm đổi SHA của commit. Bảng dưới chỉ đối chiếu metadata; không phải một lần chạy RTL/CI mới. Mỗi cặp có cùng tree SHA, được kiểm trong `COMMIT_METADATA.json`.
 
@@ -26,4 +26,4 @@ git -C F10_CI_source rev-parse HEAD
 
 Chạy từ thư mục gốc repo. HEAD của bản clone phải là `298e12b0f79a326343315beee1697f55e2946403`. Bundle giữ nguyên lịch sử của source CI, độc lập với khả năng GitHub giữ các commit không còn trên nhánh main.
 
-Toàn bộ source RTL/TB/scripts/flow/config không đổi trong lần cập nhật này. Source gốc, Author và bản ghi CI không được thay bằng thông tin của metadata mới.
+Toàn bộ source RTL/TB/scripts/flow/config không đổi trong lần cập nhật này. Source gốc, Author gốc trong bundle và bản ghi CI được giữ nguyên; không gán số liệu CI cho SHA metadata mới.
