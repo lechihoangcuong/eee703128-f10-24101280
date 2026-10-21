@@ -50,3 +50,7 @@ Xem [phân tích raw chi tiết](PHYSICAL_ANALYSIS.md), [dữ liệu phân tích
 GDS chính: `selected/physical/final/gds/tt_um_24101280_f10.gds`,1187254byte, SHA256 `a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d`. Render2D KLayout nằm trong artifact; hình3D bổ sung sau CI chỉ tách lớp các polygon metal cấp top theo z minh họa, không phải bề dày công nghệ hay mô hình3D đầy đủ.
 
 Thông tin giao diện còn phải nêu với giảng viên: START ở `uio_in[1]` là đề xuất tích hợp, requester nằm trong RTL còn responder nằm trong TB; chưa coi đó là phê duyệt của giảng viên. Input/peer hợp tác đồng bộ, CDC bên ngoài phạm vi. Các kết quả trên không chứng minh mọi chuỗi input hoặc mọi peer vi phạm đều được bắt.
+
+## Khôi phục source CI sau cập nhật metadata commit
+
+Trường Committer trên main được cập nhật ngày 21/10/2026; các SHA mới không thay SHA đã thực thi của run này. `CI_SOURCE_HISTORY.bundle` giữ nguyên bốn commit nguồn đến `298e12b`. Xem [bảng đối chiếu và lệnh clone bundle](../../../docs/COMMIT_METADATA.md). Author, nội dung và các artifacts của run được giữ nguyên.

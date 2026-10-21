@@ -63,3 +63,7 @@ Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lec
 Kiểm thêm deadline hai pha và giới hạn đối tác: `bash diagnostics/contract_bounds/run.sh`. Thử sức bắt lỗi của checker: `bash scripts/run_mutations.sh`. Tất cả chạy được từ repo; giữ riêng các log FAIL có chủ ý.
 
 Không đồng nhất “CI xanh” với “đã hiểu và đã đạt mọi tiêu chí”. Repo/CI/GDS đã có bằng chứng thật; còn phải giải thích waveform, 22 FF, phân biệt DRC/LVS với slew, rà soát giả định giao diện và tuân thủ cách nộp của lớp.
+
+## Metadata commit và nguồn CI
+
+Committer đã được gắn với tài khoản GitHub của chủ kho. [Bảng đối chiếu commit](docs/COMMIT_METADATA.md) xác nhận từng cây tệp được giữ nguyên. Để checkout source của CI cũ, dùng `CI_SOURCE_HISTORY.bundle` theo hướng dẫn trong bảng; mã source CI trong báo cáo vẫn là lần chạy thực tế.
