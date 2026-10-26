@@ -1,0 +1,20 @@
+* text=auto eol=lf
+*.sv text eol=lf
+*.v text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.log text eol=lf
+*.vcd text eol=lf
+*.svg text eol=lf
+*.png binary
+*.pdf binary
+*.zip binary
+diagnostics/mutation_smoke/**/mutant_core.sv -text
+# Retain exact CI artifact and checksum bytes, including original line endings.
+evidence/github-actions/** -text

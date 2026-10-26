@@ -1,0 +1,124 @@
+# =====================================================================
+#  EEE703128 - RTL-to-GDSII tren GitHub Actions
+#
+#  DAY LA CONG A: bai nop phai co repo ca nhan + lich su commit + link
+#  den mot lan chay CI. Thieu la khong duoc cham tiep.
+#
+#  CACH DUNG
+#   1. Tao repo ca nhan. De private cung duoc, nho them giang vien lam
+#      collaborator de cham.
+#   2. Chep file nay vao dung duong dan  .github/workflows/rtl2gds.yml
+#   3. Sua ba bien trong muc `env` ben duoi cho khop de cua minh.
+#   4. Commit va push. Vao tab "Actions" de xem no chay.
+#   5. Chay xong, bam vao lan chay do de lay LINK - do la link CI phai nop.
+#
+#  Flow chay tren may cua GitHub chu khong phai may minh, nen ket qua o
+#  day la bang chung khach quan: ai bam vao link cung chay lai duoc.
+# =====================================================================
+name: RTL to GDSII
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+env:
+  # ---- SUA BA DONG NAY CHO KHOP DE CUA MINH -----------------------
+  MA_DE: A01
+  DESIGN_NAME: a01_ripple_adder
+  CONFIG: config.json
+  # -----------------------------------------------------------------
+
+jobs:
+  mo-phong:
+    name: 1 - Mo phong RTL (Icarus Verilog)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cai Icarus Verilog
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+
+      - name: Ghi lai phien ban cong cu
+        run: |
+          iverilog -V | head -1 | tee tool_versions.txt
+          echo "Ngay chay: $(date -Is)" | tee -a tool_versions.txt
+
+      - name: Bien dich va chay testbench
+        run: |
+          iverilog -g2012 -o sim.vvp rtl/*.sv tb/*.sv
+          vvp sim.vvp | tee simulation.log
+
+      - name: Kiem log - phai co PASS va khong duoc co loi
+        run: |
+          # Khong tin ma thoat cua vvp: no van tra 0 ngay ca khi testbench
+          # bao FAIL. Phai doc chinh noi dung log.
+          if grep -qiE "FATAL|mismatch|\bFAIL\b" simulation.log; then
+            echo "::error::Testbench bao loi - xem simulation.log"
+            exit 1
+          fi
+          if ! grep -qi "PASS" simulation.log; then
+            echo "::error::Khong thay dong PASS nao trong log"
+            exit 1
+          fi
+          echo "Mo phong dat."
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mo-phong-${{ env.MA_DE }}
+          path: |
+            simulation.log
+            tool_versions.txt
+            *.vcd
+          if-no-files-found: warn
+
+  rtl2gds:
+    name: 2 - RTL-to-GDSII (LibreLane + sky130A)
+    runs-on: ubuntu-latest
+    needs: mo-phong
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cai Nix kem bo nho dem nhi phan cua FOSSi
+        # Khong co bo nho dem nay thi Nix se TU BIEN DICH OpenROAD - rat lau.
+        uses: cachix/install-nix-action@v27
+        with:
+          extra_nix_config: |
+            extra-substituters = https://nix-cache.fossi-foundation.org
+            extra-trusted-public-keys = nix-cache.fossi-foundation.org:3+K59iFwXqKsL7BNu6Guy0v+uTlwsxYQxjspXzqLYQs=
+            extra-experimental-features = nix-command flakes
+
+      - name: Lay LibreLane
+        run: git clone --depth 1 https://github.com/librelane/librelane ~/librelane
+
+      - name: Chay flow
+        run: |
+          cd ~/librelane
+          nix-shell --run "cd '$GITHUB_WORKSPACE' && librelane --version && librelane '$CONFIG'"
+
+      - name: Kiem SAN PHAM, khong chi kiem ma thoat
+        run: |
+          # Ma thoat 0 chi noi "tien trinh ket thuc binh thuong". No KHONG
+          # noi "da ra san pham". Phai kiem san pham that.
+          GDS=$(find . -name "*.gds" | head -1)
+          MJ=$(find . -name "metrics.json" | head -1)
+          if [ -z "$GDS" ]; then echo "::error::Khong sinh duoc file GDS"; exit 1; fi
+          if [ -z "$MJ" ];  then echo "::error::Khong co metrics.json";   exit 1; fi
+          echo "GDS: $GDS"
+          echo "--- Chi so chinh, chep vao bao cao ---"
+          python3 .github/doc_metrics.py "$MJ"
+
+      - uses: actions/upload-artifact@v4
+        # Tai len CA KHI FLOW HONG - nhat ky loi cung la bang chung hop le.
+        if: always()
+        with:
+          name: rtl2gds-${{ env.MA_DE }}
+          path: |
+            **/runs/**/final/**
+            **/runs/**/*.log
+            **/metrics.json
+            **/*.gds
+          if-no-files-found: warn

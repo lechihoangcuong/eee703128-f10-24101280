@@ -1,0 +1,79 @@
+[
+  {
+    "name": "normal_4phase",
+    "title": "F10 · Bắt tay bình thường",
+    "size": [
+      1200,
+      740
+    ],
+    "source_sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+    "description": "Actual VCD events; window 35..90 ns",
+    "clipping": []
+  },
+  {
+    "name": "timeout_no_ack",
+    "title": "F10 · Hết hạn khi không có ACK",
+    "size": [
+      1200,
+      740
+    ],
+    "source_sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+    "description": "Actual VCD events; window 187..250 ns",
+    "clipping": []
+  },
+  {
+    "name": "back_to_back",
+    "title": "F10 · Hai giao dịch liên tiếp",
+    "size": [
+      1200,
+      740
+    ],
+    "source_sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+    "description": "Actual VCD events; window 327..467 ns",
+    "clipping": []
+  },
+  {
+    "name": "system_context",
+    "title": "F10 · Ngữ cảnh hệ thống",
+    "size": [
+      1200,
+      740
+    ],
+    "source_sha256": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "description": "System-level connections and stated synchronous input assumption",
+    "clipping": []
+  },
+  {
+    "name": "block_fsm",
+    "title": "F10 · Kiến trúc FSM và bộ đếm chờ",
+    "size": [
+      1200,
+      880
+    ],
+    "source_sha256": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "description": "FSM state set, retained limit, wait counter, deadline logic and outputs",
+    "clipping": []
+  },
+  {
+    "name": "design_lifecycle",
+    "title": "F10 · Vòng đời thiết kế và mức bằng chứng",
+    "size": [
+      1200,
+      790
+    ],
+    "source_sha256": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "description": "Completed CI and physical design; STA includes outstanding SS slew violations; fabrication outside scope",
+    "clipping": []
+  },
+  {
+    "name": "fsm_transitions",
+    "title": "F10 · Sơ đồ chuyển trạng thái",
+    "size": [
+      1200,
+      840
+    ],
+    "source_sha256": "10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4",
+    "description": "Exact transition conditions from the supplied synchronous FSM RTL",
+    "clipping": []
+  }
+]

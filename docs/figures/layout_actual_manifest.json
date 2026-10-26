@@ -1,0 +1,305 @@
+{
+  "ci_run_id": 39390858919,
+  "ci_run_url": "https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919",
+  "executed_source_commit": "298e12b0f79a326343315beee1697f55e2946403",
+  "gds_artifact_relative_path": "output/ci_live/physical_artifact/runs/RUN_2026-10-20_08-07-12/final/gds/tt_um_24101280_f10.gds",
+  "gds_size_bytes": 1187254,
+  "gds_sha256": "a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d",
+  "original_render_artifact_relative_path": "output/ci_live/physical_artifact/runs/RUN_2026-10-20_08-07-12/final/render/tt_um_24101280_f10.png",
+  "original_render_sha256": "bd9758e61fe3c4abfc88648e0ff2469a222376f7b12ed137a7416cf1681c3a40",
+  "layout_actual_sha256": "bd9758e61fe3c4abfc88648e0ff2469a222376f7b12ed137a7416cf1681c3a40",
+  "render_unchanged": true,
+  "render_size_px": [
+    1000,
+    1000
+  ],
+  "top_cell": "tt_um_24101280_f10",
+  "cell_definitions": 41,
+  "database_unit_m": 1e-09,
+  "user_unit_m": 1e-06,
+  "top_direct_polygon_path_bbox_um": [
+    0.0,
+    0.0,
+    160.0,
+    160.0
+  ],
+  "configured_die_area_um": [
+    0,
+    0,
+    160,
+    160
+  ],
+  "gds_layer_type_element_counts": [
+    {
+      "layer": 64,
+      "type": 5,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 64,
+      "type": 16,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 64,
+      "type": 20,
+      "count_in_cell_definitions": 40
+    },
+    {
+      "layer": 64,
+      "type": 59,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 65,
+      "type": 20,
+      "count_in_cell_definitions": 106
+    },
+    {
+      "layer": 65,
+      "type": 44,
+      "count_in_cell_definitions": 2
+    },
+    {
+      "layer": 66,
+      "type": 15,
+      "count_in_cell_definitions": 2
+    },
+    {
+      "layer": 66,
+      "type": 20,
+      "count_in_cell_definitions": 165
+    },
+    {
+      "layer": 66,
+      "type": 44,
+      "count_in_cell_definitions": 997
+    },
+    {
+      "layer": 67,
+      "type": 5,
+      "count_in_cell_definitions": 281
+    },
+    {
+      "layer": 67,
+      "type": 16,
+      "count_in_cell_definitions": 292
+    },
+    {
+      "layer": 67,
+      "type": 20,
+      "count_in_cell_definitions": 807
+    },
+    {
+      "layer": 67,
+      "type": 44,
+      "count_in_cell_definitions": 1123
+    },
+    {
+      "layer": 68,
+      "type": 5,
+      "count_in_cell_definitions": 82
+    },
+    {
+      "layer": 68,
+      "type": 16,
+      "count_in_cell_definitions": 82
+    },
+    {
+      "layer": 68,
+      "type": 20,
+      "count_in_cell_definitions": 595
+    },
+    {
+      "layer": 68,
+      "type": 44,
+      "count_in_cell_definitions": 2044
+    },
+    {
+      "layer": 69,
+      "type": 5,
+      "count_in_cell_definitions": 24
+    },
+    {
+      "layer": 69,
+      "type": 16,
+      "count_in_cell_definitions": 24
+    },
+    {
+      "layer": 69,
+      "type": 20,
+      "count_in_cell_definitions": 500
+    },
+    {
+      "layer": 69,
+      "type": 44,
+      "count_in_cell_definitions": 1294
+    },
+    {
+      "layer": 70,
+      "type": 5,
+      "count_in_cell_definitions": 19
+    },
+    {
+      "layer": 70,
+      "type": 16,
+      "count_in_cell_definitions": 19
+    },
+    {
+      "layer": 70,
+      "type": 20,
+      "count_in_cell_definitions": 274
+    },
+    {
+      "layer": 70,
+      "type": 44,
+      "count_in_cell_definitions": 1275
+    },
+    {
+      "layer": 71,
+      "type": 5,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 71,
+      "type": 16,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 71,
+      "type": 20,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 71,
+      "type": 44,
+      "count_in_cell_definitions": 50
+    },
+    {
+      "layer": 72,
+      "type": 5,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 72,
+      "type": 16,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 72,
+      "type": 20,
+      "count_in_cell_definitions": 10
+    },
+    {
+      "layer": 78,
+      "type": 44,
+      "count_in_cell_definitions": 40
+    },
+    {
+      "layer": 81,
+      "type": 4,
+      "count_in_cell_definitions": 40
+    },
+    {
+      "layer": 83,
+      "type": 44,
+      "count_in_cell_definitions": 44
+    },
+    {
+      "layer": 93,
+      "type": 44,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 94,
+      "type": 20,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 95,
+      "type": 20,
+      "count_in_cell_definitions": 43
+    },
+    {
+      "layer": 122,
+      "type": 16,
+      "count_in_cell_definitions": 41
+    },
+    {
+      "layer": 235,
+      "type": 4,
+      "count_in_cell_definitions": 1
+    },
+    {
+      "layer": 236,
+      "type": 0,
+      "count_in_cell_definitions": 37
+    }
+  ],
+  "tool": "Actual LibreLane KLayout render from CI artifact; Python standard library GDS record inspection and Pillow crop only",
+  "detail_crop_source_px": [
+    45,
+    300,
+    655,
+    855
+  ],
+  "detail_resampling": "nearest neighbour",
+  "limits": [
+    "Layer/type counts are counts in cell definitions, not a flattened physical count.",
+    "The reported direct bbox uses top-level BOUNDARY/PATH XY records only, not hierarchy transforms.",
+    "Die area comes from the flow configuration and is not standard-cell area.",
+    "The rendering is a two-dimensional layout view, not fabricated hardware evidence.",
+    "No three-dimensional height or layer thickness has been inferred from the GDS.",
+    "This inspection does not replace DRC, LVS or timing reports."
+  ],
+  "qualitative_3d": {
+    "image": "layout_actual_3d.png",
+    "image_sha256": "02aea482630d67a5cb50bafaba19d9ba7f267ff9161693b536b226f06c58cdae",
+    "svg": "layout_actual_3d.svg",
+    "script": "render_actual_layout_3d.py",
+    "x_y_source": "Actual top-level BOUNDARY polygons on GDS drawing datatype 20; coordinates unchanged in micrometres before affine projection",
+    "z": "Arbitrary layer-index separation (218 display pixels); no physical units, layer thickness or process height",
+    "scope": "Top-level routing/power only; hierarchy references, paths, vias, cell-internal shapes, devices and substrate intentionally omitted",
+    "top_polygon_counts_by_layer": {
+      "met1": 510,
+      "met2": 500,
+      "met3": 274,
+      "met4": 10,
+      "met5": 10
+    },
+    "all_top_boundary_counts": {
+      "235:4": 1,
+      "67:20": 507,
+      "67:44": 507,
+      "68:20": 510,
+      "68:44": 2044,
+      "69:20": 500,
+      "69:44": 1294,
+      "70:20": 274,
+      "70:44": 1275,
+      "71:20": 10,
+      "71:44": 50,
+      "72:20": 10,
+      "72:16": 10,
+      "71:16": 10,
+      "70:16": 19,
+      "69:16": 24
+    },
+    "ignored_top_elements": {
+      "record_0x0a": 5462,
+      "record_0x08": 5741,
+      "record_0x0c": 63
+    },
+    "layer_map_source": "https://skywater-pdk.readthedocs.io/en/main/rules/layers.html#gds-layers-information",
+    "layer_map_checked_date": "2026-10-20",
+    "layer_map": {
+      "68:20": "met1",
+      "69:20": "met2",
+      "70:20": "met3",
+      "71:20": "met4",
+      "72:20": "met5"
+    },
+    "interpretation_limit": "A qualitative exploded 3D view of this actual design's routing polygons, not a technology-accurate cross-section or proof of fabricated hardware",
+    "combined_panel": "layout_actual_panel.png"
+  }
+}

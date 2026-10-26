@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740">
+<title>F10 · Bắt tay bình thường</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="36.00" y="25.00" fill="#15324d" font-family="Arial, sans-serif" font-size="34" font-weight="bold" dominant-baseline="text-before-edge">F10 · Bắt tay bình thường</text>
+<text x="36.00" y="78.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">VCD mô phỏng RTL · N=8 · clock 10 ns</text>
+<polyline points="246.36,155.00 246.36,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="231.86" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">40</text>
+<polyline points="429.09,155.00 429.09,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="414.59" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">50</text>
+<polyline points="611.82,155.00 611.82,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="597.32" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">60</text>
+<polyline points="794.55,155.00 794.55,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="780.05" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">70</text>
+<polyline points="977.27,155.00 977.27,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="962.77" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">80</text>
+<polyline points="1160.00,155.00 1160.00,550.00" fill="none" stroke="#dbe4ec" stroke-width="1"/>
+<text x="1145.50" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">90</text>
+<text x="36.00" y="119.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ns</text>
+<polyline points="337.73,155.00 337.73,550.00" fill="none" stroke="#137d59" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="321.73" y="148.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">P1</text>
+<polyline points="429.09,155.00 429.09,550.00" fill="none" stroke="#7244a5" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="413.09" y="148.00" fill="#7244a5" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">P2</text>
+<polyline points="703.18,155.00 703.18,550.00" fill="none" stroke="#137d59" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="687.18" y="148.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">P3</text>
+<polyline points="794.55,155.00 794.55,550.00" fill="none" stroke="#7244a5" stroke-width="2" stroke-dasharray="6 6"/>
+<text x="778.55" y="148.00" fill="#7244a5" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">P4</text>
+<text x="108.00" y="172.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">clk</text>
+<polyline points="155.00,208.00 1160.00,208.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,174.00 246.36,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="246.36,174.00 246.36,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="246.36,198.00 337.73,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="337.73,198.00 337.73,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="337.73,174.00 429.09,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="429.09,174.00 429.09,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="429.09,198.00 520.45,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="520.45,198.00 520.45,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="520.45,174.00 611.82,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="611.82,174.00 611.82,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="611.82,198.00 703.18,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="703.18,198.00 703.18,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="703.18,174.00 794.55,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="794.55,174.00 794.55,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="794.55,198.00 885.91,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="885.91,198.00 885.91,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="885.91,174.00 977.27,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="977.27,174.00 977.27,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="977.27,198.00 1068.64,198.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="1068.64,198.00 1068.64,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="1068.64,174.00 1160.00,174.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<text x="82.50" y="220.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">rst_n</text>
+<polyline points="155.00,256.00 1160.00,256.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,222.00 1160.00,222.00" fill="none" stroke="#526b80" stroke-width="3"/>
+<text x="90.00" y="268.00" fill="#195fa8" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">start</text>
+<polyline points="155.00,304.00 1160.00,304.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,294.00 246.36,294.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="246.36,294.00 246.36,270.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="246.36,270.00 429.09,270.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="429.09,270.00 429.09,294.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<polyline points="429.09,294.00 1160.00,294.00" fill="none" stroke="#195fa8" stroke-width="3"/>
+<text x="96.50" y="316.00" fill="#7244a5" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">ack</text>
+<polyline points="155.00,352.00 1160.00,352.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,342.00 429.09,342.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="429.09,342.00 429.09,318.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="429.09,318.00 794.55,318.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="794.55,318.00 794.55,342.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<polyline points="794.55,342.00 1160.00,342.00" fill="none" stroke="#7244a5" stroke-width="3"/>
+<text x="99.50" y="364.00" fill="#137d59" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">req</text>
+<polyline points="155.00,400.00 1160.00,400.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,390.00 337.73,390.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="337.73,390.00 337.73,366.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="337.73,366.00 703.18,366.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="703.18,366.00 703.18,390.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<polyline points="703.18,390.00 1160.00,390.00" fill="none" stroke="#137d59" stroke-width="3"/>
+<text x="77.50" y="412.00" fill="#ad5600" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">done</text>
+<polyline points="155.00,448.00 1160.00,448.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,438.00 885.91,438.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<polyline points="885.91,438.00 885.91,414.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<polyline points="885.91,414.00 1068.64,414.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<polyline points="1068.64,414.00 1068.64,438.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<polyline points="1068.64,438.00 1160.00,438.00" fill="none" stroke="#ad5600" stroke-width="3"/>
+<text x="55.00" y="460.00" fill="#b14549" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">timeout</text>
+<polyline points="155.00,496.00 1160.00,496.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,486.00 1160.00,486.00" fill="none" stroke="#b14549" stroke-width="3"/>
+<text x="34.00" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">state[3:0]</text>
+<polyline points="155.00,544.00 1160.00,544.00" fill="none" stroke="#edf1f5" stroke-width="1"/>
+<polyline points="155.00,522.00 161.00,509.00 331.73,509.00 337.73,522.00 331.73,535.00 161.00,535.00 155.00,522.00" fill="none" stroke="#15324d" stroke-width="2"/>
+<polygon points="155.00,522.00 161.00,509.00 331.73,509.00 337.73,522.00 331.73,535.00 161.00,535.00" fill="#f1f5f9" stroke="#15324d" stroke-width="2"/>
+<text x="239.11" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">0</text>
+<polyline points="337.73,522.00 343.73,509.00 514.45,509.00 520.45,522.00 514.45,535.00 343.73,535.00 337.73,522.00" fill="none" stroke="#15324d" stroke-width="2"/>
+<polygon points="337.73,522.00 343.73,509.00 514.45,509.00 520.45,522.00 514.45,535.00 343.73,535.00" fill="#f1f5f9" stroke="#15324d" stroke-width="2"/>
+<text x="421.84" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">1</text>
+<polyline points="520.45,522.00 526.45,509.00 697.18,509.00 703.18,522.00 697.18,535.00 526.45,535.00 520.45,522.00" fill="none" stroke="#15324d" stroke-width="2"/>
+<polygon points="520.45,522.00 526.45,509.00 697.18,509.00 703.18,522.00 697.18,535.00 526.45,535.00" fill="#f1f5f9" stroke="#15324d" stroke-width="2"/>
+<text x="604.57" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">2</text>
+<polyline points="703.18,522.00 709.18,509.00 879.91,509.00 885.91,522.00 879.91,535.00 709.18,535.00 703.18,522.00" fill="none" stroke="#15324d" stroke-width="2"/>
+<polygon points="703.18,522.00 709.18,509.00 879.91,509.00 885.91,522.00 879.91,535.00 709.18,535.00" fill="#f1f5f9" stroke="#15324d" stroke-width="2"/>
+<text x="787.30" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">3</text>
+<polyline points="885.91,522.00 891.91,509.00 1154.00,509.00 1160.00,522.00 1154.00,535.00 891.91,535.00 885.91,522.00" fill="none" stroke="#15324d" stroke-width="2"/>
+<polygon points="885.91,522.00 891.91,509.00 1154.00,509.00 1160.00,522.00 1154.00,535.00 891.91,535.00" fill="#f1f5f9" stroke="#15324d" stroke-width="2"/>
+<text x="1015.70" y="508.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">0</text>
+<text x="36.00" y="578.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="bold" dominant-baseline="text-before-edge">P1 req↑ 45 ns · P2 ack↑ 50 ns · P3 req↓ 65 ns · P4 ack↓ 70 ns</text>
+<text x="36.00" y="618.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">ACK được FSM lấy mẫu tại 55 ns; done bật tại 75 ns.</text>
+<text x="36.00" y="658.00" fill="#15324d" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">state: 0=IDLE · 1=REQ_HIGH · 2=ACK_HIGH · 3=WAIT_ACK_LOW</text>
+<text x="36.00" y="700.00" fill="#526b80" font-family="Arial, sans-serif" font-size="26" font-weight="normal" dominant-baseline="text-before-edge">SHA-256 VCD: 3678ae4b0a8b0a4f…  |  Nguồn: f10_core_selfcheck.vcd</text>
+</svg>
