@@ -1,0 +1,23 @@
+{
+  "top": "f10_handshake_controller",
+  "total_cells": 209,
+  "flip_flops": 22,
+  "latches": 0,
+  "combinational_cells": 187,
+  "cell_types": {
+    "$_ANDNOT_": 52,
+    "$_AND_": 6,
+    "$_MUX_": 15,
+    "$_NAND_": 4,
+    "$_NOR_": 11,
+    "$_NOT_": 9,
+    "$_ORNOT_": 11,
+    "$_OR_": 56,
+    "$_SDFFE_PN0P_": 12,
+    "$_SDFF_PN0_": 10,
+    "$_XNOR_": 1,
+    "$_XOR_": 22
+  },
+  "synthesis": "Yosys generic, flattened; scope metadata excluded",
+  "limits": "No PDK, mapped area, STA, power, layout, DRC or LVS result"
+}

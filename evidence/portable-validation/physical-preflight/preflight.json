@@ -1,0 +1,23 @@
+{
+  "utc": "2026-10-20T02:50:13.020458+00:00",
+  "kind": "availability_preflight_only",
+  "flow_attempted": false,
+  "tools": {
+    "librelane": null,
+    "openroad": null,
+    "sta": null,
+    "magic": null,
+    "klayout": null,
+    "nix-shell": null,
+    "docker": null
+  },
+  "pdk_environment": {
+    "PDK_ROOT": null,
+    "PDK": null,
+    "STD_CELL_LIBRARY": null
+  },
+  "default_pdk_roots": {
+    "/home/Leecg/.ciel": false,
+    "/home/Leecg/.volare": false
+  }
+}

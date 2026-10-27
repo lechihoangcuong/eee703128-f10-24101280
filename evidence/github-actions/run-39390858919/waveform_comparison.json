@@ -1,0 +1,13 @@
+{
+  "local": {
+    "path": "work\\F10\\05_VERIFICATION\\runs\\current_core\\f10_core_selfcheck.vcd",
+    "sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+    "normalized_sha256": "a130f74a4a05ee784e8585a097e1c04978c95eb085f7ee01a91549b34dd70655"
+  },
+  "ci": {
+    "path": "output\\ci_live\\functional_artifact\\simulation\\core\\f10_core_selfcheck.vcd",
+    "sha256": "df1a977ee412332f5c4212c0ed9e516d7906e5b87f48f93e87d17ca7f8aff0ea",
+    "normalized_sha256": "a130f74a4a05ee784e8585a097e1c04978c95eb085f7ee01a91549b34dd70655"
+  },
+  "identical_after_only_date_version_normalization": true
+}

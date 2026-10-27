@@ -1,0 +1,1 @@
+timeout 30s verilator --lint-only -Wall -Wno-fatal --top-module tt_um_24101280_f10 04_IMPLEMENTATION/rtl/f10_handshake_controller.sv 04_IMPLEMENTATION/rtl/f10_tiny_tapeout_top.sv 04_IMPLEMENTATION/rtl/tt_um_24101280_f10.sv

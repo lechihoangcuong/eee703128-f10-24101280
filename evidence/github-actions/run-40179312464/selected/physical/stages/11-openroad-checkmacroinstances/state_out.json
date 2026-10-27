@@ -1,0 +1,14 @@
+{
+    "json_h": "/home/runner/work/eee703128-f10-24101280/eee703128-f10-24101280/runs/RUN_2026-10-25_09-08-50/05-yosys-jsonheader/tt_um_24101280_f10.h.json",
+    "nl": "/home/runner/work/eee703128-f10-24101280/eee703128-f10-24101280/runs/RUN_2026-10-25_09-08-50/06-yosys-synthesis/tt_um_24101280_f10.nl.v",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 1,
+        "design__inferred_latch__count": 0,
+        "design__instance__count": 133,
+        "design__instance__area": 1383.8272,
+        "design__instance_unmapped__count": 0,
+        "synthesis__check_error__count": 0
+    }
+}

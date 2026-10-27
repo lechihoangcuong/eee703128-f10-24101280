@@ -12,13 +12,13 @@
 | Portable rerun | `evidence/portable-validation/` | Log mới chạy từ layout repo được bàn giao |
 | Physical preflight | `evidence/portable-validation/physical-preflight/` | Chỉ tra tool/PDK có sẵn; không phải một lần physical flow đã chạy |
 | Waveform chú thích | `docs/figures/` | Ảnh và SVG từ dữ liệu mô phỏng, xem manifest |
-| GitHub Actions thật | `evidence/github-actions/run-39390858919/` | Hai artifact ZIP nguyên byte; metadata run/jobs; summaries, versions, hash nguồn và physical metrics/log được chọn |
+| GitHub Actions thật | `evidence/github-actions/run-40179312464/` | Hai artifact ZIP nguyên byte; metadata run/jobs; summaries, versions, hash nguồn và physical metrics/log được chọn |
 
 Các tệp `summary.json`, mã thoát, hash nguồn, `tool_versions.txt` và log phải đọc cùng nhau. Không dựa riêng vào dòng “PASSED”. Tổng số 22 FF trong lần tổng hợp generic này gồm count 8, timeout chốt 8, state quan sát 4, DONE 1, TIMEOUT 1; wrapper thêm một AND không thêm FF. Không suy số FF chỉ từ số trạng thái.
 
 Các mutation FAIL có chủ ý được giữ riêng trong thư mục làm việc gốc, không trộn vào PASS của thiết kế bàn giao. Đây không phải số liệu code coverage hay formal proof. Sweep đủ 256 N cho bốn kịch bản deadline đã định nghĩa, chưa duyệt mọi chuỗi input có thể có.
 
-Ngày 20/10/2026 đã có [CI run 39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) trên commit nguồn `298e12b0f79a326343315beee1697f55e2946403`; hai job thành công. Kết quả local trên đây được giữ đúng nhãn local; CI là lần chạy riêng. Xem `evidence/github-actions/run-39390858919/CI_EVIDENCE.md` và `docs/PHYSICAL_FLOW.md` để đọc GDS, area, STA, power, CTS, DRC/LVS và những vi phạm/giới hạn còn lại. Không dùng số trong tài liệu nguồn cũ thay cho metrics mới.
+Ngày 25/10/2026 đã có [CI run 40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464) trên commit nguồn `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f`; hai job thành công. Kết quả local trên đây được giữ đúng nhãn local; CI là lần chạy riêng. Xem `evidence/github-actions/run-40179312464/CI_EVIDENCE.md` và `docs/PHYSICAL_FLOW.md` để đọc GDS, area, STA, power, CTS, DRC/LVS và những vi phạm/giới hạn còn lại. Không dùng số trong tài liệu nguồn cũ thay cho metrics mới.
 
 
 ## Bổ sung E3 và E5, chạy lại từ repo
@@ -29,10 +29,14 @@ Ngày 20/10/2026 đã có [CI run 39390858919](https://github.com/lechihoangcuon
 
 ## Đối chiếu nguồn của CI
 
-Đã kiểm 16 tệp nguồn khác nhau trong các `source_sha256.txt` của CI khớp byte với bản bàn giao, gồm RTL, testbench, script và mutant tách riêng. Hash lõi giữ nguyên `10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4`. Hai ZIP có SHA256 khớp digest GitHub và kiểm CRC không lỗi. `verification.json` ghi lại phép đối chiếu; `SHA256SUMS` bao phủ bản lưu evidence.
+Đã kiểm đủ 22 tệp đầu vào giữa commit CI `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f` và snapshot mã nguồn nộp `7ae2df482cbf7f316b2eac5e066c0b33ebad88eb`: tất cả trùng blob SHA. Bảng chi tiết ở `metadata/source_comparison.json`. Hash lõi giữ nguyên `10cca64461908d5cbe1da1d36be07633c613b92f1c2daeff7fd2ba414cccdfe4`. Hai ZIP khớp digest GitHub và kiểm CRC không lỗi; `verification.json` ghi đối chiếu 307 metrics, GDS và CSV.
 
 CI dùng Icarus 12.0, Yosys 0.33 (`2584903a060`), Verilator 5.020. Không gọi chúng là Yosys 0.52/Verilator 5.032 của máy local. Các tổng generic trùng nhau ở hai môi trường nhưng đó vẫn là hai lần chạy khác nhau. Cảnh báo thiếu timeunit và `START_INTERNAL` không dùng vẫn được giữ trong log; exit 0 không đồng nghĩa không có cảnh báo.
 
-Toàn bộ VCD/netlist/GDS/SPEF/SDF/Liberty và log gốc nằm trong hai ZIP nguyên bản. Thư mục `selected/` chỉ là bản chép byte những tệp tiện đọc; không thay thế artifact gốc. Các commit tài liệu sau run không làm thay đổi source commit mà run đã thực thi.
+Hai ZIP nguyên bản giữ VCD, netlist generic, GDS, metrics và các log/state đã được workflow tải lên; không khẳng định artifact chứa mọi tệp đầu ra DEF/SPEF/SDF/ODB của flow. Thư mục `selected/` chỉ là bản chép byte những tệp tiện đọc; không thay thế artifact gốc. Các commit tài liệu sau run không làm thay đổi source commit mà run đã thực thi.
 
-`waveform_comparison.json` đối chiếu VCD core local với CI: chỉ chuẩn hóa `$date`/`$version`, còn khai báo và toàn bộ sự kiện giống nhau; normalizedSHA256 chung `a130f74a4a05ee784e8585a097e1c04978c95eb085f7ee01a91549b34dd70655`. Vì vậy các cạnh trên hình chú thích từ local được CI lặp lại chính xác, nhưng rawhash vẫn khác và được giữ riêng.
+`waveform_comparison.json` đối chiếu VCD core local với CI: chỉ chuẩn hóa `$date`/`$version`, còn khai báo và toàn bộ sự kiện giống nhau; normalizedSHA256 chung `a9c15b8f53a5d8ceecbf9a5ebd6f750e0f5fa833901ef649c1f50aa0f100426a`. Vì vậy các cạnh trên hình chú thích từ local được CI lặp lại chính xác, nhưng rawhash vẫn khác và được giữ riêng.
+
+## Bản lưu trước
+
+`run-39390858919` được giữ nguyên để truy vết lịch sử. Nguồn CI hiện hành của PDF là `run-40179312464`; không dùng link cũ trả 404 làm link CI chính.

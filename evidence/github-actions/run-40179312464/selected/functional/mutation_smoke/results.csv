@@ -1,0 +1,4 @@
+mutant,compile_exit,simulation_exit,detected,classification
+off_by_one,0,1,YES,INTENTIONAL_MUTANT_FAILURE_CAUGHT
+deadline_priority,0,1,YES,INTENTIONAL_MUTANT_FAILURE_CAUGHT
+live_timeout_reload,0,1,YES,INTENTIONAL_MUTANT_FAILURE_CAUGHT

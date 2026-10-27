@@ -2,7 +2,7 @@
 
 Sinh viên: **Lê Chí Hoàng Cường — 24101280 — N01**.
 
-Bảng này phân biệt kết quả đã kiểm local, CI thật và điều kiện nộp cần sinh viên hoàn tất. Đây không phải giấy nghiệm thu của giảng viên. Ngày20/10/2026 đã kiểm repo công khai và hai job CI thành công; physical còn11pin vi phạm slew cùng các giả định SDC/IR đã nêu rõ.
+Bảng này phân biệt kết quả đã kiểm local, CI thật và điều kiện nộp cần sinh viên hoàn tất. Đây không phải giấy nghiệm thu của giảng viên. Ngày25/10/2026 đã kiểm repo công khai và hai job CI thành công; physical còn11pin vi phạm slew cùng các giả định SDC/IR đã nêu rõ.
 
 ## 1. Căn cứ và tài liệu chưa thống nhất
 
@@ -43,12 +43,12 @@ Nguồn đã đối chiếu:
 | R14 | Tổng hợp và giải thích cấu trúc | Lõi209=22FF+187logic;top210=22FF+188logic;0latch | **Có generic local0.52/CI0.33 và mappingSky130133cell/22FF**; không trộn stage |
 | R15 | Repo GitHub cá nhân | [Repo công khai](https://github.com/lechihoangcuong/eee703128-f10-24101280) | **Đã có repo thật và mã nguồn**; user đã duyệt public |
 | R16 | Lịch sử commit thật M1–M5 | Bốn commit nguồn thật, sau đó cập nhật kết quả/tài liệu | Có lịch sử commit và dữ liệu chạy; việc hiểu bài cần sinh viên tự giải thích |
-| R17 | Link CI run — Cổng A | [Run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) trên `298e12b0f79a326343315beee1697f55e2946403` | **Hai job success**; metadata và ZIP được lưu, không chỉ có YAML |
+| R17 | Link CI run — Cổng A | [Run40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464) trên `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f` | **Hai job success**; metadata và ZIP được lưu, không chỉ có YAML |
 | R18 | LibreLane/Sky130; STA/power/layout/DRC/LVS | LibreLane3.0.16;Sky130A;GDS;setup+1,314872ns/hold+0,109147ns;DRC/LVS0 | **Có physical CI thật**; còn11pin slewSS,fallbackSDC,power vectorless và IR nguồn giả định; chưa sign-off |
 | R19 | Artifacts hoặc lỗi flow + chẩn đoán | Hai ZIP nguyên byte, hash khớp GitHub;metrics/log/GDS;phân tích nhánh reset gây slew | **Đã lưu artifact và chẩn đoán cảnh báo**; không sửa log để thành sạch |
 | R20 | Đọc CTS vì F10 có clock | 22sink;5buffer cây+2dummyload;final7clockbuffer;skew riseTT0,043615ns | **Đã đọc log CTS/STA**; phân biệt định nghĩa skew và corner |
 | R21 | PDF8–15 trang + phụ lục | Báo cáo chính cập nhậtCI15trang, phụ lục mã17trang | **Có bản cập nhật từ artifact**; QA/render bản cuối được lưu cùng báo cáo |
-| R22 | Repo/commit/CI/LibreLane/PDK/ngày chạy | Run20/10/2026;source298e12b;LibreLane01ddb25;PDK8afc834;resolvedconfig | **Đủ thông tin truy vết lần chạy**; commit tài liệu sau run không phải source commit đã thực thi |
+| R22 | Repo/commit/CI/LibreLane/PDK/ngày chạy | Run25/10/2026;sourceb59c838;LibreLanea09d248;PDK8afc834;resolvedconfig | **Đủ thông tin truy vết lần chạy**; commit tài liệu sau run không phải source commit đã thực thi |
 | R23 | Kết luận có điều kiện | Tài liệu phân biệt RTL/generic/physical/hardware | **Phải giữ trong bản cuối**; không sign-off/tape-out/chế tạo/Fmax |
 | R24 | Vấn đáp5 phút | Có hướng dẫn học, câu hỏi và đáp án để ôn tập | **Cần luyện trình bày và giải thích thiết kế** bằng tín hiệu, trạng thái và kết quả kiểm chứng |
 
@@ -56,11 +56,11 @@ Các trạng thái dựa trên run đã nêu và bản lưu evidence. CI xanh kh
 
 ## 3. Số thực đo, số tham khảo và số chưa có
 
-**Kết quả mới dùng được:** log/VCD/CSV local và hai artifactCIrun39390858919;netlist/stat/design.json/summary generic;finalmetrics/GDS/SDC/STA/CTS/DRC/LVS; các lần chạy mới LabA/B. Mỗi số giữ tên lần chạy, phiên bản và hash nguồn. Giữ riêng nhãn local/CI, vì các phiên bản Yosys/Verilator khác nhau.
+**Kết quả mới dùng được:** log/VCD/CSV local và hai artifactCIrun40179312464;netlist/stat/design.json/summary generic;finalmetrics/GDS/SDC/STA/CTS/DRC/LVS; các lần chạy mới LabA/B. Mỗi số giữ tên lần chạy, phiên bản và hash nguồn. Giữ riêng nhãn local/CI, vì các phiên bản Yosys/Verilator khác nhau.
 
 **Tham khảo nguồn:** khoảng200–290 cell và1×1tile của charter; gợi ý18–19 ô nhớ; README nguồn ghi106cell,22FF,area1019.728µm² hoặc3ns. Không dùng chúng làm số thực đo của bản hiện tại khi thiếu artifact và điều kiện tương ứng.
 
-**Physical đã có số thực:** mapping133cell/1383,8272µm²;final454standardcell/2162,07µm²;die25600µm²;slack vàDRC/LVS như bảng;powerTT285,402435µWước tính vectorless. Xem `docs/PHYSICAL_FLOW.md` và `evidence/github-actions/run-39390858919/PHYSICAL_ANALYSIS.md` để giữ đủ đơn vị/corner/định nghĩa. Render2DKLayout thật; hình3Dbổ sung chỉ tách lớp1304polygonmetal1–5 cấp top theo z minh họa, không đầy đủ hierarchy/via/bề dày công nghệ.
+**Physical đã có số thực:** mapping133cell/1383,8272µm²;final454standardcell/2162,07µm²;die25600µm²;slack vàDRC/LVS như bảng;powerTT285,402435µWước tính vectorless. Xem `docs/PHYSICAL_FLOW.md` và `evidence/github-actions/run-40179312464/PHYSICAL_ANALYSIS.md` để giữ đủ đơn vị/corner/định nghĩa. Render2DKLayout thật; hình3Dbổ sung chỉ tách lớp1304polygonmetal1–5 cấp top theo z minh họa, không đầy đủ hierarchy/via/bề dày công nghệ.
 
 **Chưa được chứng minh:** Fmax đo thực, power silicon, sign-off/chế tạo, CDC bên ngoài hay mọi chuỗi peer vi phạm. Slew11pinSS chưa được sửa. FallbackSDC và vị trí cấp nguồnIR còn là giả định. Thiếu bằng chứng không được thay bằng0.
 

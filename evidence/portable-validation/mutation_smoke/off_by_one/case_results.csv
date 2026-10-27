@@ -1,0 +1,9 @@
+case_id,description,start_ns,end_ns,cycles,checks,errors,result
+TC00_RESET,Reset and idle hold,0,37,4,49,0,PASS
+TC01_NORMAL,Normal complete four-phase handshake,37,87,5,65,0,PASS
+TC02_DELAYED_SUCCESS,Delayed ACK-high and ACK-low before deadline,87,187,10,125,0,PASS
+TC03_NO_ACK,No ACK-high timeout after four waiting cycles,187,247,6,77,6,FAIL
+TC04_ACK_STUCK,ACK-high stuck timeout after four waiting cycles,247,327,8,101,6,FAIL
+TC05_BACK_TO_BACK,Two complete transactions without an idle bubble,327,467,14,177,0,PASS
+TC06_STALE_ACK,Reject start while stale ACK is high and do not queue it,467,557,9,117,0,PASS
+TC07_BUSY_START,Ignore start in all three busy states,557,627,7,86,0,PASS

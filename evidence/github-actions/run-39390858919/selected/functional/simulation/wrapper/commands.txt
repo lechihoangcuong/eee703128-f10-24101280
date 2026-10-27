@@ -1,0 +1,2 @@
+timeout 30s iverilog -g2012 -Wall -s f10_wrapper_tb -o sim.vvp rtl/*.sv tb/f10_wrapper_tb.sv
+timeout 60s vvp sim.vvp

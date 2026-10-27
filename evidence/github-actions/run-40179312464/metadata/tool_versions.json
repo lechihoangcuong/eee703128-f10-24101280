@@ -1,0 +1,27 @@
+{
+  "physical_versions_from_job_log": {
+    "librelane": [
+      "3.0.16.",
+      "3.0.16-",
+      "3.0.16",
+      "3.0.16..."
+    ],
+    "verilator": [
+      "5.044"
+    ],
+    "openroad": [
+      "2026-02-17",
+      "2026-02-17-"
+    ],
+    "magic": [],
+    "netgen": [
+      "1.5.316"
+    ],
+    "klayout": [
+      "0.30.7"
+    ]
+  },
+  "source_job_id": 121126878084,
+  "source_job_url": "https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464/job/121126878084",
+  "librelane_commit": "a09d248c49bd1f7170d41885936f63e4255b1fe5"
+}

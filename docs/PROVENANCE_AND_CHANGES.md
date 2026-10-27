@@ -26,15 +26,15 @@ Tham số `START_INTERNAL` trong core gốc chưa được dùng; lint giữ c�
 
 ## Những nhận định nguồn không được sao chép thành kết quả mới
 
-Gói ZIP thiếu các thư mục và log vật lý mà README nguồn nhắc tới. Số106cell, diện tích1019,728µm², timing3ns hoặc công suất từ mô tả cũ không được dùng làm kết quả mới. Báo cáo dùng log local có nhãn riêng và dữ liệu CI thật ngày20/10/2026. Physical mới có mapping133cell/22FF, final454standardcell, GDS, STA, powerước tính, DRC/LVS theo đúng artifact; vẫn còn11pin slewSS và giới hạn SDC/IR.
+Gói ZIP thiếu các thư mục và log vật lý mà README nguồn nhắc tới. Số106cell, diện tích1019,728µm², timing3ns hoặc công suất từ mô tả cũ không được dùng làm kết quả mới. Báo cáo dùng log local có nhãn riêng và dữ liệu CI thật ngày25/10/2026. Physical mới có mapping133cell/22FF, final454standardcell, GDS, STA, powerước tính, DRC/LVS theo đúng artifact; vẫn còn11pin slewSS và giới hạn SDC/IR.
 
 START pin và phạm vi requester-only vẫn cần rà soát. Có mã chạy PASS không tự giải quyết được yêu cầu đặc tả chưa thống nhất.
 
 ## E6 — repo công khai và CI thật
 
-[Repo](https://github.com/lechihoangcuong/eee703128-f10-24101280) lưu mã nguồn và bộ bằng chứng của bài. [Run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) thực thi source commit `298e12b0f79a326343315beee1697f55e2946403`; các commit cập nhật kết quả sau đó không tự được coi là source đã chạy. Workflow/RTL không bị thay trong lần bổ sung evidence này.
+[Repo](https://github.com/lechihoangcuong/eee703128-f10-24101280) lưu mã nguồn và bộ bằng chứng của bài. [Run40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464) thực thi source commit `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f`; các commit cập nhật kết quả sau đó không tự được coi là source đã chạy. Workflow/RTL không bị thay trong lần bổ sung evidence này.
 
-Hai ZIP artifact nguyên byte, metadata, selected raw logs/metrics và SHA256 giữ ở `evidence/github-actions/run-39390858919/`. Đã kiểm16tệp nguồn khác nhau khớp hash của CI. So VCD local/CI cho thấy toàn bộ khai báo/sự kiện trùng sau khi chỉ chuẩn hóa date/version; không đổi nhãn log local thành CI. Xem `CI_EVIDENCE.md`, `waveform_comparison.json` và `PHYSICAL_ANALYSIS.md` trong bản lưu đó.
+Hai ZIP artifact nguyên byte, metadata, selected raw logs/metrics và SHA256 giữ ở `evidence/github-actions/run-40179312464/`. Đã kiểm đủ22tệp đầu vào khớp blob SHA của CI; xem metadata/source_comparison.json. So VCD local/CI cho thấy toàn bộ khai báo/sự kiện trùng sau khi chỉ chuẩn hóa date/version; không đổi nhãn log local thành CI. Xem `CI_EVIDENCE.md`, `waveform_comparison.json` và `PHYSICAL_ANALYSIS.md` trong bản lưu đó.
 
 ## Tài liệu yêu cầu
 
@@ -43,4 +43,4 @@ Hai ZIP artifact nguyên byte, metadata, selected raw logs/metrics và SHA256 gi
 - [Mẫu CI Cổng A Canvas](https://canvas.phenikaa-uni.edu.vn/courses/30065/files/4677309?module_item_id=440833): workflow gốc lưu trong `docs/course-reference/`.
 - Gói hướng dẫn v2.4 có phần coi CI/GDS là mở rộng; đã ưu tiên hướng dẫn Canvas và charter F10 cụ thể, không dùng khác biệt này để tự bỏ Cổng A.
 
-Lịch sử commit lưu các thay đổi theo thời điểm thực hiện. Source commit của CI được ghi riêng để đối chiếu mã đã chạy với các cập nhật tài liệu và bằng chứng sau đó.
+Lịch sử hiện đã được gộp còn hai commit theo yêu cầu chủ kho; không dùng lịch sử đã gộp để tự chứng minh tiến trình phát triển gốc. Source commit của CI được ghi riêng để đối chiếu mã đã chạy với các cập nhật tài liệu và bằng chứng sau đó.

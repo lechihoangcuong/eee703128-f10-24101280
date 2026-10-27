@@ -301,5 +301,13 @@
     },
     "interpretation_limit": "A qualitative exploded 3D view of this actual design's routing polygons, not a technology-accurate cross-section or proof of fabricated hardware",
     "combined_panel": "layout_actual_panel.png"
+  },
+  "revalidated_against_ci": {
+    "run_id": 40179312464,
+    "executed_source_commit": "b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f",
+    "new_gds_sha256": "6bb02c420db3967a6b95394187e302c512e116d9a5b9c268b86434cf40f1800a",
+    "original_image_origin_fields_preserved": true,
+    "gds_records_equal_except_BGNLIB_BGNSTR_timestamps": true,
+    "evidence": "evidence/github-actions/run-40179312464/verification.json"
   }
 }

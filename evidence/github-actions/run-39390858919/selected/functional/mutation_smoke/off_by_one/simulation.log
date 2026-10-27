@@ -1,0 +1,51 @@
+VCD info: dumpfile f10_core_selfcheck.vcd opened for output.
+CASE TC00_RESET PASS time_ns=[0..37] cycles=4 checks=49 errors=0
+CASE TC01_NORMAL PASS time_ns=[37..87] cycles=5 checks=65 errors=0
+CASE TC02_DELAYED_SUCCESS PASS time_ns=[87..187] cycles=10 checks=125 errors=0
+FAIL case=TC03_NO_ACK cycle=24 time=236000: State differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=4; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC03_NO_ACK cycle=24 time=236000: REQ differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=4; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC03_NO_ACK cycle=24 time=236000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=4; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC03_NO_ACK cycle=24 time=237000: Request-phase timeout on deadline
+  inputs rst_n=1 start=0 ack=0 N=4; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC03_NO_ACK cycle=25 time=246000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=0 timeout=1; expected phase=0 req=0 done=0 timeout=0 remaining=0
+FAIL case=TC03_NO_ACK cycle=25 time=247000: Idle recovery and result pulse clearing
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=0 timeout=1; expected phase=0 req=0 done=0 timeout=0 remaining=0
+CASE TC03_NO_ACK FAIL time_ns=[187..247] cycles=6 checks=77 errors=6
+FAIL case=TC04_ACK_STUCK cycle=32 time=316000: State differs from independent reference
+  inputs rst_n=1 start=0 ack=1 N=4; DUT state=0011 req=0 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC04_ACK_STUCK cycle=32 time=316000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=0 ack=1 N=4; DUT state=0011 req=0 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC04_ACK_STUCK cycle=32 time=317000: Return-phase timeout on deadline
+  inputs rst_n=1 start=0 ack=1 N=4; DUT state=0011 req=0 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC04_ACK_STUCK cycle=33 time=326000: DONE differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=1 timeout=0; expected phase=0 req=0 done=0 timeout=0 remaining=0
+FAIL case=TC04_ACK_STUCK cycle=33 time=326000: DONE requires sampled ACK-low in WAIT_ACK_LOW
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=1 timeout=0; expected phase=0 req=0 done=0 timeout=0 remaining=0
+FAIL case=TC04_ACK_STUCK cycle=33 time=327000: Idle recovery and result pulse clearing
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=1 timeout=0; expected phase=0 req=0 done=0 timeout=0 remaining=0
+CASE TC04_ACK_STUCK FAIL time_ns=[247..327] cycles=8 checks=101 errors=6
+CASE TC05_BACK_TO_BACK PASS time_ns=[327..467] cycles=14 checks=177 errors=0
+CASE TC06_STALE_ACK PASS time_ns=[467..557] cycles=9 checks=117 errors=0
+CASE TC07_BUSY_START PASS time_ns=[557..627] cycles=7 checks=86 errors=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=68 time=676000: State differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=255; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=68 time=676000: REQ differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=255; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=68 time=676000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=255; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=68 time=677000: Request deadline keeps accepted N=4
+  inputs rst_n=1 start=0 ack=0 N=255; DUT state=0001 req=1 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=69 time=686000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=0 timeout=1; expected phase=0 req=0 done=0 timeout=0 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=69 time=687000: Idle recovery and result pulse clearing
+  inputs rst_n=1 start=0 ack=0 N=0; DUT state=0000 req=0 done=0 timeout=1; expected phase=0 req=0 done=0 timeout=0 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=76 time=756000: State differs from independent reference
+  inputs rst_n=1 start=1 ack=1 N=255; DUT state=0011 req=0 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FAIL case=TC08_LATCH_TIMEOUT cycle=76 time=756000: TIMEOUT differs from independent reference
+  inputs rst_n=1 start=1 ack=1 N=255; DUT state=0011 req=0 done=0 timeout=0; expected phase=0 req=0 done=0 timeout=1 remaining=0
+FATAL: tb/f10_tb_selfcheck.sv:49: Stopping after 20 failures
+       Time: 756000  Scope: f10_tb_selfcheck.check

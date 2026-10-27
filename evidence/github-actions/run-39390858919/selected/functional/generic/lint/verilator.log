@@ -1,0 +1,6 @@
+%Warning-UNUSEDPARAM: rtl/f10_handshake_controller.sv:2:19: Parameter is not used: 'START_INTERNAL'
+                                                          : ... note: In instance 'tt_um_24101280_f10.impl.dut'
+    2 |     parameter int START_INTERNAL = 0
+      |                   ^~~~~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.020
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.

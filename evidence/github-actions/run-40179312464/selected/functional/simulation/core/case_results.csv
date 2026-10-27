@@ -1,0 +1,1037 @@
+case_id,description,start_ns,end_ns,cycles,checks,errors,result
+TC00_RESET,Reset and idle hold,0,37,4,49,0,PASS
+TC01_NORMAL,Normal complete four-phase handshake,37,87,5,65,0,PASS
+TC02_DELAYED_SUCCESS,Delayed ACK-high and ACK-low before deadline,87,187,10,125,0,PASS
+TC03_NO_ACK,No ACK-high timeout after four waiting cycles,187,247,6,77,0,PASS
+TC04_ACK_STUCK,ACK-high stuck timeout after four waiting cycles,247,327,8,101,0,PASS
+TC05_BACK_TO_BACK,Two complete transactions without an idle bubble,327,467,14,177,0,PASS
+TC06_STALE_ACK,Reject start while stale ACK is high and do not queue it,467,557,9,117,0,PASS
+TC07_BUSY_START,Ignore start in all three busy states,557,627,7,86,0,PASS
+TC08_LATCH_TIMEOUT,Live timeout input changes do not reload either wait deadline,627,767,14,172,0,PASS
+TC09_SYNC_RESET,Reset between edges in IDLE and all three busy states,767,907,14,180,0,PASS
+SW_REQ_TIMEOUT_N000,Request wait timeout at exact deadline,907,937,3,38,0,PASS
+SW_LOW_TIMEOUT_N000,Return wait timeout at exact deadline,937,987,5,62,0,PASS
+SW_REQ_PRIORITY_N000,ACK-high wins over timeout on exact deadline,987,1037,5,63,0,PASS
+SW_LOW_PRIORITY_N000,ACK-low wins over timeout on exact deadline,1037,1087,5,62,0,PASS
+SW_REQ_TIMEOUT_N001,Request wait timeout at exact deadline,1087,1117,3,38,0,PASS
+SW_LOW_TIMEOUT_N001,Return wait timeout at exact deadline,1117,1167,5,62,0,PASS
+SW_REQ_PRIORITY_N001,ACK-high wins over timeout on exact deadline,1167,1217,5,63,0,PASS
+SW_LOW_PRIORITY_N001,ACK-low wins over timeout on exact deadline,1217,1267,5,62,0,PASS
+SW_REQ_TIMEOUT_N002,Request wait timeout at exact deadline,1267,1307,4,50,0,PASS
+SW_LOW_TIMEOUT_N002,Return wait timeout at exact deadline,1307,1367,6,74,0,PASS
+SW_REQ_PRIORITY_N002,ACK-high wins over timeout on exact deadline,1367,1427,6,75,0,PASS
+SW_LOW_PRIORITY_N002,ACK-low wins over timeout on exact deadline,1427,1487,6,74,0,PASS
+SW_REQ_TIMEOUT_N003,Request wait timeout at exact deadline,1487,1537,5,62,0,PASS
+SW_LOW_TIMEOUT_N003,Return wait timeout at exact deadline,1537,1607,7,86,0,PASS
+SW_REQ_PRIORITY_N003,ACK-high wins over timeout on exact deadline,1607,1677,7,87,0,PASS
+SW_LOW_PRIORITY_N003,ACK-low wins over timeout on exact deadline,1677,1747,7,86,0,PASS
+SW_REQ_TIMEOUT_N004,Request wait timeout at exact deadline,1747,1807,6,74,0,PASS
+SW_LOW_TIMEOUT_N004,Return wait timeout at exact deadline,1807,1887,8,98,0,PASS
+SW_REQ_PRIORITY_N004,ACK-high wins over timeout on exact deadline,1887,1967,8,99,0,PASS
+SW_LOW_PRIORITY_N004,ACK-low wins over timeout on exact deadline,1967,2047,8,98,0,PASS
+SW_REQ_TIMEOUT_N005,Request wait timeout at exact deadline,2047,2117,7,86,0,PASS
+SW_LOW_TIMEOUT_N005,Return wait timeout at exact deadline,2117,2207,9,110,0,PASS
+SW_REQ_PRIORITY_N005,ACK-high wins over timeout on exact deadline,2207,2297,9,111,0,PASS
+SW_LOW_PRIORITY_N005,ACK-low wins over timeout on exact deadline,2297,2387,9,110,0,PASS
+SW_REQ_TIMEOUT_N006,Request wait timeout at exact deadline,2387,2467,8,98,0,PASS
+SW_LOW_TIMEOUT_N006,Return wait timeout at exact deadline,2467,2567,10,122,0,PASS
+SW_REQ_PRIORITY_N006,ACK-high wins over timeout on exact deadline,2567,2667,10,123,0,PASS
+SW_LOW_PRIORITY_N006,ACK-low wins over timeout on exact deadline,2667,2767,10,122,0,PASS
+SW_REQ_TIMEOUT_N007,Request wait timeout at exact deadline,2767,2857,9,110,0,PASS
+SW_LOW_TIMEOUT_N007,Return wait timeout at exact deadline,2857,2967,11,134,0,PASS
+SW_REQ_PRIORITY_N007,ACK-high wins over timeout on exact deadline,2967,3077,11,135,0,PASS
+SW_LOW_PRIORITY_N007,ACK-low wins over timeout on exact deadline,3077,3187,11,134,0,PASS
+SW_REQ_TIMEOUT_N008,Request wait timeout at exact deadline,3187,3287,10,122,0,PASS
+SW_LOW_TIMEOUT_N008,Return wait timeout at exact deadline,3287,3407,12,146,0,PASS
+SW_REQ_PRIORITY_N008,ACK-high wins over timeout on exact deadline,3407,3527,12,147,0,PASS
+SW_LOW_PRIORITY_N008,ACK-low wins over timeout on exact deadline,3527,3647,12,146,0,PASS
+SW_REQ_TIMEOUT_N009,Request wait timeout at exact deadline,3647,3757,11,134,0,PASS
+SW_LOW_TIMEOUT_N009,Return wait timeout at exact deadline,3757,3887,13,158,0,PASS
+SW_REQ_PRIORITY_N009,ACK-high wins over timeout on exact deadline,3887,4017,13,159,0,PASS
+SW_LOW_PRIORITY_N009,ACK-low wins over timeout on exact deadline,4017,4147,13,158,0,PASS
+SW_REQ_TIMEOUT_N010,Request wait timeout at exact deadline,4147,4267,12,146,0,PASS
+SW_LOW_TIMEOUT_N010,Return wait timeout at exact deadline,4267,4407,14,170,0,PASS
+SW_REQ_PRIORITY_N010,ACK-high wins over timeout on exact deadline,4407,4547,14,171,0,PASS
+SW_LOW_PRIORITY_N010,ACK-low wins over timeout on exact deadline,4547,4687,14,170,0,PASS
+SW_REQ_TIMEOUT_N011,Request wait timeout at exact deadline,4687,4817,13,158,0,PASS
+SW_LOW_TIMEOUT_N011,Return wait timeout at exact deadline,4817,4967,15,182,0,PASS
+SW_REQ_PRIORITY_N011,ACK-high wins over timeout on exact deadline,4967,5117,15,183,0,PASS
+SW_LOW_PRIORITY_N011,ACK-low wins over timeout on exact deadline,5117,5267,15,182,0,PASS
+SW_REQ_TIMEOUT_N012,Request wait timeout at exact deadline,5267,5407,14,170,0,PASS
+SW_LOW_TIMEOUT_N012,Return wait timeout at exact deadline,5407,5567,16,194,0,PASS
+SW_REQ_PRIORITY_N012,ACK-high wins over timeout on exact deadline,5567,5727,16,195,0,PASS
+SW_LOW_PRIORITY_N012,ACK-low wins over timeout on exact deadline,5727,5887,16,194,0,PASS
+SW_REQ_TIMEOUT_N013,Request wait timeout at exact deadline,5887,6037,15,182,0,PASS
+SW_LOW_TIMEOUT_N013,Return wait timeout at exact deadline,6037,6207,17,206,0,PASS
+SW_REQ_PRIORITY_N013,ACK-high wins over timeout on exact deadline,6207,6377,17,207,0,PASS
+SW_LOW_PRIORITY_N013,ACK-low wins over timeout on exact deadline,6377,6547,17,206,0,PASS
+SW_REQ_TIMEOUT_N014,Request wait timeout at exact deadline,6547,6707,16,194,0,PASS
+SW_LOW_TIMEOUT_N014,Return wait timeout at exact deadline,6707,6887,18,218,0,PASS
+SW_REQ_PRIORITY_N014,ACK-high wins over timeout on exact deadline,6887,7067,18,219,0,PASS
+SW_LOW_PRIORITY_N014,ACK-low wins over timeout on exact deadline,7067,7247,18,218,0,PASS
+SW_REQ_TIMEOUT_N015,Request wait timeout at exact deadline,7247,7417,17,206,0,PASS
+SW_LOW_TIMEOUT_N015,Return wait timeout at exact deadline,7417,7607,19,230,0,PASS
+SW_REQ_PRIORITY_N015,ACK-high wins over timeout on exact deadline,7607,7797,19,231,0,PASS
+SW_LOW_PRIORITY_N015,ACK-low wins over timeout on exact deadline,7797,7987,19,230,0,PASS
+SW_REQ_TIMEOUT_N016,Request wait timeout at exact deadline,7987,8167,18,218,0,PASS
+SW_LOW_TIMEOUT_N016,Return wait timeout at exact deadline,8167,8367,20,242,0,PASS
+SW_REQ_PRIORITY_N016,ACK-high wins over timeout on exact deadline,8367,8567,20,243,0,PASS
+SW_LOW_PRIORITY_N016,ACK-low wins over timeout on exact deadline,8567,8767,20,242,0,PASS
+SW_REQ_TIMEOUT_N017,Request wait timeout at exact deadline,8767,8957,19,230,0,PASS
+SW_LOW_TIMEOUT_N017,Return wait timeout at exact deadline,8957,9167,21,254,0,PASS
+SW_REQ_PRIORITY_N017,ACK-high wins over timeout on exact deadline,9167,9377,21,255,0,PASS
+SW_LOW_PRIORITY_N017,ACK-low wins over timeout on exact deadline,9377,9587,21,254,0,PASS
+SW_REQ_TIMEOUT_N018,Request wait timeout at exact deadline,9587,9787,20,242,0,PASS
+SW_LOW_TIMEOUT_N018,Return wait timeout at exact deadline,9787,10007,22,266,0,PASS
+SW_REQ_PRIORITY_N018,ACK-high wins over timeout on exact deadline,10007,10227,22,267,0,PASS
+SW_LOW_PRIORITY_N018,ACK-low wins over timeout on exact deadline,10227,10447,22,266,0,PASS
+SW_REQ_TIMEOUT_N019,Request wait timeout at exact deadline,10447,10657,21,254,0,PASS
+SW_LOW_TIMEOUT_N019,Return wait timeout at exact deadline,10657,10887,23,278,0,PASS
+SW_REQ_PRIORITY_N019,ACK-high wins over timeout on exact deadline,10887,11117,23,279,0,PASS
+SW_LOW_PRIORITY_N019,ACK-low wins over timeout on exact deadline,11117,11347,23,278,0,PASS
+SW_REQ_TIMEOUT_N020,Request wait timeout at exact deadline,11347,11567,22,266,0,PASS
+SW_LOW_TIMEOUT_N020,Return wait timeout at exact deadline,11567,11807,24,290,0,PASS
+SW_REQ_PRIORITY_N020,ACK-high wins over timeout on exact deadline,11807,12047,24,291,0,PASS
+SW_LOW_PRIORITY_N020,ACK-low wins over timeout on exact deadline,12047,12287,24,290,0,PASS
+SW_REQ_TIMEOUT_N021,Request wait timeout at exact deadline,12287,12517,23,278,0,PASS
+SW_LOW_TIMEOUT_N021,Return wait timeout at exact deadline,12517,12767,25,302,0,PASS
+SW_REQ_PRIORITY_N021,ACK-high wins over timeout on exact deadline,12767,13017,25,303,0,PASS
+SW_LOW_PRIORITY_N021,ACK-low wins over timeout on exact deadline,13017,13267,25,302,0,PASS
+SW_REQ_TIMEOUT_N022,Request wait timeout at exact deadline,13267,13507,24,290,0,PASS
+SW_LOW_TIMEOUT_N022,Return wait timeout at exact deadline,13507,13767,26,314,0,PASS
+SW_REQ_PRIORITY_N022,ACK-high wins over timeout on exact deadline,13767,14027,26,315,0,PASS
+SW_LOW_PRIORITY_N022,ACK-low wins over timeout on exact deadline,14027,14287,26,314,0,PASS
+SW_REQ_TIMEOUT_N023,Request wait timeout at exact deadline,14287,14537,25,302,0,PASS
+SW_LOW_TIMEOUT_N023,Return wait timeout at exact deadline,14537,14807,27,326,0,PASS
+SW_REQ_PRIORITY_N023,ACK-high wins over timeout on exact deadline,14807,15077,27,327,0,PASS
+SW_LOW_PRIORITY_N023,ACK-low wins over timeout on exact deadline,15077,15347,27,326,0,PASS
+SW_REQ_TIMEOUT_N024,Request wait timeout at exact deadline,15347,15607,26,314,0,PASS
+SW_LOW_TIMEOUT_N024,Return wait timeout at exact deadline,15607,15887,28,338,0,PASS
+SW_REQ_PRIORITY_N024,ACK-high wins over timeout on exact deadline,15887,16167,28,339,0,PASS
+SW_LOW_PRIORITY_N024,ACK-low wins over timeout on exact deadline,16167,16447,28,338,0,PASS
+SW_REQ_TIMEOUT_N025,Request wait timeout at exact deadline,16447,16717,27,326,0,PASS
+SW_LOW_TIMEOUT_N025,Return wait timeout at exact deadline,16717,17007,29,350,0,PASS
+SW_REQ_PRIORITY_N025,ACK-high wins over timeout on exact deadline,17007,17297,29,351,0,PASS
+SW_LOW_PRIORITY_N025,ACK-low wins over timeout on exact deadline,17297,17587,29,350,0,PASS
+SW_REQ_TIMEOUT_N026,Request wait timeout at exact deadline,17587,17867,28,338,0,PASS
+SW_LOW_TIMEOUT_N026,Return wait timeout at exact deadline,17867,18167,30,362,0,PASS
+SW_REQ_PRIORITY_N026,ACK-high wins over timeout on exact deadline,18167,18467,30,363,0,PASS
+SW_LOW_PRIORITY_N026,ACK-low wins over timeout on exact deadline,18467,18767,30,362,0,PASS
+SW_REQ_TIMEOUT_N027,Request wait timeout at exact deadline,18767,19057,29,350,0,PASS
+SW_LOW_TIMEOUT_N027,Return wait timeout at exact deadline,19057,19367,31,374,0,PASS
+SW_REQ_PRIORITY_N027,ACK-high wins over timeout on exact deadline,19367,19677,31,375,0,PASS
+SW_LOW_PRIORITY_N027,ACK-low wins over timeout on exact deadline,19677,19987,31,374,0,PASS
+SW_REQ_TIMEOUT_N028,Request wait timeout at exact deadline,19987,20287,30,362,0,PASS
+SW_LOW_TIMEOUT_N028,Return wait timeout at exact deadline,20287,20607,32,386,0,PASS
+SW_REQ_PRIORITY_N028,ACK-high wins over timeout on exact deadline,20607,20927,32,387,0,PASS
+SW_LOW_PRIORITY_N028,ACK-low wins over timeout on exact deadline,20927,21247,32,386,0,PASS
+SW_REQ_TIMEOUT_N029,Request wait timeout at exact deadline,21247,21557,31,374,0,PASS
+SW_LOW_TIMEOUT_N029,Return wait timeout at exact deadline,21557,21887,33,398,0,PASS
+SW_REQ_PRIORITY_N029,ACK-high wins over timeout on exact deadline,21887,22217,33,399,0,PASS
+SW_LOW_PRIORITY_N029,ACK-low wins over timeout on exact deadline,22217,22547,33,398,0,PASS
+SW_REQ_TIMEOUT_N030,Request wait timeout at exact deadline,22547,22867,32,386,0,PASS
+SW_LOW_TIMEOUT_N030,Return wait timeout at exact deadline,22867,23207,34,410,0,PASS
+SW_REQ_PRIORITY_N030,ACK-high wins over timeout on exact deadline,23207,23547,34,411,0,PASS
+SW_LOW_PRIORITY_N030,ACK-low wins over timeout on exact deadline,23547,23887,34,410,0,PASS
+SW_REQ_TIMEOUT_N031,Request wait timeout at exact deadline,23887,24217,33,398,0,PASS
+SW_LOW_TIMEOUT_N031,Return wait timeout at exact deadline,24217,24567,35,422,0,PASS
+SW_REQ_PRIORITY_N031,ACK-high wins over timeout on exact deadline,24567,24917,35,423,0,PASS
+SW_LOW_PRIORITY_N031,ACK-low wins over timeout on exact deadline,24917,25267,35,422,0,PASS
+SW_REQ_TIMEOUT_N032,Request wait timeout at exact deadline,25267,25607,34,410,0,PASS
+SW_LOW_TIMEOUT_N032,Return wait timeout at exact deadline,25607,25967,36,434,0,PASS
+SW_REQ_PRIORITY_N032,ACK-high wins over timeout on exact deadline,25967,26327,36,435,0,PASS
+SW_LOW_PRIORITY_N032,ACK-low wins over timeout on exact deadline,26327,26687,36,434,0,PASS
+SW_REQ_TIMEOUT_N033,Request wait timeout at exact deadline,26687,27037,35,422,0,PASS
+SW_LOW_TIMEOUT_N033,Return wait timeout at exact deadline,27037,27407,37,446,0,PASS
+SW_REQ_PRIORITY_N033,ACK-high wins over timeout on exact deadline,27407,27777,37,447,0,PASS
+SW_LOW_PRIORITY_N033,ACK-low wins over timeout on exact deadline,27777,28147,37,446,0,PASS
+SW_REQ_TIMEOUT_N034,Request wait timeout at exact deadline,28147,28507,36,434,0,PASS
+SW_LOW_TIMEOUT_N034,Return wait timeout at exact deadline,28507,28887,38,458,0,PASS
+SW_REQ_PRIORITY_N034,ACK-high wins over timeout on exact deadline,28887,29267,38,459,0,PASS
+SW_LOW_PRIORITY_N034,ACK-low wins over timeout on exact deadline,29267,29647,38,458,0,PASS
+SW_REQ_TIMEOUT_N035,Request wait timeout at exact deadline,29647,30017,37,446,0,PASS
+SW_LOW_TIMEOUT_N035,Return wait timeout at exact deadline,30017,30407,39,470,0,PASS
+SW_REQ_PRIORITY_N035,ACK-high wins over timeout on exact deadline,30407,30797,39,471,0,PASS
+SW_LOW_PRIORITY_N035,ACK-low wins over timeout on exact deadline,30797,31187,39,470,0,PASS
+SW_REQ_TIMEOUT_N036,Request wait timeout at exact deadline,31187,31567,38,458,0,PASS
+SW_LOW_TIMEOUT_N036,Return wait timeout at exact deadline,31567,31967,40,482,0,PASS
+SW_REQ_PRIORITY_N036,ACK-high wins over timeout on exact deadline,31967,32367,40,483,0,PASS
+SW_LOW_PRIORITY_N036,ACK-low wins over timeout on exact deadline,32367,32767,40,482,0,PASS
+SW_REQ_TIMEOUT_N037,Request wait timeout at exact deadline,32767,33157,39,470,0,PASS
+SW_LOW_TIMEOUT_N037,Return wait timeout at exact deadline,33157,33567,41,494,0,PASS
+SW_REQ_PRIORITY_N037,ACK-high wins over timeout on exact deadline,33567,33977,41,495,0,PASS
+SW_LOW_PRIORITY_N037,ACK-low wins over timeout on exact deadline,33977,34387,41,494,0,PASS
+SW_REQ_TIMEOUT_N038,Request wait timeout at exact deadline,34387,34787,40,482,0,PASS
+SW_LOW_TIMEOUT_N038,Return wait timeout at exact deadline,34787,35207,42,506,0,PASS
+SW_REQ_PRIORITY_N038,ACK-high wins over timeout on exact deadline,35207,35627,42,507,0,PASS
+SW_LOW_PRIORITY_N038,ACK-low wins over timeout on exact deadline,35627,36047,42,506,0,PASS
+SW_REQ_TIMEOUT_N039,Request wait timeout at exact deadline,36047,36457,41,494,0,PASS
+SW_LOW_TIMEOUT_N039,Return wait timeout at exact deadline,36457,36887,43,518,0,PASS
+SW_REQ_PRIORITY_N039,ACK-high wins over timeout on exact deadline,36887,37317,43,519,0,PASS
+SW_LOW_PRIORITY_N039,ACK-low wins over timeout on exact deadline,37317,37747,43,518,0,PASS
+SW_REQ_TIMEOUT_N040,Request wait timeout at exact deadline,37747,38167,42,506,0,PASS
+SW_LOW_TIMEOUT_N040,Return wait timeout at exact deadline,38167,38607,44,530,0,PASS
+SW_REQ_PRIORITY_N040,ACK-high wins over timeout on exact deadline,38607,39047,44,531,0,PASS
+SW_LOW_PRIORITY_N040,ACK-low wins over timeout on exact deadline,39047,39487,44,530,0,PASS
+SW_REQ_TIMEOUT_N041,Request wait timeout at exact deadline,39487,39917,43,518,0,PASS
+SW_LOW_TIMEOUT_N041,Return wait timeout at exact deadline,39917,40367,45,542,0,PASS
+SW_REQ_PRIORITY_N041,ACK-high wins over timeout on exact deadline,40367,40817,45,543,0,PASS
+SW_LOW_PRIORITY_N041,ACK-low wins over timeout on exact deadline,40817,41267,45,542,0,PASS
+SW_REQ_TIMEOUT_N042,Request wait timeout at exact deadline,41267,41707,44,530,0,PASS
+SW_LOW_TIMEOUT_N042,Return wait timeout at exact deadline,41707,42167,46,554,0,PASS
+SW_REQ_PRIORITY_N042,ACK-high wins over timeout on exact deadline,42167,42627,46,555,0,PASS
+SW_LOW_PRIORITY_N042,ACK-low wins over timeout on exact deadline,42627,43087,46,554,0,PASS
+SW_REQ_TIMEOUT_N043,Request wait timeout at exact deadline,43087,43537,45,542,0,PASS
+SW_LOW_TIMEOUT_N043,Return wait timeout at exact deadline,43537,44007,47,566,0,PASS
+SW_REQ_PRIORITY_N043,ACK-high wins over timeout on exact deadline,44007,44477,47,567,0,PASS
+SW_LOW_PRIORITY_N043,ACK-low wins over timeout on exact deadline,44477,44947,47,566,0,PASS
+SW_REQ_TIMEOUT_N044,Request wait timeout at exact deadline,44947,45407,46,554,0,PASS
+SW_LOW_TIMEOUT_N044,Return wait timeout at exact deadline,45407,45887,48,578,0,PASS
+SW_REQ_PRIORITY_N044,ACK-high wins over timeout on exact deadline,45887,46367,48,579,0,PASS
+SW_LOW_PRIORITY_N044,ACK-low wins over timeout on exact deadline,46367,46847,48,578,0,PASS
+SW_REQ_TIMEOUT_N045,Request wait timeout at exact deadline,46847,47317,47,566,0,PASS
+SW_LOW_TIMEOUT_N045,Return wait timeout at exact deadline,47317,47807,49,590,0,PASS
+SW_REQ_PRIORITY_N045,ACK-high wins over timeout on exact deadline,47807,48297,49,591,0,PASS
+SW_LOW_PRIORITY_N045,ACK-low wins over timeout on exact deadline,48297,48787,49,590,0,PASS
+SW_REQ_TIMEOUT_N046,Request wait timeout at exact deadline,48787,49267,48,578,0,PASS
+SW_LOW_TIMEOUT_N046,Return wait timeout at exact deadline,49267,49767,50,602,0,PASS
+SW_REQ_PRIORITY_N046,ACK-high wins over timeout on exact deadline,49767,50267,50,603,0,PASS
+SW_LOW_PRIORITY_N046,ACK-low wins over timeout on exact deadline,50267,50767,50,602,0,PASS
+SW_REQ_TIMEOUT_N047,Request wait timeout at exact deadline,50767,51257,49,590,0,PASS
+SW_LOW_TIMEOUT_N047,Return wait timeout at exact deadline,51257,51767,51,614,0,PASS
+SW_REQ_PRIORITY_N047,ACK-high wins over timeout on exact deadline,51767,52277,51,615,0,PASS
+SW_LOW_PRIORITY_N047,ACK-low wins over timeout on exact deadline,52277,52787,51,614,0,PASS
+SW_REQ_TIMEOUT_N048,Request wait timeout at exact deadline,52787,53287,50,602,0,PASS
+SW_LOW_TIMEOUT_N048,Return wait timeout at exact deadline,53287,53807,52,626,0,PASS
+SW_REQ_PRIORITY_N048,ACK-high wins over timeout on exact deadline,53807,54327,52,627,0,PASS
+SW_LOW_PRIORITY_N048,ACK-low wins over timeout on exact deadline,54327,54847,52,626,0,PASS
+SW_REQ_TIMEOUT_N049,Request wait timeout at exact deadline,54847,55357,51,614,0,PASS
+SW_LOW_TIMEOUT_N049,Return wait timeout at exact deadline,55357,55887,53,638,0,PASS
+SW_REQ_PRIORITY_N049,ACK-high wins over timeout on exact deadline,55887,56417,53,639,0,PASS
+SW_LOW_PRIORITY_N049,ACK-low wins over timeout on exact deadline,56417,56947,53,638,0,PASS
+SW_REQ_TIMEOUT_N050,Request wait timeout at exact deadline,56947,57467,52,626,0,PASS
+SW_LOW_TIMEOUT_N050,Return wait timeout at exact deadline,57467,58007,54,650,0,PASS
+SW_REQ_PRIORITY_N050,ACK-high wins over timeout on exact deadline,58007,58547,54,651,0,PASS
+SW_LOW_PRIORITY_N050,ACK-low wins over timeout on exact deadline,58547,59087,54,650,0,PASS
+SW_REQ_TIMEOUT_N051,Request wait timeout at exact deadline,59087,59617,53,638,0,PASS
+SW_LOW_TIMEOUT_N051,Return wait timeout at exact deadline,59617,60167,55,662,0,PASS
+SW_REQ_PRIORITY_N051,ACK-high wins over timeout on exact deadline,60167,60717,55,663,0,PASS
+SW_LOW_PRIORITY_N051,ACK-low wins over timeout on exact deadline,60717,61267,55,662,0,PASS
+SW_REQ_TIMEOUT_N052,Request wait timeout at exact deadline,61267,61807,54,650,0,PASS
+SW_LOW_TIMEOUT_N052,Return wait timeout at exact deadline,61807,62367,56,674,0,PASS
+SW_REQ_PRIORITY_N052,ACK-high wins over timeout on exact deadline,62367,62927,56,675,0,PASS
+SW_LOW_PRIORITY_N052,ACK-low wins over timeout on exact deadline,62927,63487,56,674,0,PASS
+SW_REQ_TIMEOUT_N053,Request wait timeout at exact deadline,63487,64037,55,662,0,PASS
+SW_LOW_TIMEOUT_N053,Return wait timeout at exact deadline,64037,64607,57,686,0,PASS
+SW_REQ_PRIORITY_N053,ACK-high wins over timeout on exact deadline,64607,65177,57,687,0,PASS
+SW_LOW_PRIORITY_N053,ACK-low wins over timeout on exact deadline,65177,65747,57,686,0,PASS
+SW_REQ_TIMEOUT_N054,Request wait timeout at exact deadline,65747,66307,56,674,0,PASS
+SW_LOW_TIMEOUT_N054,Return wait timeout at exact deadline,66307,66887,58,698,0,PASS
+SW_REQ_PRIORITY_N054,ACK-high wins over timeout on exact deadline,66887,67467,58,699,0,PASS
+SW_LOW_PRIORITY_N054,ACK-low wins over timeout on exact deadline,67467,68047,58,698,0,PASS
+SW_REQ_TIMEOUT_N055,Request wait timeout at exact deadline,68047,68617,57,686,0,PASS
+SW_LOW_TIMEOUT_N055,Return wait timeout at exact deadline,68617,69207,59,710,0,PASS
+SW_REQ_PRIORITY_N055,ACK-high wins over timeout on exact deadline,69207,69797,59,711,0,PASS
+SW_LOW_PRIORITY_N055,ACK-low wins over timeout on exact deadline,69797,70387,59,710,0,PASS
+SW_REQ_TIMEOUT_N056,Request wait timeout at exact deadline,70387,70967,58,698,0,PASS
+SW_LOW_TIMEOUT_N056,Return wait timeout at exact deadline,70967,71567,60,722,0,PASS
+SW_REQ_PRIORITY_N056,ACK-high wins over timeout on exact deadline,71567,72167,60,723,0,PASS
+SW_LOW_PRIORITY_N056,ACK-low wins over timeout on exact deadline,72167,72767,60,722,0,PASS
+SW_REQ_TIMEOUT_N057,Request wait timeout at exact deadline,72767,73357,59,710,0,PASS
+SW_LOW_TIMEOUT_N057,Return wait timeout at exact deadline,73357,73967,61,734,0,PASS
+SW_REQ_PRIORITY_N057,ACK-high wins over timeout on exact deadline,73967,74577,61,735,0,PASS
+SW_LOW_PRIORITY_N057,ACK-low wins over timeout on exact deadline,74577,75187,61,734,0,PASS
+SW_REQ_TIMEOUT_N058,Request wait timeout at exact deadline,75187,75787,60,722,0,PASS
+SW_LOW_TIMEOUT_N058,Return wait timeout at exact deadline,75787,76407,62,746,0,PASS
+SW_REQ_PRIORITY_N058,ACK-high wins over timeout on exact deadline,76407,77027,62,747,0,PASS
+SW_LOW_PRIORITY_N058,ACK-low wins over timeout on exact deadline,77027,77647,62,746,0,PASS
+SW_REQ_TIMEOUT_N059,Request wait timeout at exact deadline,77647,78257,61,734,0,PASS
+SW_LOW_TIMEOUT_N059,Return wait timeout at exact deadline,78257,78887,63,758,0,PASS
+SW_REQ_PRIORITY_N059,ACK-high wins over timeout on exact deadline,78887,79517,63,759,0,PASS
+SW_LOW_PRIORITY_N059,ACK-low wins over timeout on exact deadline,79517,80147,63,758,0,PASS
+SW_REQ_TIMEOUT_N060,Request wait timeout at exact deadline,80147,80767,62,746,0,PASS
+SW_LOW_TIMEOUT_N060,Return wait timeout at exact deadline,80767,81407,64,770,0,PASS
+SW_REQ_PRIORITY_N060,ACK-high wins over timeout on exact deadline,81407,82047,64,771,0,PASS
+SW_LOW_PRIORITY_N060,ACK-low wins over timeout on exact deadline,82047,82687,64,770,0,PASS
+SW_REQ_TIMEOUT_N061,Request wait timeout at exact deadline,82687,83317,63,758,0,PASS
+SW_LOW_TIMEOUT_N061,Return wait timeout at exact deadline,83317,83967,65,782,0,PASS
+SW_REQ_PRIORITY_N061,ACK-high wins over timeout on exact deadline,83967,84617,65,783,0,PASS
+SW_LOW_PRIORITY_N061,ACK-low wins over timeout on exact deadline,84617,85267,65,782,0,PASS
+SW_REQ_TIMEOUT_N062,Request wait timeout at exact deadline,85267,85907,64,770,0,PASS
+SW_LOW_TIMEOUT_N062,Return wait timeout at exact deadline,85907,86567,66,794,0,PASS
+SW_REQ_PRIORITY_N062,ACK-high wins over timeout on exact deadline,86567,87227,66,795,0,PASS
+SW_LOW_PRIORITY_N062,ACK-low wins over timeout on exact deadline,87227,87887,66,794,0,PASS
+SW_REQ_TIMEOUT_N063,Request wait timeout at exact deadline,87887,88537,65,782,0,PASS
+SW_LOW_TIMEOUT_N063,Return wait timeout at exact deadline,88537,89207,67,806,0,PASS
+SW_REQ_PRIORITY_N063,ACK-high wins over timeout on exact deadline,89207,89877,67,807,0,PASS
+SW_LOW_PRIORITY_N063,ACK-low wins over timeout on exact deadline,89877,90547,67,806,0,PASS
+SW_REQ_TIMEOUT_N064,Request wait timeout at exact deadline,90547,91207,66,794,0,PASS
+SW_LOW_TIMEOUT_N064,Return wait timeout at exact deadline,91207,91887,68,818,0,PASS
+SW_REQ_PRIORITY_N064,ACK-high wins over timeout on exact deadline,91887,92567,68,819,0,PASS
+SW_LOW_PRIORITY_N064,ACK-low wins over timeout on exact deadline,92567,93247,68,818,0,PASS
+SW_REQ_TIMEOUT_N065,Request wait timeout at exact deadline,93247,93917,67,806,0,PASS
+SW_LOW_TIMEOUT_N065,Return wait timeout at exact deadline,93917,94607,69,830,0,PASS
+SW_REQ_PRIORITY_N065,ACK-high wins over timeout on exact deadline,94607,95297,69,831,0,PASS
+SW_LOW_PRIORITY_N065,ACK-low wins over timeout on exact deadline,95297,95987,69,830,0,PASS
+SW_REQ_TIMEOUT_N066,Request wait timeout at exact deadline,95987,96667,68,818,0,PASS
+SW_LOW_TIMEOUT_N066,Return wait timeout at exact deadline,96667,97367,70,842,0,PASS
+SW_REQ_PRIORITY_N066,ACK-high wins over timeout on exact deadline,97367,98067,70,843,0,PASS
+SW_LOW_PRIORITY_N066,ACK-low wins over timeout on exact deadline,98067,98767,70,842,0,PASS
+SW_REQ_TIMEOUT_N067,Request wait timeout at exact deadline,98767,99457,69,830,0,PASS
+SW_LOW_TIMEOUT_N067,Return wait timeout at exact deadline,99457,100167,71,854,0,PASS
+SW_REQ_PRIORITY_N067,ACK-high wins over timeout on exact deadline,100167,100877,71,855,0,PASS
+SW_LOW_PRIORITY_N067,ACK-low wins over timeout on exact deadline,100877,101587,71,854,0,PASS
+SW_REQ_TIMEOUT_N068,Request wait timeout at exact deadline,101587,102287,70,842,0,PASS
+SW_LOW_TIMEOUT_N068,Return wait timeout at exact deadline,102287,103007,72,866,0,PASS
+SW_REQ_PRIORITY_N068,ACK-high wins over timeout on exact deadline,103007,103727,72,867,0,PASS
+SW_LOW_PRIORITY_N068,ACK-low wins over timeout on exact deadline,103727,104447,72,866,0,PASS
+SW_REQ_TIMEOUT_N069,Request wait timeout at exact deadline,104447,105157,71,854,0,PASS
+SW_LOW_TIMEOUT_N069,Return wait timeout at exact deadline,105157,105887,73,878,0,PASS
+SW_REQ_PRIORITY_N069,ACK-high wins over timeout on exact deadline,105887,106617,73,879,0,PASS
+SW_LOW_PRIORITY_N069,ACK-low wins over timeout on exact deadline,106617,107347,73,878,0,PASS
+SW_REQ_TIMEOUT_N070,Request wait timeout at exact deadline,107347,108067,72,866,0,PASS
+SW_LOW_TIMEOUT_N070,Return wait timeout at exact deadline,108067,108807,74,890,0,PASS
+SW_REQ_PRIORITY_N070,ACK-high wins over timeout on exact deadline,108807,109547,74,891,0,PASS
+SW_LOW_PRIORITY_N070,ACK-low wins over timeout on exact deadline,109547,110287,74,890,0,PASS
+SW_REQ_TIMEOUT_N071,Request wait timeout at exact deadline,110287,111017,73,878,0,PASS
+SW_LOW_TIMEOUT_N071,Return wait timeout at exact deadline,111017,111767,75,902,0,PASS
+SW_REQ_PRIORITY_N071,ACK-high wins over timeout on exact deadline,111767,112517,75,903,0,PASS
+SW_LOW_PRIORITY_N071,ACK-low wins over timeout on exact deadline,112517,113267,75,902,0,PASS
+SW_REQ_TIMEOUT_N072,Request wait timeout at exact deadline,113267,114007,74,890,0,PASS
+SW_LOW_TIMEOUT_N072,Return wait timeout at exact deadline,114007,114767,76,914,0,PASS
+SW_REQ_PRIORITY_N072,ACK-high wins over timeout on exact deadline,114767,115527,76,915,0,PASS
+SW_LOW_PRIORITY_N072,ACK-low wins over timeout on exact deadline,115527,116287,76,914,0,PASS
+SW_REQ_TIMEOUT_N073,Request wait timeout at exact deadline,116287,117037,75,902,0,PASS
+SW_LOW_TIMEOUT_N073,Return wait timeout at exact deadline,117037,117807,77,926,0,PASS
+SW_REQ_PRIORITY_N073,ACK-high wins over timeout on exact deadline,117807,118577,77,927,0,PASS
+SW_LOW_PRIORITY_N073,ACK-low wins over timeout on exact deadline,118577,119347,77,926,0,PASS
+SW_REQ_TIMEOUT_N074,Request wait timeout at exact deadline,119347,120107,76,914,0,PASS
+SW_LOW_TIMEOUT_N074,Return wait timeout at exact deadline,120107,120887,78,938,0,PASS
+SW_REQ_PRIORITY_N074,ACK-high wins over timeout on exact deadline,120887,121667,78,939,0,PASS
+SW_LOW_PRIORITY_N074,ACK-low wins over timeout on exact deadline,121667,122447,78,938,0,PASS
+SW_REQ_TIMEOUT_N075,Request wait timeout at exact deadline,122447,123217,77,926,0,PASS
+SW_LOW_TIMEOUT_N075,Return wait timeout at exact deadline,123217,124007,79,950,0,PASS
+SW_REQ_PRIORITY_N075,ACK-high wins over timeout on exact deadline,124007,124797,79,951,0,PASS
+SW_LOW_PRIORITY_N075,ACK-low wins over timeout on exact deadline,124797,125587,79,950,0,PASS
+SW_REQ_TIMEOUT_N076,Request wait timeout at exact deadline,125587,126367,78,938,0,PASS
+SW_LOW_TIMEOUT_N076,Return wait timeout at exact deadline,126367,127167,80,962,0,PASS
+SW_REQ_PRIORITY_N076,ACK-high wins over timeout on exact deadline,127167,127967,80,963,0,PASS
+SW_LOW_PRIORITY_N076,ACK-low wins over timeout on exact deadline,127967,128767,80,962,0,PASS
+SW_REQ_TIMEOUT_N077,Request wait timeout at exact deadline,128767,129557,79,950,0,PASS
+SW_LOW_TIMEOUT_N077,Return wait timeout at exact deadline,129557,130367,81,974,0,PASS
+SW_REQ_PRIORITY_N077,ACK-high wins over timeout on exact deadline,130367,131177,81,975,0,PASS
+SW_LOW_PRIORITY_N077,ACK-low wins over timeout on exact deadline,131177,131987,81,974,0,PASS
+SW_REQ_TIMEOUT_N078,Request wait timeout at exact deadline,131987,132787,80,962,0,PASS
+SW_LOW_TIMEOUT_N078,Return wait timeout at exact deadline,132787,133607,82,986,0,PASS
+SW_REQ_PRIORITY_N078,ACK-high wins over timeout on exact deadline,133607,134427,82,987,0,PASS
+SW_LOW_PRIORITY_N078,ACK-low wins over timeout on exact deadline,134427,135247,82,986,0,PASS
+SW_REQ_TIMEOUT_N079,Request wait timeout at exact deadline,135247,136057,81,974,0,PASS
+SW_LOW_TIMEOUT_N079,Return wait timeout at exact deadline,136057,136887,83,998,0,PASS
+SW_REQ_PRIORITY_N079,ACK-high wins over timeout on exact deadline,136887,137717,83,999,0,PASS
+SW_LOW_PRIORITY_N079,ACK-low wins over timeout on exact deadline,137717,138547,83,998,0,PASS
+SW_REQ_TIMEOUT_N080,Request wait timeout at exact deadline,138547,139367,82,986,0,PASS
+SW_LOW_TIMEOUT_N080,Return wait timeout at exact deadline,139367,140207,84,1010,0,PASS
+SW_REQ_PRIORITY_N080,ACK-high wins over timeout on exact deadline,140207,141047,84,1011,0,PASS
+SW_LOW_PRIORITY_N080,ACK-low wins over timeout on exact deadline,141047,141887,84,1010,0,PASS
+SW_REQ_TIMEOUT_N081,Request wait timeout at exact deadline,141887,142717,83,998,0,PASS
+SW_LOW_TIMEOUT_N081,Return wait timeout at exact deadline,142717,143567,85,1022,0,PASS
+SW_REQ_PRIORITY_N081,ACK-high wins over timeout on exact deadline,143567,144417,85,1023,0,PASS
+SW_LOW_PRIORITY_N081,ACK-low wins over timeout on exact deadline,144417,145267,85,1022,0,PASS
+SW_REQ_TIMEOUT_N082,Request wait timeout at exact deadline,145267,146107,84,1010,0,PASS
+SW_LOW_TIMEOUT_N082,Return wait timeout at exact deadline,146107,146967,86,1034,0,PASS
+SW_REQ_PRIORITY_N082,ACK-high wins over timeout on exact deadline,146967,147827,86,1035,0,PASS
+SW_LOW_PRIORITY_N082,ACK-low wins over timeout on exact deadline,147827,148687,86,1034,0,PASS
+SW_REQ_TIMEOUT_N083,Request wait timeout at exact deadline,148687,149537,85,1022,0,PASS
+SW_LOW_TIMEOUT_N083,Return wait timeout at exact deadline,149537,150407,87,1046,0,PASS
+SW_REQ_PRIORITY_N083,ACK-high wins over timeout on exact deadline,150407,151277,87,1047,0,PASS
+SW_LOW_PRIORITY_N083,ACK-low wins over timeout on exact deadline,151277,152147,87,1046,0,PASS
+SW_REQ_TIMEOUT_N084,Request wait timeout at exact deadline,152147,153007,86,1034,0,PASS
+SW_LOW_TIMEOUT_N084,Return wait timeout at exact deadline,153007,153887,88,1058,0,PASS
+SW_REQ_PRIORITY_N084,ACK-high wins over timeout on exact deadline,153887,154767,88,1059,0,PASS
+SW_LOW_PRIORITY_N084,ACK-low wins over timeout on exact deadline,154767,155647,88,1058,0,PASS
+SW_REQ_TIMEOUT_N085,Request wait timeout at exact deadline,155647,156517,87,1046,0,PASS
+SW_LOW_TIMEOUT_N085,Return wait timeout at exact deadline,156517,157407,89,1070,0,PASS
+SW_REQ_PRIORITY_N085,ACK-high wins over timeout on exact deadline,157407,158297,89,1071,0,PASS
+SW_LOW_PRIORITY_N085,ACK-low wins over timeout on exact deadline,158297,159187,89,1070,0,PASS
+SW_REQ_TIMEOUT_N086,Request wait timeout at exact deadline,159187,160067,88,1058,0,PASS
+SW_LOW_TIMEOUT_N086,Return wait timeout at exact deadline,160067,160967,90,1082,0,PASS
+SW_REQ_PRIORITY_N086,ACK-high wins over timeout on exact deadline,160967,161867,90,1083,0,PASS
+SW_LOW_PRIORITY_N086,ACK-low wins over timeout on exact deadline,161867,162767,90,1082,0,PASS
+SW_REQ_TIMEOUT_N087,Request wait timeout at exact deadline,162767,163657,89,1070,0,PASS
+SW_LOW_TIMEOUT_N087,Return wait timeout at exact deadline,163657,164567,91,1094,0,PASS
+SW_REQ_PRIORITY_N087,ACK-high wins over timeout on exact deadline,164567,165477,91,1095,0,PASS
+SW_LOW_PRIORITY_N087,ACK-low wins over timeout on exact deadline,165477,166387,91,1094,0,PASS
+SW_REQ_TIMEOUT_N088,Request wait timeout at exact deadline,166387,167287,90,1082,0,PASS
+SW_LOW_TIMEOUT_N088,Return wait timeout at exact deadline,167287,168207,92,1106,0,PASS
+SW_REQ_PRIORITY_N088,ACK-high wins over timeout on exact deadline,168207,169127,92,1107,0,PASS
+SW_LOW_PRIORITY_N088,ACK-low wins over timeout on exact deadline,169127,170047,92,1106,0,PASS
+SW_REQ_TIMEOUT_N089,Request wait timeout at exact deadline,170047,170957,91,1094,0,PASS
+SW_LOW_TIMEOUT_N089,Return wait timeout at exact deadline,170957,171887,93,1118,0,PASS
+SW_REQ_PRIORITY_N089,ACK-high wins over timeout on exact deadline,171887,172817,93,1119,0,PASS
+SW_LOW_PRIORITY_N089,ACK-low wins over timeout on exact deadline,172817,173747,93,1118,0,PASS
+SW_REQ_TIMEOUT_N090,Request wait timeout at exact deadline,173747,174667,92,1106,0,PASS
+SW_LOW_TIMEOUT_N090,Return wait timeout at exact deadline,174667,175607,94,1130,0,PASS
+SW_REQ_PRIORITY_N090,ACK-high wins over timeout on exact deadline,175607,176547,94,1131,0,PASS
+SW_LOW_PRIORITY_N090,ACK-low wins over timeout on exact deadline,176547,177487,94,1130,0,PASS
+SW_REQ_TIMEOUT_N091,Request wait timeout at exact deadline,177487,178417,93,1118,0,PASS
+SW_LOW_TIMEOUT_N091,Return wait timeout at exact deadline,178417,179367,95,1142,0,PASS
+SW_REQ_PRIORITY_N091,ACK-high wins over timeout on exact deadline,179367,180317,95,1143,0,PASS
+SW_LOW_PRIORITY_N091,ACK-low wins over timeout on exact deadline,180317,181267,95,1142,0,PASS
+SW_REQ_TIMEOUT_N092,Request wait timeout at exact deadline,181267,182207,94,1130,0,PASS
+SW_LOW_TIMEOUT_N092,Return wait timeout at exact deadline,182207,183167,96,1154,0,PASS
+SW_REQ_PRIORITY_N092,ACK-high wins over timeout on exact deadline,183167,184127,96,1155,0,PASS
+SW_LOW_PRIORITY_N092,ACK-low wins over timeout on exact deadline,184127,185087,96,1154,0,PASS
+SW_REQ_TIMEOUT_N093,Request wait timeout at exact deadline,185087,186037,95,1142,0,PASS
+SW_LOW_TIMEOUT_N093,Return wait timeout at exact deadline,186037,187007,97,1166,0,PASS
+SW_REQ_PRIORITY_N093,ACK-high wins over timeout on exact deadline,187007,187977,97,1167,0,PASS
+SW_LOW_PRIORITY_N093,ACK-low wins over timeout on exact deadline,187977,188947,97,1166,0,PASS
+SW_REQ_TIMEOUT_N094,Request wait timeout at exact deadline,188947,189907,96,1154,0,PASS
+SW_LOW_TIMEOUT_N094,Return wait timeout at exact deadline,189907,190887,98,1178,0,PASS
+SW_REQ_PRIORITY_N094,ACK-high wins over timeout on exact deadline,190887,191867,98,1179,0,PASS
+SW_LOW_PRIORITY_N094,ACK-low wins over timeout on exact deadline,191867,192847,98,1178,0,PASS
+SW_REQ_TIMEOUT_N095,Request wait timeout at exact deadline,192847,193817,97,1166,0,PASS
+SW_LOW_TIMEOUT_N095,Return wait timeout at exact deadline,193817,194807,99,1190,0,PASS
+SW_REQ_PRIORITY_N095,ACK-high wins over timeout on exact deadline,194807,195797,99,1191,0,PASS
+SW_LOW_PRIORITY_N095,ACK-low wins over timeout on exact deadline,195797,196787,99,1190,0,PASS
+SW_REQ_TIMEOUT_N096,Request wait timeout at exact deadline,196787,197767,98,1178,0,PASS
+SW_LOW_TIMEOUT_N096,Return wait timeout at exact deadline,197767,198767,100,1202,0,PASS
+SW_REQ_PRIORITY_N096,ACK-high wins over timeout on exact deadline,198767,199767,100,1203,0,PASS
+SW_LOW_PRIORITY_N096,ACK-low wins over timeout on exact deadline,199767,200767,100,1202,0,PASS
+SW_REQ_TIMEOUT_N097,Request wait timeout at exact deadline,200767,201757,99,1190,0,PASS
+SW_LOW_TIMEOUT_N097,Return wait timeout at exact deadline,201757,202767,101,1214,0,PASS
+SW_REQ_PRIORITY_N097,ACK-high wins over timeout on exact deadline,202767,203777,101,1215,0,PASS
+SW_LOW_PRIORITY_N097,ACK-low wins over timeout on exact deadline,203777,204787,101,1214,0,PASS
+SW_REQ_TIMEOUT_N098,Request wait timeout at exact deadline,204787,205787,100,1202,0,PASS
+SW_LOW_TIMEOUT_N098,Return wait timeout at exact deadline,205787,206807,102,1226,0,PASS
+SW_REQ_PRIORITY_N098,ACK-high wins over timeout on exact deadline,206807,207827,102,1227,0,PASS
+SW_LOW_PRIORITY_N098,ACK-low wins over timeout on exact deadline,207827,208847,102,1226,0,PASS
+SW_REQ_TIMEOUT_N099,Request wait timeout at exact deadline,208847,209857,101,1214,0,PASS
+SW_LOW_TIMEOUT_N099,Return wait timeout at exact deadline,209857,210887,103,1238,0,PASS
+SW_REQ_PRIORITY_N099,ACK-high wins over timeout on exact deadline,210887,211917,103,1239,0,PASS
+SW_LOW_PRIORITY_N099,ACK-low wins over timeout on exact deadline,211917,212947,103,1238,0,PASS
+SW_REQ_TIMEOUT_N100,Request wait timeout at exact deadline,212947,213967,102,1226,0,PASS
+SW_LOW_TIMEOUT_N100,Return wait timeout at exact deadline,213967,215007,104,1250,0,PASS
+SW_REQ_PRIORITY_N100,ACK-high wins over timeout on exact deadline,215007,216047,104,1251,0,PASS
+SW_LOW_PRIORITY_N100,ACK-low wins over timeout on exact deadline,216047,217087,104,1250,0,PASS
+SW_REQ_TIMEOUT_N101,Request wait timeout at exact deadline,217087,218117,103,1238,0,PASS
+SW_LOW_TIMEOUT_N101,Return wait timeout at exact deadline,218117,219167,105,1262,0,PASS
+SW_REQ_PRIORITY_N101,ACK-high wins over timeout on exact deadline,219167,220217,105,1263,0,PASS
+SW_LOW_PRIORITY_N101,ACK-low wins over timeout on exact deadline,220217,221267,105,1262,0,PASS
+SW_REQ_TIMEOUT_N102,Request wait timeout at exact deadline,221267,222307,104,1250,0,PASS
+SW_LOW_TIMEOUT_N102,Return wait timeout at exact deadline,222307,223367,106,1274,0,PASS
+SW_REQ_PRIORITY_N102,ACK-high wins over timeout on exact deadline,223367,224427,106,1275,0,PASS
+SW_LOW_PRIORITY_N102,ACK-low wins over timeout on exact deadline,224427,225487,106,1274,0,PASS
+SW_REQ_TIMEOUT_N103,Request wait timeout at exact deadline,225487,226537,105,1262,0,PASS
+SW_LOW_TIMEOUT_N103,Return wait timeout at exact deadline,226537,227607,107,1286,0,PASS
+SW_REQ_PRIORITY_N103,ACK-high wins over timeout on exact deadline,227607,228677,107,1287,0,PASS
+SW_LOW_PRIORITY_N103,ACK-low wins over timeout on exact deadline,228677,229747,107,1286,0,PASS
+SW_REQ_TIMEOUT_N104,Request wait timeout at exact deadline,229747,230807,106,1274,0,PASS
+SW_LOW_TIMEOUT_N104,Return wait timeout at exact deadline,230807,231887,108,1298,0,PASS
+SW_REQ_PRIORITY_N104,ACK-high wins over timeout on exact deadline,231887,232967,108,1299,0,PASS
+SW_LOW_PRIORITY_N104,ACK-low wins over timeout on exact deadline,232967,234047,108,1298,0,PASS
+SW_REQ_TIMEOUT_N105,Request wait timeout at exact deadline,234047,235117,107,1286,0,PASS
+SW_LOW_TIMEOUT_N105,Return wait timeout at exact deadline,235117,236207,109,1310,0,PASS
+SW_REQ_PRIORITY_N105,ACK-high wins over timeout on exact deadline,236207,237297,109,1311,0,PASS
+SW_LOW_PRIORITY_N105,ACK-low wins over timeout on exact deadline,237297,238387,109,1310,0,PASS
+SW_REQ_TIMEOUT_N106,Request wait timeout at exact deadline,238387,239467,108,1298,0,PASS
+SW_LOW_TIMEOUT_N106,Return wait timeout at exact deadline,239467,240567,110,1322,0,PASS
+SW_REQ_PRIORITY_N106,ACK-high wins over timeout on exact deadline,240567,241667,110,1323,0,PASS
+SW_LOW_PRIORITY_N106,ACK-low wins over timeout on exact deadline,241667,242767,110,1322,0,PASS
+SW_REQ_TIMEOUT_N107,Request wait timeout at exact deadline,242767,243857,109,1310,0,PASS
+SW_LOW_TIMEOUT_N107,Return wait timeout at exact deadline,243857,244967,111,1334,0,PASS
+SW_REQ_PRIORITY_N107,ACK-high wins over timeout on exact deadline,244967,246077,111,1335,0,PASS
+SW_LOW_PRIORITY_N107,ACK-low wins over timeout on exact deadline,246077,247187,111,1334,0,PASS
+SW_REQ_TIMEOUT_N108,Request wait timeout at exact deadline,247187,248287,110,1322,0,PASS
+SW_LOW_TIMEOUT_N108,Return wait timeout at exact deadline,248287,249407,112,1346,0,PASS
+SW_REQ_PRIORITY_N108,ACK-high wins over timeout on exact deadline,249407,250527,112,1347,0,PASS
+SW_LOW_PRIORITY_N108,ACK-low wins over timeout on exact deadline,250527,251647,112,1346,0,PASS
+SW_REQ_TIMEOUT_N109,Request wait timeout at exact deadline,251647,252757,111,1334,0,PASS
+SW_LOW_TIMEOUT_N109,Return wait timeout at exact deadline,252757,253887,113,1358,0,PASS
+SW_REQ_PRIORITY_N109,ACK-high wins over timeout on exact deadline,253887,255017,113,1359,0,PASS
+SW_LOW_PRIORITY_N109,ACK-low wins over timeout on exact deadline,255017,256147,113,1358,0,PASS
+SW_REQ_TIMEOUT_N110,Request wait timeout at exact deadline,256147,257267,112,1346,0,PASS
+SW_LOW_TIMEOUT_N110,Return wait timeout at exact deadline,257267,258407,114,1370,0,PASS
+SW_REQ_PRIORITY_N110,ACK-high wins over timeout on exact deadline,258407,259547,114,1371,0,PASS
+SW_LOW_PRIORITY_N110,ACK-low wins over timeout on exact deadline,259547,260687,114,1370,0,PASS
+SW_REQ_TIMEOUT_N111,Request wait timeout at exact deadline,260687,261817,113,1358,0,PASS
+SW_LOW_TIMEOUT_N111,Return wait timeout at exact deadline,261817,262967,115,1382,0,PASS
+SW_REQ_PRIORITY_N111,ACK-high wins over timeout on exact deadline,262967,264117,115,1383,0,PASS
+SW_LOW_PRIORITY_N111,ACK-low wins over timeout on exact deadline,264117,265267,115,1382,0,PASS
+SW_REQ_TIMEOUT_N112,Request wait timeout at exact deadline,265267,266407,114,1370,0,PASS
+SW_LOW_TIMEOUT_N112,Return wait timeout at exact deadline,266407,267567,116,1394,0,PASS
+SW_REQ_PRIORITY_N112,ACK-high wins over timeout on exact deadline,267567,268727,116,1395,0,PASS
+SW_LOW_PRIORITY_N112,ACK-low wins over timeout on exact deadline,268727,269887,116,1394,0,PASS
+SW_REQ_TIMEOUT_N113,Request wait timeout at exact deadline,269887,271037,115,1382,0,PASS
+SW_LOW_TIMEOUT_N113,Return wait timeout at exact deadline,271037,272207,117,1406,0,PASS
+SW_REQ_PRIORITY_N113,ACK-high wins over timeout on exact deadline,272207,273377,117,1407,0,PASS
+SW_LOW_PRIORITY_N113,ACK-low wins over timeout on exact deadline,273377,274547,117,1406,0,PASS
+SW_REQ_TIMEOUT_N114,Request wait timeout at exact deadline,274547,275707,116,1394,0,PASS
+SW_LOW_TIMEOUT_N114,Return wait timeout at exact deadline,275707,276887,118,1418,0,PASS
+SW_REQ_PRIORITY_N114,ACK-high wins over timeout on exact deadline,276887,278067,118,1419,0,PASS
+SW_LOW_PRIORITY_N114,ACK-low wins over timeout on exact deadline,278067,279247,118,1418,0,PASS
+SW_REQ_TIMEOUT_N115,Request wait timeout at exact deadline,279247,280417,117,1406,0,PASS
+SW_LOW_TIMEOUT_N115,Return wait timeout at exact deadline,280417,281607,119,1430,0,PASS
+SW_REQ_PRIORITY_N115,ACK-high wins over timeout on exact deadline,281607,282797,119,1431,0,PASS
+SW_LOW_PRIORITY_N115,ACK-low wins over timeout on exact deadline,282797,283987,119,1430,0,PASS
+SW_REQ_TIMEOUT_N116,Request wait timeout at exact deadline,283987,285167,118,1418,0,PASS
+SW_LOW_TIMEOUT_N116,Return wait timeout at exact deadline,285167,286367,120,1442,0,PASS
+SW_REQ_PRIORITY_N116,ACK-high wins over timeout on exact deadline,286367,287567,120,1443,0,PASS
+SW_LOW_PRIORITY_N116,ACK-low wins over timeout on exact deadline,287567,288767,120,1442,0,PASS
+SW_REQ_TIMEOUT_N117,Request wait timeout at exact deadline,288767,289957,119,1430,0,PASS
+SW_LOW_TIMEOUT_N117,Return wait timeout at exact deadline,289957,291167,121,1454,0,PASS
+SW_REQ_PRIORITY_N117,ACK-high wins over timeout on exact deadline,291167,292377,121,1455,0,PASS
+SW_LOW_PRIORITY_N117,ACK-low wins over timeout on exact deadline,292377,293587,121,1454,0,PASS
+SW_REQ_TIMEOUT_N118,Request wait timeout at exact deadline,293587,294787,120,1442,0,PASS
+SW_LOW_TIMEOUT_N118,Return wait timeout at exact deadline,294787,296007,122,1466,0,PASS
+SW_REQ_PRIORITY_N118,ACK-high wins over timeout on exact deadline,296007,297227,122,1467,0,PASS
+SW_LOW_PRIORITY_N118,ACK-low wins over timeout on exact deadline,297227,298447,122,1466,0,PASS
+SW_REQ_TIMEOUT_N119,Request wait timeout at exact deadline,298447,299657,121,1454,0,PASS
+SW_LOW_TIMEOUT_N119,Return wait timeout at exact deadline,299657,300887,123,1478,0,PASS
+SW_REQ_PRIORITY_N119,ACK-high wins over timeout on exact deadline,300887,302117,123,1479,0,PASS
+SW_LOW_PRIORITY_N119,ACK-low wins over timeout on exact deadline,302117,303347,123,1478,0,PASS
+SW_REQ_TIMEOUT_N120,Request wait timeout at exact deadline,303347,304567,122,1466,0,PASS
+SW_LOW_TIMEOUT_N120,Return wait timeout at exact deadline,304567,305807,124,1490,0,PASS
+SW_REQ_PRIORITY_N120,ACK-high wins over timeout on exact deadline,305807,307047,124,1491,0,PASS
+SW_LOW_PRIORITY_N120,ACK-low wins over timeout on exact deadline,307047,308287,124,1490,0,PASS
+SW_REQ_TIMEOUT_N121,Request wait timeout at exact deadline,308287,309517,123,1478,0,PASS
+SW_LOW_TIMEOUT_N121,Return wait timeout at exact deadline,309517,310767,125,1502,0,PASS
+SW_REQ_PRIORITY_N121,ACK-high wins over timeout on exact deadline,310767,312017,125,1503,0,PASS
+SW_LOW_PRIORITY_N121,ACK-low wins over timeout on exact deadline,312017,313267,125,1502,0,PASS
+SW_REQ_TIMEOUT_N122,Request wait timeout at exact deadline,313267,314507,124,1490,0,PASS
+SW_LOW_TIMEOUT_N122,Return wait timeout at exact deadline,314507,315767,126,1514,0,PASS
+SW_REQ_PRIORITY_N122,ACK-high wins over timeout on exact deadline,315767,317027,126,1515,0,PASS
+SW_LOW_PRIORITY_N122,ACK-low wins over timeout on exact deadline,317027,318287,126,1514,0,PASS
+SW_REQ_TIMEOUT_N123,Request wait timeout at exact deadline,318287,319537,125,1502,0,PASS
+SW_LOW_TIMEOUT_N123,Return wait timeout at exact deadline,319537,320807,127,1526,0,PASS
+SW_REQ_PRIORITY_N123,ACK-high wins over timeout on exact deadline,320807,322077,127,1527,0,PASS
+SW_LOW_PRIORITY_N123,ACK-low wins over timeout on exact deadline,322077,323347,127,1526,0,PASS
+SW_REQ_TIMEOUT_N124,Request wait timeout at exact deadline,323347,324607,126,1514,0,PASS
+SW_LOW_TIMEOUT_N124,Return wait timeout at exact deadline,324607,325887,128,1538,0,PASS
+SW_REQ_PRIORITY_N124,ACK-high wins over timeout on exact deadline,325887,327167,128,1539,0,PASS
+SW_LOW_PRIORITY_N124,ACK-low wins over timeout on exact deadline,327167,328447,128,1538,0,PASS
+SW_REQ_TIMEOUT_N125,Request wait timeout at exact deadline,328447,329717,127,1526,0,PASS
+SW_LOW_TIMEOUT_N125,Return wait timeout at exact deadline,329717,331007,129,1550,0,PASS
+SW_REQ_PRIORITY_N125,ACK-high wins over timeout on exact deadline,331007,332297,129,1551,0,PASS
+SW_LOW_PRIORITY_N125,ACK-low wins over timeout on exact deadline,332297,333587,129,1550,0,PASS
+SW_REQ_TIMEOUT_N126,Request wait timeout at exact deadline,333587,334867,128,1538,0,PASS
+SW_LOW_TIMEOUT_N126,Return wait timeout at exact deadline,334867,336167,130,1562,0,PASS
+SW_REQ_PRIORITY_N126,ACK-high wins over timeout on exact deadline,336167,337467,130,1563,0,PASS
+SW_LOW_PRIORITY_N126,ACK-low wins over timeout on exact deadline,337467,338767,130,1562,0,PASS
+SW_REQ_TIMEOUT_N127,Request wait timeout at exact deadline,338767,340057,129,1550,0,PASS
+SW_LOW_TIMEOUT_N127,Return wait timeout at exact deadline,340057,341367,131,1574,0,PASS
+SW_REQ_PRIORITY_N127,ACK-high wins over timeout on exact deadline,341367,342677,131,1575,0,PASS
+SW_LOW_PRIORITY_N127,ACK-low wins over timeout on exact deadline,342677,343987,131,1574,0,PASS
+SW_REQ_TIMEOUT_N128,Request wait timeout at exact deadline,343987,345287,130,1562,0,PASS
+SW_LOW_TIMEOUT_N128,Return wait timeout at exact deadline,345287,346607,132,1586,0,PASS
+SW_REQ_PRIORITY_N128,ACK-high wins over timeout on exact deadline,346607,347927,132,1587,0,PASS
+SW_LOW_PRIORITY_N128,ACK-low wins over timeout on exact deadline,347927,349247,132,1586,0,PASS
+SW_REQ_TIMEOUT_N129,Request wait timeout at exact deadline,349247,350557,131,1574,0,PASS
+SW_LOW_TIMEOUT_N129,Return wait timeout at exact deadline,350557,351887,133,1598,0,PASS
+SW_REQ_PRIORITY_N129,ACK-high wins over timeout on exact deadline,351887,353217,133,1599,0,PASS
+SW_LOW_PRIORITY_N129,ACK-low wins over timeout on exact deadline,353217,354547,133,1598,0,PASS
+SW_REQ_TIMEOUT_N130,Request wait timeout at exact deadline,354547,355867,132,1586,0,PASS
+SW_LOW_TIMEOUT_N130,Return wait timeout at exact deadline,355867,357207,134,1610,0,PASS
+SW_REQ_PRIORITY_N130,ACK-high wins over timeout on exact deadline,357207,358547,134,1611,0,PASS
+SW_LOW_PRIORITY_N130,ACK-low wins over timeout on exact deadline,358547,359887,134,1610,0,PASS
+SW_REQ_TIMEOUT_N131,Request wait timeout at exact deadline,359887,361217,133,1598,0,PASS
+SW_LOW_TIMEOUT_N131,Return wait timeout at exact deadline,361217,362567,135,1622,0,PASS
+SW_REQ_PRIORITY_N131,ACK-high wins over timeout on exact deadline,362567,363917,135,1623,0,PASS
+SW_LOW_PRIORITY_N131,ACK-low wins over timeout on exact deadline,363917,365267,135,1622,0,PASS
+SW_REQ_TIMEOUT_N132,Request wait timeout at exact deadline,365267,366607,134,1610,0,PASS
+SW_LOW_TIMEOUT_N132,Return wait timeout at exact deadline,366607,367967,136,1634,0,PASS
+SW_REQ_PRIORITY_N132,ACK-high wins over timeout on exact deadline,367967,369327,136,1635,0,PASS
+SW_LOW_PRIORITY_N132,ACK-low wins over timeout on exact deadline,369327,370687,136,1634,0,PASS
+SW_REQ_TIMEOUT_N133,Request wait timeout at exact deadline,370687,372037,135,1622,0,PASS
+SW_LOW_TIMEOUT_N133,Return wait timeout at exact deadline,372037,373407,137,1646,0,PASS
+SW_REQ_PRIORITY_N133,ACK-high wins over timeout on exact deadline,373407,374777,137,1647,0,PASS
+SW_LOW_PRIORITY_N133,ACK-low wins over timeout on exact deadline,374777,376147,137,1646,0,PASS
+SW_REQ_TIMEOUT_N134,Request wait timeout at exact deadline,376147,377507,136,1634,0,PASS
+SW_LOW_TIMEOUT_N134,Return wait timeout at exact deadline,377507,378887,138,1658,0,PASS
+SW_REQ_PRIORITY_N134,ACK-high wins over timeout on exact deadline,378887,380267,138,1659,0,PASS
+SW_LOW_PRIORITY_N134,ACK-low wins over timeout on exact deadline,380267,381647,138,1658,0,PASS
+SW_REQ_TIMEOUT_N135,Request wait timeout at exact deadline,381647,383017,137,1646,0,PASS
+SW_LOW_TIMEOUT_N135,Return wait timeout at exact deadline,383017,384407,139,1670,0,PASS
+SW_REQ_PRIORITY_N135,ACK-high wins over timeout on exact deadline,384407,385797,139,1671,0,PASS
+SW_LOW_PRIORITY_N135,ACK-low wins over timeout on exact deadline,385797,387187,139,1670,0,PASS
+SW_REQ_TIMEOUT_N136,Request wait timeout at exact deadline,387187,388567,138,1658,0,PASS
+SW_LOW_TIMEOUT_N136,Return wait timeout at exact deadline,388567,389967,140,1682,0,PASS
+SW_REQ_PRIORITY_N136,ACK-high wins over timeout on exact deadline,389967,391367,140,1683,0,PASS
+SW_LOW_PRIORITY_N136,ACK-low wins over timeout on exact deadline,391367,392767,140,1682,0,PASS
+SW_REQ_TIMEOUT_N137,Request wait timeout at exact deadline,392767,394157,139,1670,0,PASS
+SW_LOW_TIMEOUT_N137,Return wait timeout at exact deadline,394157,395567,141,1694,0,PASS
+SW_REQ_PRIORITY_N137,ACK-high wins over timeout on exact deadline,395567,396977,141,1695,0,PASS
+SW_LOW_PRIORITY_N137,ACK-low wins over timeout on exact deadline,396977,398387,141,1694,0,PASS
+SW_REQ_TIMEOUT_N138,Request wait timeout at exact deadline,398387,399787,140,1682,0,PASS
+SW_LOW_TIMEOUT_N138,Return wait timeout at exact deadline,399787,401207,142,1706,0,PASS
+SW_REQ_PRIORITY_N138,ACK-high wins over timeout on exact deadline,401207,402627,142,1707,0,PASS
+SW_LOW_PRIORITY_N138,ACK-low wins over timeout on exact deadline,402627,404047,142,1706,0,PASS
+SW_REQ_TIMEOUT_N139,Request wait timeout at exact deadline,404047,405457,141,1694,0,PASS
+SW_LOW_TIMEOUT_N139,Return wait timeout at exact deadline,405457,406887,143,1718,0,PASS
+SW_REQ_PRIORITY_N139,ACK-high wins over timeout on exact deadline,406887,408317,143,1719,0,PASS
+SW_LOW_PRIORITY_N139,ACK-low wins over timeout on exact deadline,408317,409747,143,1718,0,PASS
+SW_REQ_TIMEOUT_N140,Request wait timeout at exact deadline,409747,411167,142,1706,0,PASS
+SW_LOW_TIMEOUT_N140,Return wait timeout at exact deadline,411167,412607,144,1730,0,PASS
+SW_REQ_PRIORITY_N140,ACK-high wins over timeout on exact deadline,412607,414047,144,1731,0,PASS
+SW_LOW_PRIORITY_N140,ACK-low wins over timeout on exact deadline,414047,415487,144,1730,0,PASS
+SW_REQ_TIMEOUT_N141,Request wait timeout at exact deadline,415487,416917,143,1718,0,PASS
+SW_LOW_TIMEOUT_N141,Return wait timeout at exact deadline,416917,418367,145,1742,0,PASS
+SW_REQ_PRIORITY_N141,ACK-high wins over timeout on exact deadline,418367,419817,145,1743,0,PASS
+SW_LOW_PRIORITY_N141,ACK-low wins over timeout on exact deadline,419817,421267,145,1742,0,PASS
+SW_REQ_TIMEOUT_N142,Request wait timeout at exact deadline,421267,422707,144,1730,0,PASS
+SW_LOW_TIMEOUT_N142,Return wait timeout at exact deadline,422707,424167,146,1754,0,PASS
+SW_REQ_PRIORITY_N142,ACK-high wins over timeout on exact deadline,424167,425627,146,1755,0,PASS
+SW_LOW_PRIORITY_N142,ACK-low wins over timeout on exact deadline,425627,427087,146,1754,0,PASS
+SW_REQ_TIMEOUT_N143,Request wait timeout at exact deadline,427087,428537,145,1742,0,PASS
+SW_LOW_TIMEOUT_N143,Return wait timeout at exact deadline,428537,430007,147,1766,0,PASS
+SW_REQ_PRIORITY_N143,ACK-high wins over timeout on exact deadline,430007,431477,147,1767,0,PASS
+SW_LOW_PRIORITY_N143,ACK-low wins over timeout on exact deadline,431477,432947,147,1766,0,PASS
+SW_REQ_TIMEOUT_N144,Request wait timeout at exact deadline,432947,434407,146,1754,0,PASS
+SW_LOW_TIMEOUT_N144,Return wait timeout at exact deadline,434407,435887,148,1778,0,PASS
+SW_REQ_PRIORITY_N144,ACK-high wins over timeout on exact deadline,435887,437367,148,1779,0,PASS
+SW_LOW_PRIORITY_N144,ACK-low wins over timeout on exact deadline,437367,438847,148,1778,0,PASS
+SW_REQ_TIMEOUT_N145,Request wait timeout at exact deadline,438847,440317,147,1766,0,PASS
+SW_LOW_TIMEOUT_N145,Return wait timeout at exact deadline,440317,441807,149,1790,0,PASS
+SW_REQ_PRIORITY_N145,ACK-high wins over timeout on exact deadline,441807,443297,149,1791,0,PASS
+SW_LOW_PRIORITY_N145,ACK-low wins over timeout on exact deadline,443297,444787,149,1790,0,PASS
+SW_REQ_TIMEOUT_N146,Request wait timeout at exact deadline,444787,446267,148,1778,0,PASS
+SW_LOW_TIMEOUT_N146,Return wait timeout at exact deadline,446267,447767,150,1802,0,PASS
+SW_REQ_PRIORITY_N146,ACK-high wins over timeout on exact deadline,447767,449267,150,1803,0,PASS
+SW_LOW_PRIORITY_N146,ACK-low wins over timeout on exact deadline,449267,450767,150,1802,0,PASS
+SW_REQ_TIMEOUT_N147,Request wait timeout at exact deadline,450767,452257,149,1790,0,PASS
+SW_LOW_TIMEOUT_N147,Return wait timeout at exact deadline,452257,453767,151,1814,0,PASS
+SW_REQ_PRIORITY_N147,ACK-high wins over timeout on exact deadline,453767,455277,151,1815,0,PASS
+SW_LOW_PRIORITY_N147,ACK-low wins over timeout on exact deadline,455277,456787,151,1814,0,PASS
+SW_REQ_TIMEOUT_N148,Request wait timeout at exact deadline,456787,458287,150,1802,0,PASS
+SW_LOW_TIMEOUT_N148,Return wait timeout at exact deadline,458287,459807,152,1826,0,PASS
+SW_REQ_PRIORITY_N148,ACK-high wins over timeout on exact deadline,459807,461327,152,1827,0,PASS
+SW_LOW_PRIORITY_N148,ACK-low wins over timeout on exact deadline,461327,462847,152,1826,0,PASS
+SW_REQ_TIMEOUT_N149,Request wait timeout at exact deadline,462847,464357,151,1814,0,PASS
+SW_LOW_TIMEOUT_N149,Return wait timeout at exact deadline,464357,465887,153,1838,0,PASS
+SW_REQ_PRIORITY_N149,ACK-high wins over timeout on exact deadline,465887,467417,153,1839,0,PASS
+SW_LOW_PRIORITY_N149,ACK-low wins over timeout on exact deadline,467417,468947,153,1838,0,PASS
+SW_REQ_TIMEOUT_N150,Request wait timeout at exact deadline,468947,470467,152,1826,0,PASS
+SW_LOW_TIMEOUT_N150,Return wait timeout at exact deadline,470467,472007,154,1850,0,PASS
+SW_REQ_PRIORITY_N150,ACK-high wins over timeout on exact deadline,472007,473547,154,1851,0,PASS
+SW_LOW_PRIORITY_N150,ACK-low wins over timeout on exact deadline,473547,475087,154,1850,0,PASS
+SW_REQ_TIMEOUT_N151,Request wait timeout at exact deadline,475087,476617,153,1838,0,PASS
+SW_LOW_TIMEOUT_N151,Return wait timeout at exact deadline,476617,478167,155,1862,0,PASS
+SW_REQ_PRIORITY_N151,ACK-high wins over timeout on exact deadline,478167,479717,155,1863,0,PASS
+SW_LOW_PRIORITY_N151,ACK-low wins over timeout on exact deadline,479717,481267,155,1862,0,PASS
+SW_REQ_TIMEOUT_N152,Request wait timeout at exact deadline,481267,482807,154,1850,0,PASS
+SW_LOW_TIMEOUT_N152,Return wait timeout at exact deadline,482807,484367,156,1874,0,PASS
+SW_REQ_PRIORITY_N152,ACK-high wins over timeout on exact deadline,484367,485927,156,1875,0,PASS
+SW_LOW_PRIORITY_N152,ACK-low wins over timeout on exact deadline,485927,487487,156,1874,0,PASS
+SW_REQ_TIMEOUT_N153,Request wait timeout at exact deadline,487487,489037,155,1862,0,PASS
+SW_LOW_TIMEOUT_N153,Return wait timeout at exact deadline,489037,490607,157,1886,0,PASS
+SW_REQ_PRIORITY_N153,ACK-high wins over timeout on exact deadline,490607,492177,157,1887,0,PASS
+SW_LOW_PRIORITY_N153,ACK-low wins over timeout on exact deadline,492177,493747,157,1886,0,PASS
+SW_REQ_TIMEOUT_N154,Request wait timeout at exact deadline,493747,495307,156,1874,0,PASS
+SW_LOW_TIMEOUT_N154,Return wait timeout at exact deadline,495307,496887,158,1898,0,PASS
+SW_REQ_PRIORITY_N154,ACK-high wins over timeout on exact deadline,496887,498467,158,1899,0,PASS
+SW_LOW_PRIORITY_N154,ACK-low wins over timeout on exact deadline,498467,500047,158,1898,0,PASS
+SW_REQ_TIMEOUT_N155,Request wait timeout at exact deadline,500047,501617,157,1886,0,PASS
+SW_LOW_TIMEOUT_N155,Return wait timeout at exact deadline,501617,503207,159,1910,0,PASS
+SW_REQ_PRIORITY_N155,ACK-high wins over timeout on exact deadline,503207,504797,159,1911,0,PASS
+SW_LOW_PRIORITY_N155,ACK-low wins over timeout on exact deadline,504797,506387,159,1910,0,PASS
+SW_REQ_TIMEOUT_N156,Request wait timeout at exact deadline,506387,507967,158,1898,0,PASS
+SW_LOW_TIMEOUT_N156,Return wait timeout at exact deadline,507967,509567,160,1922,0,PASS
+SW_REQ_PRIORITY_N156,ACK-high wins over timeout on exact deadline,509567,511167,160,1923,0,PASS
+SW_LOW_PRIORITY_N156,ACK-low wins over timeout on exact deadline,511167,512767,160,1922,0,PASS
+SW_REQ_TIMEOUT_N157,Request wait timeout at exact deadline,512767,514357,159,1910,0,PASS
+SW_LOW_TIMEOUT_N157,Return wait timeout at exact deadline,514357,515967,161,1934,0,PASS
+SW_REQ_PRIORITY_N157,ACK-high wins over timeout on exact deadline,515967,517577,161,1935,0,PASS
+SW_LOW_PRIORITY_N157,ACK-low wins over timeout on exact deadline,517577,519187,161,1934,0,PASS
+SW_REQ_TIMEOUT_N158,Request wait timeout at exact deadline,519187,520787,160,1922,0,PASS
+SW_LOW_TIMEOUT_N158,Return wait timeout at exact deadline,520787,522407,162,1946,0,PASS
+SW_REQ_PRIORITY_N158,ACK-high wins over timeout on exact deadline,522407,524027,162,1947,0,PASS
+SW_LOW_PRIORITY_N158,ACK-low wins over timeout on exact deadline,524027,525647,162,1946,0,PASS
+SW_REQ_TIMEOUT_N159,Request wait timeout at exact deadline,525647,527257,161,1934,0,PASS
+SW_LOW_TIMEOUT_N159,Return wait timeout at exact deadline,527257,528887,163,1958,0,PASS
+SW_REQ_PRIORITY_N159,ACK-high wins over timeout on exact deadline,528887,530517,163,1959,0,PASS
+SW_LOW_PRIORITY_N159,ACK-low wins over timeout on exact deadline,530517,532147,163,1958,0,PASS
+SW_REQ_TIMEOUT_N160,Request wait timeout at exact deadline,532147,533767,162,1946,0,PASS
+SW_LOW_TIMEOUT_N160,Return wait timeout at exact deadline,533767,535407,164,1970,0,PASS
+SW_REQ_PRIORITY_N160,ACK-high wins over timeout on exact deadline,535407,537047,164,1971,0,PASS
+SW_LOW_PRIORITY_N160,ACK-low wins over timeout on exact deadline,537047,538687,164,1970,0,PASS
+SW_REQ_TIMEOUT_N161,Request wait timeout at exact deadline,538687,540317,163,1958,0,PASS
+SW_LOW_TIMEOUT_N161,Return wait timeout at exact deadline,540317,541967,165,1982,0,PASS
+SW_REQ_PRIORITY_N161,ACK-high wins over timeout on exact deadline,541967,543617,165,1983,0,PASS
+SW_LOW_PRIORITY_N161,ACK-low wins over timeout on exact deadline,543617,545267,165,1982,0,PASS
+SW_REQ_TIMEOUT_N162,Request wait timeout at exact deadline,545267,546907,164,1970,0,PASS
+SW_LOW_TIMEOUT_N162,Return wait timeout at exact deadline,546907,548567,166,1994,0,PASS
+SW_REQ_PRIORITY_N162,ACK-high wins over timeout on exact deadline,548567,550227,166,1995,0,PASS
+SW_LOW_PRIORITY_N162,ACK-low wins over timeout on exact deadline,550227,551887,166,1994,0,PASS
+SW_REQ_TIMEOUT_N163,Request wait timeout at exact deadline,551887,553537,165,1982,0,PASS
+SW_LOW_TIMEOUT_N163,Return wait timeout at exact deadline,553537,555207,167,2006,0,PASS
+SW_REQ_PRIORITY_N163,ACK-high wins over timeout on exact deadline,555207,556877,167,2007,0,PASS
+SW_LOW_PRIORITY_N163,ACK-low wins over timeout on exact deadline,556877,558547,167,2006,0,PASS
+SW_REQ_TIMEOUT_N164,Request wait timeout at exact deadline,558547,560207,166,1994,0,PASS
+SW_LOW_TIMEOUT_N164,Return wait timeout at exact deadline,560207,561887,168,2018,0,PASS
+SW_REQ_PRIORITY_N164,ACK-high wins over timeout on exact deadline,561887,563567,168,2019,0,PASS
+SW_LOW_PRIORITY_N164,ACK-low wins over timeout on exact deadline,563567,565247,168,2018,0,PASS
+SW_REQ_TIMEOUT_N165,Request wait timeout at exact deadline,565247,566917,167,2006,0,PASS
+SW_LOW_TIMEOUT_N165,Return wait timeout at exact deadline,566917,568607,169,2030,0,PASS
+SW_REQ_PRIORITY_N165,ACK-high wins over timeout on exact deadline,568607,570297,169,2031,0,PASS
+SW_LOW_PRIORITY_N165,ACK-low wins over timeout on exact deadline,570297,571987,169,2030,0,PASS
+SW_REQ_TIMEOUT_N166,Request wait timeout at exact deadline,571987,573667,168,2018,0,PASS
+SW_LOW_TIMEOUT_N166,Return wait timeout at exact deadline,573667,575367,170,2042,0,PASS
+SW_REQ_PRIORITY_N166,ACK-high wins over timeout on exact deadline,575367,577067,170,2043,0,PASS
+SW_LOW_PRIORITY_N166,ACK-low wins over timeout on exact deadline,577067,578767,170,2042,0,PASS
+SW_REQ_TIMEOUT_N167,Request wait timeout at exact deadline,578767,580457,169,2030,0,PASS
+SW_LOW_TIMEOUT_N167,Return wait timeout at exact deadline,580457,582167,171,2054,0,PASS
+SW_REQ_PRIORITY_N167,ACK-high wins over timeout on exact deadline,582167,583877,171,2055,0,PASS
+SW_LOW_PRIORITY_N167,ACK-low wins over timeout on exact deadline,583877,585587,171,2054,0,PASS
+SW_REQ_TIMEOUT_N168,Request wait timeout at exact deadline,585587,587287,170,2042,0,PASS
+SW_LOW_TIMEOUT_N168,Return wait timeout at exact deadline,587287,589007,172,2066,0,PASS
+SW_REQ_PRIORITY_N168,ACK-high wins over timeout on exact deadline,589007,590727,172,2067,0,PASS
+SW_LOW_PRIORITY_N168,ACK-low wins over timeout on exact deadline,590727,592447,172,2066,0,PASS
+SW_REQ_TIMEOUT_N169,Request wait timeout at exact deadline,592447,594157,171,2054,0,PASS
+SW_LOW_TIMEOUT_N169,Return wait timeout at exact deadline,594157,595887,173,2078,0,PASS
+SW_REQ_PRIORITY_N169,ACK-high wins over timeout on exact deadline,595887,597617,173,2079,0,PASS
+SW_LOW_PRIORITY_N169,ACK-low wins over timeout on exact deadline,597617,599347,173,2078,0,PASS
+SW_REQ_TIMEOUT_N170,Request wait timeout at exact deadline,599347,601067,172,2066,0,PASS
+SW_LOW_TIMEOUT_N170,Return wait timeout at exact deadline,601067,602807,174,2090,0,PASS
+SW_REQ_PRIORITY_N170,ACK-high wins over timeout on exact deadline,602807,604547,174,2091,0,PASS
+SW_LOW_PRIORITY_N170,ACK-low wins over timeout on exact deadline,604547,606287,174,2090,0,PASS
+SW_REQ_TIMEOUT_N171,Request wait timeout at exact deadline,606287,608017,173,2078,0,PASS
+SW_LOW_TIMEOUT_N171,Return wait timeout at exact deadline,608017,609767,175,2102,0,PASS
+SW_REQ_PRIORITY_N171,ACK-high wins over timeout on exact deadline,609767,611517,175,2103,0,PASS
+SW_LOW_PRIORITY_N171,ACK-low wins over timeout on exact deadline,611517,613267,175,2102,0,PASS
+SW_REQ_TIMEOUT_N172,Request wait timeout at exact deadline,613267,615007,174,2090,0,PASS
+SW_LOW_TIMEOUT_N172,Return wait timeout at exact deadline,615007,616767,176,2114,0,PASS
+SW_REQ_PRIORITY_N172,ACK-high wins over timeout on exact deadline,616767,618527,176,2115,0,PASS
+SW_LOW_PRIORITY_N172,ACK-low wins over timeout on exact deadline,618527,620287,176,2114,0,PASS
+SW_REQ_TIMEOUT_N173,Request wait timeout at exact deadline,620287,622037,175,2102,0,PASS
+SW_LOW_TIMEOUT_N173,Return wait timeout at exact deadline,622037,623807,177,2126,0,PASS
+SW_REQ_PRIORITY_N173,ACK-high wins over timeout on exact deadline,623807,625577,177,2127,0,PASS
+SW_LOW_PRIORITY_N173,ACK-low wins over timeout on exact deadline,625577,627347,177,2126,0,PASS
+SW_REQ_TIMEOUT_N174,Request wait timeout at exact deadline,627347,629107,176,2114,0,PASS
+SW_LOW_TIMEOUT_N174,Return wait timeout at exact deadline,629107,630887,178,2138,0,PASS
+SW_REQ_PRIORITY_N174,ACK-high wins over timeout on exact deadline,630887,632667,178,2139,0,PASS
+SW_LOW_PRIORITY_N174,ACK-low wins over timeout on exact deadline,632667,634447,178,2138,0,PASS
+SW_REQ_TIMEOUT_N175,Request wait timeout at exact deadline,634447,636217,177,2126,0,PASS
+SW_LOW_TIMEOUT_N175,Return wait timeout at exact deadline,636217,638007,179,2150,0,PASS
+SW_REQ_PRIORITY_N175,ACK-high wins over timeout on exact deadline,638007,639797,179,2151,0,PASS
+SW_LOW_PRIORITY_N175,ACK-low wins over timeout on exact deadline,639797,641587,179,2150,0,PASS
+SW_REQ_TIMEOUT_N176,Request wait timeout at exact deadline,641587,643367,178,2138,0,PASS
+SW_LOW_TIMEOUT_N176,Return wait timeout at exact deadline,643367,645167,180,2162,0,PASS
+SW_REQ_PRIORITY_N176,ACK-high wins over timeout on exact deadline,645167,646967,180,2163,0,PASS
+SW_LOW_PRIORITY_N176,ACK-low wins over timeout on exact deadline,646967,648767,180,2162,0,PASS
+SW_REQ_TIMEOUT_N177,Request wait timeout at exact deadline,648767,650557,179,2150,0,PASS
+SW_LOW_TIMEOUT_N177,Return wait timeout at exact deadline,650557,652367,181,2174,0,PASS
+SW_REQ_PRIORITY_N177,ACK-high wins over timeout on exact deadline,652367,654177,181,2175,0,PASS
+SW_LOW_PRIORITY_N177,ACK-low wins over timeout on exact deadline,654177,655987,181,2174,0,PASS
+SW_REQ_TIMEOUT_N178,Request wait timeout at exact deadline,655987,657787,180,2162,0,PASS
+SW_LOW_TIMEOUT_N178,Return wait timeout at exact deadline,657787,659607,182,2186,0,PASS
+SW_REQ_PRIORITY_N178,ACK-high wins over timeout on exact deadline,659607,661427,182,2187,0,PASS
+SW_LOW_PRIORITY_N178,ACK-low wins over timeout on exact deadline,661427,663247,182,2186,0,PASS
+SW_REQ_TIMEOUT_N179,Request wait timeout at exact deadline,663247,665057,181,2174,0,PASS
+SW_LOW_TIMEOUT_N179,Return wait timeout at exact deadline,665057,666887,183,2198,0,PASS
+SW_REQ_PRIORITY_N179,ACK-high wins over timeout on exact deadline,666887,668717,183,2199,0,PASS
+SW_LOW_PRIORITY_N179,ACK-low wins over timeout on exact deadline,668717,670547,183,2198,0,PASS
+SW_REQ_TIMEOUT_N180,Request wait timeout at exact deadline,670547,672367,182,2186,0,PASS
+SW_LOW_TIMEOUT_N180,Return wait timeout at exact deadline,672367,674207,184,2210,0,PASS
+SW_REQ_PRIORITY_N180,ACK-high wins over timeout on exact deadline,674207,676047,184,2211,0,PASS
+SW_LOW_PRIORITY_N180,ACK-low wins over timeout on exact deadline,676047,677887,184,2210,0,PASS
+SW_REQ_TIMEOUT_N181,Request wait timeout at exact deadline,677887,679717,183,2198,0,PASS
+SW_LOW_TIMEOUT_N181,Return wait timeout at exact deadline,679717,681567,185,2222,0,PASS
+SW_REQ_PRIORITY_N181,ACK-high wins over timeout on exact deadline,681567,683417,185,2223,0,PASS
+SW_LOW_PRIORITY_N181,ACK-low wins over timeout on exact deadline,683417,685267,185,2222,0,PASS
+SW_REQ_TIMEOUT_N182,Request wait timeout at exact deadline,685267,687107,184,2210,0,PASS
+SW_LOW_TIMEOUT_N182,Return wait timeout at exact deadline,687107,688967,186,2234,0,PASS
+SW_REQ_PRIORITY_N182,ACK-high wins over timeout on exact deadline,688967,690827,186,2235,0,PASS
+SW_LOW_PRIORITY_N182,ACK-low wins over timeout on exact deadline,690827,692687,186,2234,0,PASS
+SW_REQ_TIMEOUT_N183,Request wait timeout at exact deadline,692687,694537,185,2222,0,PASS
+SW_LOW_TIMEOUT_N183,Return wait timeout at exact deadline,694537,696407,187,2246,0,PASS
+SW_REQ_PRIORITY_N183,ACK-high wins over timeout on exact deadline,696407,698277,187,2247,0,PASS
+SW_LOW_PRIORITY_N183,ACK-low wins over timeout on exact deadline,698277,700147,187,2246,0,PASS
+SW_REQ_TIMEOUT_N184,Request wait timeout at exact deadline,700147,702007,186,2234,0,PASS
+SW_LOW_TIMEOUT_N184,Return wait timeout at exact deadline,702007,703887,188,2258,0,PASS
+SW_REQ_PRIORITY_N184,ACK-high wins over timeout on exact deadline,703887,705767,188,2259,0,PASS
+SW_LOW_PRIORITY_N184,ACK-low wins over timeout on exact deadline,705767,707647,188,2258,0,PASS
+SW_REQ_TIMEOUT_N185,Request wait timeout at exact deadline,707647,709517,187,2246,0,PASS
+SW_LOW_TIMEOUT_N185,Return wait timeout at exact deadline,709517,711407,189,2270,0,PASS
+SW_REQ_PRIORITY_N185,ACK-high wins over timeout on exact deadline,711407,713297,189,2271,0,PASS
+SW_LOW_PRIORITY_N185,ACK-low wins over timeout on exact deadline,713297,715187,189,2270,0,PASS
+SW_REQ_TIMEOUT_N186,Request wait timeout at exact deadline,715187,717067,188,2258,0,PASS
+SW_LOW_TIMEOUT_N186,Return wait timeout at exact deadline,717067,718967,190,2282,0,PASS
+SW_REQ_PRIORITY_N186,ACK-high wins over timeout on exact deadline,718967,720867,190,2283,0,PASS
+SW_LOW_PRIORITY_N186,ACK-low wins over timeout on exact deadline,720867,722767,190,2282,0,PASS
+SW_REQ_TIMEOUT_N187,Request wait timeout at exact deadline,722767,724657,189,2270,0,PASS
+SW_LOW_TIMEOUT_N187,Return wait timeout at exact deadline,724657,726567,191,2294,0,PASS
+SW_REQ_PRIORITY_N187,ACK-high wins over timeout on exact deadline,726567,728477,191,2295,0,PASS
+SW_LOW_PRIORITY_N187,ACK-low wins over timeout on exact deadline,728477,730387,191,2294,0,PASS
+SW_REQ_TIMEOUT_N188,Request wait timeout at exact deadline,730387,732287,190,2282,0,PASS
+SW_LOW_TIMEOUT_N188,Return wait timeout at exact deadline,732287,734207,192,2306,0,PASS
+SW_REQ_PRIORITY_N188,ACK-high wins over timeout on exact deadline,734207,736127,192,2307,0,PASS
+SW_LOW_PRIORITY_N188,ACK-low wins over timeout on exact deadline,736127,738047,192,2306,0,PASS
+SW_REQ_TIMEOUT_N189,Request wait timeout at exact deadline,738047,739957,191,2294,0,PASS
+SW_LOW_TIMEOUT_N189,Return wait timeout at exact deadline,739957,741887,193,2318,0,PASS
+SW_REQ_PRIORITY_N189,ACK-high wins over timeout on exact deadline,741887,743817,193,2319,0,PASS
+SW_LOW_PRIORITY_N189,ACK-low wins over timeout on exact deadline,743817,745747,193,2318,0,PASS
+SW_REQ_TIMEOUT_N190,Request wait timeout at exact deadline,745747,747667,192,2306,0,PASS
+SW_LOW_TIMEOUT_N190,Return wait timeout at exact deadline,747667,749607,194,2330,0,PASS
+SW_REQ_PRIORITY_N190,ACK-high wins over timeout on exact deadline,749607,751547,194,2331,0,PASS
+SW_LOW_PRIORITY_N190,ACK-low wins over timeout on exact deadline,751547,753487,194,2330,0,PASS
+SW_REQ_TIMEOUT_N191,Request wait timeout at exact deadline,753487,755417,193,2318,0,PASS
+SW_LOW_TIMEOUT_N191,Return wait timeout at exact deadline,755417,757367,195,2342,0,PASS
+SW_REQ_PRIORITY_N191,ACK-high wins over timeout on exact deadline,757367,759317,195,2343,0,PASS
+SW_LOW_PRIORITY_N191,ACK-low wins over timeout on exact deadline,759317,761267,195,2342,0,PASS
+SW_REQ_TIMEOUT_N192,Request wait timeout at exact deadline,761267,763207,194,2330,0,PASS
+SW_LOW_TIMEOUT_N192,Return wait timeout at exact deadline,763207,765167,196,2354,0,PASS
+SW_REQ_PRIORITY_N192,ACK-high wins over timeout on exact deadline,765167,767127,196,2355,0,PASS
+SW_LOW_PRIORITY_N192,ACK-low wins over timeout on exact deadline,767127,769087,196,2354,0,PASS
+SW_REQ_TIMEOUT_N193,Request wait timeout at exact deadline,769087,771037,195,2342,0,PASS
+SW_LOW_TIMEOUT_N193,Return wait timeout at exact deadline,771037,773007,197,2366,0,PASS
+SW_REQ_PRIORITY_N193,ACK-high wins over timeout on exact deadline,773007,774977,197,2367,0,PASS
+SW_LOW_PRIORITY_N193,ACK-low wins over timeout on exact deadline,774977,776947,197,2366,0,PASS
+SW_REQ_TIMEOUT_N194,Request wait timeout at exact deadline,776947,778907,196,2354,0,PASS
+SW_LOW_TIMEOUT_N194,Return wait timeout at exact deadline,778907,780887,198,2378,0,PASS
+SW_REQ_PRIORITY_N194,ACK-high wins over timeout on exact deadline,780887,782867,198,2379,0,PASS
+SW_LOW_PRIORITY_N194,ACK-low wins over timeout on exact deadline,782867,784847,198,2378,0,PASS
+SW_REQ_TIMEOUT_N195,Request wait timeout at exact deadline,784847,786817,197,2366,0,PASS
+SW_LOW_TIMEOUT_N195,Return wait timeout at exact deadline,786817,788807,199,2390,0,PASS
+SW_REQ_PRIORITY_N195,ACK-high wins over timeout on exact deadline,788807,790797,199,2391,0,PASS
+SW_LOW_PRIORITY_N195,ACK-low wins over timeout on exact deadline,790797,792787,199,2390,0,PASS
+SW_REQ_TIMEOUT_N196,Request wait timeout at exact deadline,792787,794767,198,2378,0,PASS
+SW_LOW_TIMEOUT_N196,Return wait timeout at exact deadline,794767,796767,200,2402,0,PASS
+SW_REQ_PRIORITY_N196,ACK-high wins over timeout on exact deadline,796767,798767,200,2403,0,PASS
+SW_LOW_PRIORITY_N196,ACK-low wins over timeout on exact deadline,798767,800767,200,2402,0,PASS
+SW_REQ_TIMEOUT_N197,Request wait timeout at exact deadline,800767,802757,199,2390,0,PASS
+SW_LOW_TIMEOUT_N197,Return wait timeout at exact deadline,802757,804767,201,2414,0,PASS
+SW_REQ_PRIORITY_N197,ACK-high wins over timeout on exact deadline,804767,806777,201,2415,0,PASS
+SW_LOW_PRIORITY_N197,ACK-low wins over timeout on exact deadline,806777,808787,201,2414,0,PASS
+SW_REQ_TIMEOUT_N198,Request wait timeout at exact deadline,808787,810787,200,2402,0,PASS
+SW_LOW_TIMEOUT_N198,Return wait timeout at exact deadline,810787,812807,202,2426,0,PASS
+SW_REQ_PRIORITY_N198,ACK-high wins over timeout on exact deadline,812807,814827,202,2427,0,PASS
+SW_LOW_PRIORITY_N198,ACK-low wins over timeout on exact deadline,814827,816847,202,2426,0,PASS
+SW_REQ_TIMEOUT_N199,Request wait timeout at exact deadline,816847,818857,201,2414,0,PASS
+SW_LOW_TIMEOUT_N199,Return wait timeout at exact deadline,818857,820887,203,2438,0,PASS
+SW_REQ_PRIORITY_N199,ACK-high wins over timeout on exact deadline,820887,822917,203,2439,0,PASS
+SW_LOW_PRIORITY_N199,ACK-low wins over timeout on exact deadline,822917,824947,203,2438,0,PASS
+SW_REQ_TIMEOUT_N200,Request wait timeout at exact deadline,824947,826967,202,2426,0,PASS
+SW_LOW_TIMEOUT_N200,Return wait timeout at exact deadline,826967,829007,204,2450,0,PASS
+SW_REQ_PRIORITY_N200,ACK-high wins over timeout on exact deadline,829007,831047,204,2451,0,PASS
+SW_LOW_PRIORITY_N200,ACK-low wins over timeout on exact deadline,831047,833087,204,2450,0,PASS
+SW_REQ_TIMEOUT_N201,Request wait timeout at exact deadline,833087,835117,203,2438,0,PASS
+SW_LOW_TIMEOUT_N201,Return wait timeout at exact deadline,835117,837167,205,2462,0,PASS
+SW_REQ_PRIORITY_N201,ACK-high wins over timeout on exact deadline,837167,839217,205,2463,0,PASS
+SW_LOW_PRIORITY_N201,ACK-low wins over timeout on exact deadline,839217,841267,205,2462,0,PASS
+SW_REQ_TIMEOUT_N202,Request wait timeout at exact deadline,841267,843307,204,2450,0,PASS
+SW_LOW_TIMEOUT_N202,Return wait timeout at exact deadline,843307,845367,206,2474,0,PASS
+SW_REQ_PRIORITY_N202,ACK-high wins over timeout on exact deadline,845367,847427,206,2475,0,PASS
+SW_LOW_PRIORITY_N202,ACK-low wins over timeout on exact deadline,847427,849487,206,2474,0,PASS
+SW_REQ_TIMEOUT_N203,Request wait timeout at exact deadline,849487,851537,205,2462,0,PASS
+SW_LOW_TIMEOUT_N203,Return wait timeout at exact deadline,851537,853607,207,2486,0,PASS
+SW_REQ_PRIORITY_N203,ACK-high wins over timeout on exact deadline,853607,855677,207,2487,0,PASS
+SW_LOW_PRIORITY_N203,ACK-low wins over timeout on exact deadline,855677,857747,207,2486,0,PASS
+SW_REQ_TIMEOUT_N204,Request wait timeout at exact deadline,857747,859807,206,2474,0,PASS
+SW_LOW_TIMEOUT_N204,Return wait timeout at exact deadline,859807,861887,208,2498,0,PASS
+SW_REQ_PRIORITY_N204,ACK-high wins over timeout on exact deadline,861887,863967,208,2499,0,PASS
+SW_LOW_PRIORITY_N204,ACK-low wins over timeout on exact deadline,863967,866047,208,2498,0,PASS
+SW_REQ_TIMEOUT_N205,Request wait timeout at exact deadline,866047,868117,207,2486,0,PASS
+SW_LOW_TIMEOUT_N205,Return wait timeout at exact deadline,868117,870207,209,2510,0,PASS
+SW_REQ_PRIORITY_N205,ACK-high wins over timeout on exact deadline,870207,872297,209,2511,0,PASS
+SW_LOW_PRIORITY_N205,ACK-low wins over timeout on exact deadline,872297,874387,209,2510,0,PASS
+SW_REQ_TIMEOUT_N206,Request wait timeout at exact deadline,874387,876467,208,2498,0,PASS
+SW_LOW_TIMEOUT_N206,Return wait timeout at exact deadline,876467,878567,210,2522,0,PASS
+SW_REQ_PRIORITY_N206,ACK-high wins over timeout on exact deadline,878567,880667,210,2523,0,PASS
+SW_LOW_PRIORITY_N206,ACK-low wins over timeout on exact deadline,880667,882767,210,2522,0,PASS
+SW_REQ_TIMEOUT_N207,Request wait timeout at exact deadline,882767,884857,209,2510,0,PASS
+SW_LOW_TIMEOUT_N207,Return wait timeout at exact deadline,884857,886967,211,2534,0,PASS
+SW_REQ_PRIORITY_N207,ACK-high wins over timeout on exact deadline,886967,889077,211,2535,0,PASS
+SW_LOW_PRIORITY_N207,ACK-low wins over timeout on exact deadline,889077,891187,211,2534,0,PASS
+SW_REQ_TIMEOUT_N208,Request wait timeout at exact deadline,891187,893287,210,2522,0,PASS
+SW_LOW_TIMEOUT_N208,Return wait timeout at exact deadline,893287,895407,212,2546,0,PASS
+SW_REQ_PRIORITY_N208,ACK-high wins over timeout on exact deadline,895407,897527,212,2547,0,PASS
+SW_LOW_PRIORITY_N208,ACK-low wins over timeout on exact deadline,897527,899647,212,2546,0,PASS
+SW_REQ_TIMEOUT_N209,Request wait timeout at exact deadline,899647,901757,211,2534,0,PASS
+SW_LOW_TIMEOUT_N209,Return wait timeout at exact deadline,901757,903887,213,2558,0,PASS
+SW_REQ_PRIORITY_N209,ACK-high wins over timeout on exact deadline,903887,906017,213,2559,0,PASS
+SW_LOW_PRIORITY_N209,ACK-low wins over timeout on exact deadline,906017,908147,213,2558,0,PASS
+SW_REQ_TIMEOUT_N210,Request wait timeout at exact deadline,908147,910267,212,2546,0,PASS
+SW_LOW_TIMEOUT_N210,Return wait timeout at exact deadline,910267,912407,214,2570,0,PASS
+SW_REQ_PRIORITY_N210,ACK-high wins over timeout on exact deadline,912407,914547,214,2571,0,PASS
+SW_LOW_PRIORITY_N210,ACK-low wins over timeout on exact deadline,914547,916687,214,2570,0,PASS
+SW_REQ_TIMEOUT_N211,Request wait timeout at exact deadline,916687,918817,213,2558,0,PASS
+SW_LOW_TIMEOUT_N211,Return wait timeout at exact deadline,918817,920967,215,2582,0,PASS
+SW_REQ_PRIORITY_N211,ACK-high wins over timeout on exact deadline,920967,923117,215,2583,0,PASS
+SW_LOW_PRIORITY_N211,ACK-low wins over timeout on exact deadline,923117,925267,215,2582,0,PASS
+SW_REQ_TIMEOUT_N212,Request wait timeout at exact deadline,925267,927407,214,2570,0,PASS
+SW_LOW_TIMEOUT_N212,Return wait timeout at exact deadline,927407,929567,216,2594,0,PASS
+SW_REQ_PRIORITY_N212,ACK-high wins over timeout on exact deadline,929567,931727,216,2595,0,PASS
+SW_LOW_PRIORITY_N212,ACK-low wins over timeout on exact deadline,931727,933887,216,2594,0,PASS
+SW_REQ_TIMEOUT_N213,Request wait timeout at exact deadline,933887,936037,215,2582,0,PASS
+SW_LOW_TIMEOUT_N213,Return wait timeout at exact deadline,936037,938207,217,2606,0,PASS
+SW_REQ_PRIORITY_N213,ACK-high wins over timeout on exact deadline,938207,940377,217,2607,0,PASS
+SW_LOW_PRIORITY_N213,ACK-low wins over timeout on exact deadline,940377,942547,217,2606,0,PASS
+SW_REQ_TIMEOUT_N214,Request wait timeout at exact deadline,942547,944707,216,2594,0,PASS
+SW_LOW_TIMEOUT_N214,Return wait timeout at exact deadline,944707,946887,218,2618,0,PASS
+SW_REQ_PRIORITY_N214,ACK-high wins over timeout on exact deadline,946887,949067,218,2619,0,PASS
+SW_LOW_PRIORITY_N214,ACK-low wins over timeout on exact deadline,949067,951247,218,2618,0,PASS
+SW_REQ_TIMEOUT_N215,Request wait timeout at exact deadline,951247,953417,217,2606,0,PASS
+SW_LOW_TIMEOUT_N215,Return wait timeout at exact deadline,953417,955607,219,2630,0,PASS
+SW_REQ_PRIORITY_N215,ACK-high wins over timeout on exact deadline,955607,957797,219,2631,0,PASS
+SW_LOW_PRIORITY_N215,ACK-low wins over timeout on exact deadline,957797,959987,219,2630,0,PASS
+SW_REQ_TIMEOUT_N216,Request wait timeout at exact deadline,959987,962167,218,2618,0,PASS
+SW_LOW_TIMEOUT_N216,Return wait timeout at exact deadline,962167,964367,220,2642,0,PASS
+SW_REQ_PRIORITY_N216,ACK-high wins over timeout on exact deadline,964367,966567,220,2643,0,PASS
+SW_LOW_PRIORITY_N216,ACK-low wins over timeout on exact deadline,966567,968767,220,2642,0,PASS
+SW_REQ_TIMEOUT_N217,Request wait timeout at exact deadline,968767,970957,219,2630,0,PASS
+SW_LOW_TIMEOUT_N217,Return wait timeout at exact deadline,970957,973167,221,2654,0,PASS
+SW_REQ_PRIORITY_N217,ACK-high wins over timeout on exact deadline,973167,975377,221,2655,0,PASS
+SW_LOW_PRIORITY_N217,ACK-low wins over timeout on exact deadline,975377,977587,221,2654,0,PASS
+SW_REQ_TIMEOUT_N218,Request wait timeout at exact deadline,977587,979787,220,2642,0,PASS
+SW_LOW_TIMEOUT_N218,Return wait timeout at exact deadline,979787,982007,222,2666,0,PASS
+SW_REQ_PRIORITY_N218,ACK-high wins over timeout on exact deadline,982007,984227,222,2667,0,PASS
+SW_LOW_PRIORITY_N218,ACK-low wins over timeout on exact deadline,984227,986447,222,2666,0,PASS
+SW_REQ_TIMEOUT_N219,Request wait timeout at exact deadline,986447,988657,221,2654,0,PASS
+SW_LOW_TIMEOUT_N219,Return wait timeout at exact deadline,988657,990887,223,2678,0,PASS
+SW_REQ_PRIORITY_N219,ACK-high wins over timeout on exact deadline,990887,993117,223,2679,0,PASS
+SW_LOW_PRIORITY_N219,ACK-low wins over timeout on exact deadline,993117,995347,223,2678,0,PASS
+SW_REQ_TIMEOUT_N220,Request wait timeout at exact deadline,995347,997567,222,2666,0,PASS
+SW_LOW_TIMEOUT_N220,Return wait timeout at exact deadline,997567,999807,224,2690,0,PASS
+SW_REQ_PRIORITY_N220,ACK-high wins over timeout on exact deadline,999807,1002047,224,2691,0,PASS
+SW_LOW_PRIORITY_N220,ACK-low wins over timeout on exact deadline,1002047,1004287,224,2690,0,PASS
+SW_REQ_TIMEOUT_N221,Request wait timeout at exact deadline,1004287,1006517,223,2678,0,PASS
+SW_LOW_TIMEOUT_N221,Return wait timeout at exact deadline,1006517,1008767,225,2702,0,PASS
+SW_REQ_PRIORITY_N221,ACK-high wins over timeout on exact deadline,1008767,1011017,225,2703,0,PASS
+SW_LOW_PRIORITY_N221,ACK-low wins over timeout on exact deadline,1011017,1013267,225,2702,0,PASS
+SW_REQ_TIMEOUT_N222,Request wait timeout at exact deadline,1013267,1015507,224,2690,0,PASS
+SW_LOW_TIMEOUT_N222,Return wait timeout at exact deadline,1015507,1017767,226,2714,0,PASS
+SW_REQ_PRIORITY_N222,ACK-high wins over timeout on exact deadline,1017767,1020027,226,2715,0,PASS
+SW_LOW_PRIORITY_N222,ACK-low wins over timeout on exact deadline,1020027,1022287,226,2714,0,PASS
+SW_REQ_TIMEOUT_N223,Request wait timeout at exact deadline,1022287,1024537,225,2702,0,PASS
+SW_LOW_TIMEOUT_N223,Return wait timeout at exact deadline,1024537,1026807,227,2726,0,PASS
+SW_REQ_PRIORITY_N223,ACK-high wins over timeout on exact deadline,1026807,1029077,227,2727,0,PASS
+SW_LOW_PRIORITY_N223,ACK-low wins over timeout on exact deadline,1029077,1031347,227,2726,0,PASS
+SW_REQ_TIMEOUT_N224,Request wait timeout at exact deadline,1031347,1033607,226,2714,0,PASS
+SW_LOW_TIMEOUT_N224,Return wait timeout at exact deadline,1033607,1035887,228,2738,0,PASS
+SW_REQ_PRIORITY_N224,ACK-high wins over timeout on exact deadline,1035887,1038167,228,2739,0,PASS
+SW_LOW_PRIORITY_N224,ACK-low wins over timeout on exact deadline,1038167,1040447,228,2738,0,PASS
+SW_REQ_TIMEOUT_N225,Request wait timeout at exact deadline,1040447,1042717,227,2726,0,PASS
+SW_LOW_TIMEOUT_N225,Return wait timeout at exact deadline,1042717,1045007,229,2750,0,PASS
+SW_REQ_PRIORITY_N225,ACK-high wins over timeout on exact deadline,1045007,1047297,229,2751,0,PASS
+SW_LOW_PRIORITY_N225,ACK-low wins over timeout on exact deadline,1047297,1049587,229,2750,0,PASS
+SW_REQ_TIMEOUT_N226,Request wait timeout at exact deadline,1049587,1051867,228,2738,0,PASS
+SW_LOW_TIMEOUT_N226,Return wait timeout at exact deadline,1051867,1054167,230,2762,0,PASS
+SW_REQ_PRIORITY_N226,ACK-high wins over timeout on exact deadline,1054167,1056467,230,2763,0,PASS
+SW_LOW_PRIORITY_N226,ACK-low wins over timeout on exact deadline,1056467,1058767,230,2762,0,PASS
+SW_REQ_TIMEOUT_N227,Request wait timeout at exact deadline,1058767,1061057,229,2750,0,PASS
+SW_LOW_TIMEOUT_N227,Return wait timeout at exact deadline,1061057,1063367,231,2774,0,PASS
+SW_REQ_PRIORITY_N227,ACK-high wins over timeout on exact deadline,1063367,1065677,231,2775,0,PASS
+SW_LOW_PRIORITY_N227,ACK-low wins over timeout on exact deadline,1065677,1067987,231,2774,0,PASS
+SW_REQ_TIMEOUT_N228,Request wait timeout at exact deadline,1067987,1070287,230,2762,0,PASS
+SW_LOW_TIMEOUT_N228,Return wait timeout at exact deadline,1070287,1072607,232,2786,0,PASS
+SW_REQ_PRIORITY_N228,ACK-high wins over timeout on exact deadline,1072607,1074927,232,2787,0,PASS
+SW_LOW_PRIORITY_N228,ACK-low wins over timeout on exact deadline,1074927,1077247,232,2786,0,PASS
+SW_REQ_TIMEOUT_N229,Request wait timeout at exact deadline,1077247,1079557,231,2774,0,PASS
+SW_LOW_TIMEOUT_N229,Return wait timeout at exact deadline,1079557,1081887,233,2798,0,PASS
+SW_REQ_PRIORITY_N229,ACK-high wins over timeout on exact deadline,1081887,1084217,233,2799,0,PASS
+SW_LOW_PRIORITY_N229,ACK-low wins over timeout on exact deadline,1084217,1086547,233,2798,0,PASS
+SW_REQ_TIMEOUT_N230,Request wait timeout at exact deadline,1086547,1088867,232,2786,0,PASS
+SW_LOW_TIMEOUT_N230,Return wait timeout at exact deadline,1088867,1091207,234,2810,0,PASS
+SW_REQ_PRIORITY_N230,ACK-high wins over timeout on exact deadline,1091207,1093547,234,2811,0,PASS
+SW_LOW_PRIORITY_N230,ACK-low wins over timeout on exact deadline,1093547,1095887,234,2810,0,PASS
+SW_REQ_TIMEOUT_N231,Request wait timeout at exact deadline,1095887,1098217,233,2798,0,PASS
+SW_LOW_TIMEOUT_N231,Return wait timeout at exact deadline,1098217,1100567,235,2822,0,PASS
+SW_REQ_PRIORITY_N231,ACK-high wins over timeout on exact deadline,1100567,1102917,235,2823,0,PASS
+SW_LOW_PRIORITY_N231,ACK-low wins over timeout on exact deadline,1102917,1105267,235,2822,0,PASS
+SW_REQ_TIMEOUT_N232,Request wait timeout at exact deadline,1105267,1107607,234,2810,0,PASS
+SW_LOW_TIMEOUT_N232,Return wait timeout at exact deadline,1107607,1109967,236,2834,0,PASS
+SW_REQ_PRIORITY_N232,ACK-high wins over timeout on exact deadline,1109967,1112327,236,2835,0,PASS
+SW_LOW_PRIORITY_N232,ACK-low wins over timeout on exact deadline,1112327,1114687,236,2834,0,PASS
+SW_REQ_TIMEOUT_N233,Request wait timeout at exact deadline,1114687,1117037,235,2822,0,PASS
+SW_LOW_TIMEOUT_N233,Return wait timeout at exact deadline,1117037,1119407,237,2846,0,PASS
+SW_REQ_PRIORITY_N233,ACK-high wins over timeout on exact deadline,1119407,1121777,237,2847,0,PASS
+SW_LOW_PRIORITY_N233,ACK-low wins over timeout on exact deadline,1121777,1124147,237,2846,0,PASS
+SW_REQ_TIMEOUT_N234,Request wait timeout at exact deadline,1124147,1126507,236,2834,0,PASS
+SW_LOW_TIMEOUT_N234,Return wait timeout at exact deadline,1126507,1128887,238,2858,0,PASS
+SW_REQ_PRIORITY_N234,ACK-high wins over timeout on exact deadline,1128887,1131267,238,2859,0,PASS
+SW_LOW_PRIORITY_N234,ACK-low wins over timeout on exact deadline,1131267,1133647,238,2858,0,PASS
+SW_REQ_TIMEOUT_N235,Request wait timeout at exact deadline,1133647,1136017,237,2846,0,PASS
+SW_LOW_TIMEOUT_N235,Return wait timeout at exact deadline,1136017,1138407,239,2870,0,PASS
+SW_REQ_PRIORITY_N235,ACK-high wins over timeout on exact deadline,1138407,1140797,239,2871,0,PASS
+SW_LOW_PRIORITY_N235,ACK-low wins over timeout on exact deadline,1140797,1143187,239,2870,0,PASS
+SW_REQ_TIMEOUT_N236,Request wait timeout at exact deadline,1143187,1145567,238,2858,0,PASS
+SW_LOW_TIMEOUT_N236,Return wait timeout at exact deadline,1145567,1147967,240,2882,0,PASS
+SW_REQ_PRIORITY_N236,ACK-high wins over timeout on exact deadline,1147967,1150367,240,2883,0,PASS
+SW_LOW_PRIORITY_N236,ACK-low wins over timeout on exact deadline,1150367,1152767,240,2882,0,PASS
+SW_REQ_TIMEOUT_N237,Request wait timeout at exact deadline,1152767,1155157,239,2870,0,PASS
+SW_LOW_TIMEOUT_N237,Return wait timeout at exact deadline,1155157,1157567,241,2894,0,PASS
+SW_REQ_PRIORITY_N237,ACK-high wins over timeout on exact deadline,1157567,1159977,241,2895,0,PASS
+SW_LOW_PRIORITY_N237,ACK-low wins over timeout on exact deadline,1159977,1162387,241,2894,0,PASS
+SW_REQ_TIMEOUT_N238,Request wait timeout at exact deadline,1162387,1164787,240,2882,0,PASS
+SW_LOW_TIMEOUT_N238,Return wait timeout at exact deadline,1164787,1167207,242,2906,0,PASS
+SW_REQ_PRIORITY_N238,ACK-high wins over timeout on exact deadline,1167207,1169627,242,2907,0,PASS
+SW_LOW_PRIORITY_N238,ACK-low wins over timeout on exact deadline,1169627,1172047,242,2906,0,PASS
+SW_REQ_TIMEOUT_N239,Request wait timeout at exact deadline,1172047,1174457,241,2894,0,PASS
+SW_LOW_TIMEOUT_N239,Return wait timeout at exact deadline,1174457,1176887,243,2918,0,PASS
+SW_REQ_PRIORITY_N239,ACK-high wins over timeout on exact deadline,1176887,1179317,243,2919,0,PASS
+SW_LOW_PRIORITY_N239,ACK-low wins over timeout on exact deadline,1179317,1181747,243,2918,0,PASS
+SW_REQ_TIMEOUT_N240,Request wait timeout at exact deadline,1181747,1184167,242,2906,0,PASS
+SW_LOW_TIMEOUT_N240,Return wait timeout at exact deadline,1184167,1186607,244,2930,0,PASS
+SW_REQ_PRIORITY_N240,ACK-high wins over timeout on exact deadline,1186607,1189047,244,2931,0,PASS
+SW_LOW_PRIORITY_N240,ACK-low wins over timeout on exact deadline,1189047,1191487,244,2930,0,PASS
+SW_REQ_TIMEOUT_N241,Request wait timeout at exact deadline,1191487,1193917,243,2918,0,PASS
+SW_LOW_TIMEOUT_N241,Return wait timeout at exact deadline,1193917,1196367,245,2942,0,PASS
+SW_REQ_PRIORITY_N241,ACK-high wins over timeout on exact deadline,1196367,1198817,245,2943,0,PASS
+SW_LOW_PRIORITY_N241,ACK-low wins over timeout on exact deadline,1198817,1201267,245,2942,0,PASS
+SW_REQ_TIMEOUT_N242,Request wait timeout at exact deadline,1201267,1203707,244,2930,0,PASS
+SW_LOW_TIMEOUT_N242,Return wait timeout at exact deadline,1203707,1206167,246,2954,0,PASS
+SW_REQ_PRIORITY_N242,ACK-high wins over timeout on exact deadline,1206167,1208627,246,2955,0,PASS
+SW_LOW_PRIORITY_N242,ACK-low wins over timeout on exact deadline,1208627,1211087,246,2954,0,PASS
+SW_REQ_TIMEOUT_N243,Request wait timeout at exact deadline,1211087,1213537,245,2942,0,PASS
+SW_LOW_TIMEOUT_N243,Return wait timeout at exact deadline,1213537,1216007,247,2966,0,PASS
+SW_REQ_PRIORITY_N243,ACK-high wins over timeout on exact deadline,1216007,1218477,247,2967,0,PASS
+SW_LOW_PRIORITY_N243,ACK-low wins over timeout on exact deadline,1218477,1220947,247,2966,0,PASS
+SW_REQ_TIMEOUT_N244,Request wait timeout at exact deadline,1220947,1223407,246,2954,0,PASS
+SW_LOW_TIMEOUT_N244,Return wait timeout at exact deadline,1223407,1225887,248,2978,0,PASS
+SW_REQ_PRIORITY_N244,ACK-high wins over timeout on exact deadline,1225887,1228367,248,2979,0,PASS
+SW_LOW_PRIORITY_N244,ACK-low wins over timeout on exact deadline,1228367,1230847,248,2978,0,PASS
+SW_REQ_TIMEOUT_N245,Request wait timeout at exact deadline,1230847,1233317,247,2966,0,PASS
+SW_LOW_TIMEOUT_N245,Return wait timeout at exact deadline,1233317,1235807,249,2990,0,PASS
+SW_REQ_PRIORITY_N245,ACK-high wins over timeout on exact deadline,1235807,1238297,249,2991,0,PASS
+SW_LOW_PRIORITY_N245,ACK-low wins over timeout on exact deadline,1238297,1240787,249,2990,0,PASS
+SW_REQ_TIMEOUT_N246,Request wait timeout at exact deadline,1240787,1243267,248,2978,0,PASS
+SW_LOW_TIMEOUT_N246,Return wait timeout at exact deadline,1243267,1245767,250,3002,0,PASS
+SW_REQ_PRIORITY_N246,ACK-high wins over timeout on exact deadline,1245767,1248267,250,3003,0,PASS
+SW_LOW_PRIORITY_N246,ACK-low wins over timeout on exact deadline,1248267,1250767,250,3002,0,PASS
+SW_REQ_TIMEOUT_N247,Request wait timeout at exact deadline,1250767,1253257,249,2990,0,PASS
+SW_LOW_TIMEOUT_N247,Return wait timeout at exact deadline,1253257,1255767,251,3014,0,PASS
+SW_REQ_PRIORITY_N247,ACK-high wins over timeout on exact deadline,1255767,1258277,251,3015,0,PASS
+SW_LOW_PRIORITY_N247,ACK-low wins over timeout on exact deadline,1258277,1260787,251,3014,0,PASS
+SW_REQ_TIMEOUT_N248,Request wait timeout at exact deadline,1260787,1263287,250,3002,0,PASS
+SW_LOW_TIMEOUT_N248,Return wait timeout at exact deadline,1263287,1265807,252,3026,0,PASS
+SW_REQ_PRIORITY_N248,ACK-high wins over timeout on exact deadline,1265807,1268327,252,3027,0,PASS
+SW_LOW_PRIORITY_N248,ACK-low wins over timeout on exact deadline,1268327,1270847,252,3026,0,PASS
+SW_REQ_TIMEOUT_N249,Request wait timeout at exact deadline,1270847,1273357,251,3014,0,PASS
+SW_LOW_TIMEOUT_N249,Return wait timeout at exact deadline,1273357,1275887,253,3038,0,PASS
+SW_REQ_PRIORITY_N249,ACK-high wins over timeout on exact deadline,1275887,1278417,253,3039,0,PASS
+SW_LOW_PRIORITY_N249,ACK-low wins over timeout on exact deadline,1278417,1280947,253,3038,0,PASS
+SW_REQ_TIMEOUT_N250,Request wait timeout at exact deadline,1280947,1283467,252,3026,0,PASS
+SW_LOW_TIMEOUT_N250,Return wait timeout at exact deadline,1283467,1286007,254,3050,0,PASS
+SW_REQ_PRIORITY_N250,ACK-high wins over timeout on exact deadline,1286007,1288547,254,3051,0,PASS
+SW_LOW_PRIORITY_N250,ACK-low wins over timeout on exact deadline,1288547,1291087,254,3050,0,PASS
+SW_REQ_TIMEOUT_N251,Request wait timeout at exact deadline,1291087,1293617,253,3038,0,PASS
+SW_LOW_TIMEOUT_N251,Return wait timeout at exact deadline,1293617,1296167,255,3062,0,PASS
+SW_REQ_PRIORITY_N251,ACK-high wins over timeout on exact deadline,1296167,1298717,255,3063,0,PASS
+SW_LOW_PRIORITY_N251,ACK-low wins over timeout on exact deadline,1298717,1301267,255,3062,0,PASS
+SW_REQ_TIMEOUT_N252,Request wait timeout at exact deadline,1301267,1303807,254,3050,0,PASS
+SW_LOW_TIMEOUT_N252,Return wait timeout at exact deadline,1303807,1306367,256,3074,0,PASS
+SW_REQ_PRIORITY_N252,ACK-high wins over timeout on exact deadline,1306367,1308927,256,3075,0,PASS
+SW_LOW_PRIORITY_N252,ACK-low wins over timeout on exact deadline,1308927,1311487,256,3074,0,PASS
+SW_REQ_TIMEOUT_N253,Request wait timeout at exact deadline,1311487,1314037,255,3062,0,PASS
+SW_LOW_TIMEOUT_N253,Return wait timeout at exact deadline,1314037,1316607,257,3086,0,PASS
+SW_REQ_PRIORITY_N253,ACK-high wins over timeout on exact deadline,1316607,1319177,257,3087,0,PASS
+SW_LOW_PRIORITY_N253,ACK-low wins over timeout on exact deadline,1319177,1321747,257,3086,0,PASS
+SW_REQ_TIMEOUT_N254,Request wait timeout at exact deadline,1321747,1324307,256,3074,0,PASS
+SW_LOW_TIMEOUT_N254,Return wait timeout at exact deadline,1324307,1326887,258,3098,0,PASS
+SW_REQ_PRIORITY_N254,ACK-high wins over timeout on exact deadline,1326887,1329467,258,3099,0,PASS
+SW_LOW_PRIORITY_N254,ACK-low wins over timeout on exact deadline,1329467,1332047,258,3098,0,PASS
+SW_REQ_TIMEOUT_N255,Request wait timeout at exact deadline,1332047,1334617,257,3086,0,PASS
+SW_LOW_TIMEOUT_N255,Return wait timeout at exact deadline,1334617,1337207,259,3110,0,PASS
+SW_REQ_PRIORITY_N255,ACK-high wins over timeout on exact deadline,1337207,1339797,259,3111,0,PASS
+SW_LOW_PRIORITY_N255,ACK-low wins over timeout on exact deadline,1339797,1342387,259,3110,0,PASS
+TC10_DETERMINISTIC_STRESS,4096 synchronous input cycles seed F1002026 plus bounded drain,1342387,1385707,4332,51986,0,PASS
+SUMMARY,all cases,0,1385707,138571,1665218,0,PASS

@@ -1,14 +1,14 @@
 # Physical flow: lần chạy thật và giới hạn
 
-[CI run 39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) ngày 20/10/2026 đã hoàn tất cả hai job. Physical job chạy LibreLane Classic, không phải kết quả preflight của máy local. Source revision đã thực thi là `298e12b0f79a326343315beee1697f55e2946403`; tài liệu/evidence bổ sung sau run có commit khác. Mẫu Canvas gốc giữ ở `docs/course-reference/rtl2gds.canvas-original.yml`.
+[CI run 40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464) ngày 25/10/2026 đã hoàn tất cả hai job. Physical job chạy LibreLane Classic, không phải kết quả preflight của máy local. Source revision đã thực thi là `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f`; tài liệu/evidence bổ sung sau run có commit khác. Mẫu Canvas gốc giữ ở `docs/course-reference/rtl2gds.canvas-original.yml`.
 
 ## Môi trường và đầu vào thực tế
 
 - Top: `tt_um_24101280_f10`; ba tệp `rtl/`; clock `clk`, mục tiêu 10 ns.
-- LibreLane **3.0.16**, revision `01ddb25e4424f6f5aaf6b951b14a2b6fdcf737c0`.
+- LibreLane **3.0.16**, revision `a09d248c49bd1f7170d41885936f63e4255b1fe5`.
 - PDK **sky130A**, Ciel/open_pdks revision `8afc8346a57fe1ab7934ba5a6056ea8b43078e71`, thư viện `sky130_fd_sc_hd`.
 - Physical synthesis dùng Yosys **0.62** (`7326bb7d6641500ecb285c291a54a662cb1e76cf`), khác Yosys 0.33 của job generic; Magic 8.3.623, Netgen 1.5.316, KLayout 0.30.7. Phiên bản đầy đủ giữ trong log gốc.
-- Run tag: `RUN_2026-10-20_08-07-12` (UTC).
+- Run tag: `RUN_2026-10-25_09-08-50` (UTC).
 
 `PNR_SDC_FILE` và `SIGNOFF_SDC_FILE` chưa đặt nên flow dùng fallback SDC: clock 10 ns, uncertainty 0,25 ns, transition 0,15 ns; input/output delay 2 ns; output load được viết 0,0334 pF; early/late derate 0,95/1,05. Đây là giả định bài thực hành, chưa phải ràng buộc của một board/chip tích hợp thật.
 
@@ -43,8 +43,12 @@ Log còn giữ cảnh báo lint, thư viện đọc lặp, rule LEF58 không đ�
 
 ## Artifact và tái lập
 
-Xem [CI_EVIDENCE.md](../evidence/github-actions/run-39390858919/CI_EVIDENCE.md). Hai ZIP nguyên byte được lưu trong repo cùng digest GitHub, run/jobs metadata và selected raw metrics/log. Trong ZIP physical, GDS chính nằm ở `runs/RUN_2026-10-20_08-07-12/final/gds/tt_um_24101280_f10.gds` (1187254 byte, SHA256 `a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d`). `final/` còn có DEF, netlist, SDC, SPEF, SDF, Liberty, SPICE, ODB và render 2D.
+Xem [CI_EVIDENCE.md](../evidence/github-actions/run-40179312464/CI_EVIDENCE.md). Hai ZIP nguyên byte được lưu trong repo cùng digest GitHub, run/jobs metadata và selected raw metrics/log. Trong ZIP physical, GDS chính nằm ở `runs/RUN_2026-10-25_09-08-50/final/gds/tt_um_24101280_f10.gds` (1187254 byte, SHA256 `6bb02c420db3967a6b95394187e302c512e116d9a5b9c268b86434cf40f1800a`). Artifact hiện hành giữ GDS, metrics, JSON header và các log/state được chọn; không khẳng định mọi output DEF/SPEF/SDF/ODB đều có trong ZIP đã tải lên.
 
 Để tái lập, checkout đúng source commit trên; dùng đúng revision LibreLane/PDK thay vì tự gọi bản mới là cùng môi trường. Workflow hiện clone nhánh LibreLane theo mẫu lớp rồi ghi revision thật; một lần chạy sau có thể dùng revision khác. Giữ source SHA, run URL, resolved config và phiên bản khi so sánh kết quả. Không hứa tệp GDS giống từng byte qua phiên bản công cụ khác.
 
 Nguồn chính thức đã dùng để đối chiếu cấu hình: [Design configuration](https://librelane.readthedocs.io/en/latest/reference/configuration.html), [Universal variables](https://librelane.readthedocs.io/en/latest/reference/common_flow_vars.html), [Step variables](https://librelane.readthedocs.io/en/latest/reference/step_config_vars.html), [PDK handling](https://librelane.readthedocs.io/en/latest/usage/about_pdks.html), [LibreLane source](https://github.com/librelane/librelane). Kết quả số ở đây trích từ artifact của run đã nêu, không lấy từ các trang tài liệu đó.
+
+## Đối chiếu hình và số liệu đã có
+
+Đã so sánh 307 khóa metrics với bản lưu run 39390858919: không có khác biệt. Công suất TT được kiểm lại trực tiếp từ `%OL_METRIC_F` trong log STA corner TT. GDS khác raw SHA-256 do trường thời gian BGNLIB/BGNSTR; toàn bộ record còn lại trùng byte. Vì vậy các hình layout đã dựng từ GDS trước được giữ với nguồn gốc ban đầu, và có bằng chứng tương đương hình học trong `verification.json`.

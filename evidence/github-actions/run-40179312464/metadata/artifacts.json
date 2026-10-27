@@ -1,0 +1,45 @@
+{
+  "total_count": 2,
+  "artifacts": [
+    {
+      "id": 12594145562,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU5NDE0NTU2Mg==",
+      "name": "mo-phong-F10",
+      "size_in_bytes": 986209,
+      "url": "https://api.github.com/repos/lechihoangcuong/eee703128-f10-24101280/actions/artifacts/12594145562",
+      "archive_download_url": "https://api.github.com/repos/lechihoangcuong/eee703128-f10-24101280/actions/artifacts/12594145562/zip",
+      "expired": false,
+      "digest": "sha256:663e8434200b481b7e6689bf4aefa21e282ad929d45260812e2547d7f5a8de38",
+      "created_at": "2026-10-25T09:07:36Z",
+      "updated_at": "2026-10-25T09:07:36Z",
+      "expires_at": "2027-01-23T09:06:57Z",
+      "workflow_run": {
+        "id": 40179312464,
+        "repository_id": 1426448479,
+        "head_repository_id": 1426448479,
+        "head_branch": "main",
+        "head_sha": "b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f"
+      }
+    },
+    {
+      "id": 12594120356,
+      "node_id": "MDg6QXJ0aWZhY3QxMjU5NDEyMDM1Ng==",
+      "name": "rtl2gds-F10",
+      "size_in_bytes": 2444413,
+      "url": "https://api.github.com/repos/lechihoangcuong/eee703128-f10-24101280/actions/artifacts/12594120356",
+      "archive_download_url": "https://api.github.com/repos/lechihoangcuong/eee703128-f10-24101280/actions/artifacts/12594120356/zip",
+      "expired": false,
+      "digest": "sha256:f0137fd134f5dd3ae257ea00f1f1de9282ef980dc7569ceb3be44b0367175fe9",
+      "created_at": "2026-10-25T09:10:08Z",
+      "updated_at": "2026-10-25T09:10:08Z",
+      "expires_at": "2027-01-23T09:06:57Z",
+      "workflow_run": {
+        "id": 40179312464,
+        "repository_id": 1426448479,
+        "head_repository_id": 1426448479,
+        "head_branch": "main",
+        "head_sha": "b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f"
+      }
+    }
+  ]
+}

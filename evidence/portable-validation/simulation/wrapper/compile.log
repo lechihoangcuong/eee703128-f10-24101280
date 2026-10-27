@@ -1,0 +1,6 @@
+warning: Some design elements have no explicit time unit and/or
+       : time precision. This may cause confusing timing results.
+       : Affected design elements are:
+       :   -- module f10_handshake_controller declared here: rtl/f10_handshake_controller.sv:1
+       :   -- module f10_tiny_tapeout_top declared here: rtl/f10_tiny_tapeout_top.sv:6
+       :   -- module tt_um_24101280_f10 declared here: rtl/tt_um_24101280_f10.sv:4

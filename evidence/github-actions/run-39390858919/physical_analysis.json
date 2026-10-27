@@ -1,0 +1,510 @@
+{
+  "source_commit": "298e12b0f79a326343315beee1697f55e2946403",
+  "workflow_run": 39390858919,
+  "run_tag": "RUN_2026-10-20_08-07-12",
+  "top": "tt_um_24101280_f10",
+  "date_utc": "2026-10-20",
+  "flow": "Classic",
+  "librelane_version": "3.0.16",
+  "librelane_revision": "01ddb25e4424f6f5aaf6b951b14a2b6fdcf737c0",
+  "pdk": "sky130A",
+  "pdk_revision": "8afc8346a57fe1ab7934ba5a6056ea8b43078e71",
+  "standard_cell_library": "sky130_fd_sc_hd",
+  "physical_tool_versions": {
+    "Yosys": "0.62 git7326bb7d6641500ecb285c291a54a662cb1e76cf",
+    "Verilator": "5.044",
+    "OpenROAD_nix_package": "2026-02-17",
+    "OpenSTA_nix_package": "dev (numeric revision not printed)",
+    "Magic": "8.3.623",
+    "Netgen": "1.5.316",
+    "KLayout": "0.30.7"
+  },
+  "units": {
+    "time": "ns",
+    "capacitance": "pF",
+    "power": "W",
+    "area": "um^2",
+    "distance": "um"
+  },
+  "constraints": {
+    "clock_period_ns": 10.0,
+    "clock_uncertainty_ns": 0.25,
+    "clock_transition_ns": 0.15,
+    "input_delay_ns": 2.0,
+    "output_delay_ns": 2.0,
+    "set_load_written_pF": 0.0334,
+    "resolved_output_load_pF": 0.033442,
+    "early_derate": 0.95,
+    "late_derate": 1.05,
+    "max_transition_ns": 0.75,
+    "max_capacitance_pF": 0.2,
+    "max_fanout": 10,
+    "source": "generic LibreLane base.sdc fallback; PNR_SDC_FILE and SIGNOFF_SDC_FILE unset"
+  },
+  "synthesis_sky130": {
+    "mapped_cells": 133,
+    "mapped_cell_area_um2": 1383.8272,
+    "sequential_cells": 22,
+    "sequential_type": "sky130_fd_sc_hd__dfxtp_2",
+    "sequential_area_um2": 467.9488,
+    "tie_cells": 19,
+    "buffers": 3,
+    "inverters": 3,
+    "other_cells": 86,
+    "source": "06-yosys-synthesis/yosys-synthesis.log"
+  },
+  "final_area_counts": {
+    "design__die__area": 25600,
+    "design__core__area": 20206.9,
+    "design__instance__count": 5462,
+    "design__instance__area": 20206.9,
+    "design__instance__count__stdcell": 454,
+    "design__instance__area__stdcell": 2162.07,
+    "design__instance__count__class:fill_cell": 5008,
+    "design__instance__area__class:fill_cell": 18044.8,
+    "design__instance__count__class:tap_cell": 286,
+    "design__instance__area__class:tap_cell": 357.843,
+    "design__instance__count__class:sequential_cell": 22,
+    "design__instance__area__class:sequential_cell": 467.949,
+    "design__instance__count__class:clock_buffer": 7,
+    "design__instance__count__class:timing_repair_buffer": 28,
+    "design__instance__count__hold_buffer": 8
+  },
+  "cts": {
+    "functional_clock_sinks": 22,
+    "inserted_tree_buffers": 5,
+    "dummy_clock_loads": 2,
+    "final_clock_buffer_count": 7,
+    "tree_depth_min": 2,
+    "tree_depth_max": 2,
+    "clock_subnets": 5,
+    "source": "35-openroad-cts/openroad-cts.log"
+  },
+  "timing_per_corner": {
+    "nom_tt_025C_1v80": {
+      "timing__setup__ws": 5.599208810641355,
+      "timing__hold__ws": 0.3138767112839408,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.2703727318559299,
+      "clock__skew__worst_hold": -0.32566178453479266,
+      "power_W": {
+        "internal__total": 0.0002126327162841335,
+        "switching__total": 7.275384268723428e-05,
+        "leakage__total": 1.5852627655021934e-08,
+        "total": 0.0002854024351108819
+      },
+      "clock_rise_network_latency_min_ns": 0.348568,
+      "clock_rise_network_latency_max_ns": 0.392183,
+      "clock_rise_network_skew_ns": 0.043615
+    },
+    "nom_ss_100C_1v60": {
+      "timing__setup__ws": 1.3441577120700896,
+      "timing__hold__ws": 0.8338118764779151,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 11.0,
+      "clock__skew__worst_setup": 0.28346123473013085,
+      "clock__skew__worst_hold": -0.3799131394787658,
+      "power_W": {
+        "internal__total": 0.00016998896899167448,
+        "switching__total": 5.6464847148163244e-05,
+        "leakage__total": 1.0311164260201622e-06,
+        "total": 0.00022748493938706815
+      },
+      "clock_rise_network_latency_min_ns": 0.603766,
+      "clock_rise_network_latency_max_ns": 0.677158,
+      "clock_rise_network_skew_ns": 0.073392
+    },
+    "nom_ff_n40C_1v95": {
+      "timing__setup__ws": 6.378413533441417,
+      "timing__hold__ws": 0.111163303930556,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.2643196847321792,
+      "clock__skew__worst_hold": -0.30275557917616785,
+      "power_W": {
+        "internal__total": 0.00024429219774901867,
+        "switching__total": 8.637760765850544e-05,
+        "leakage__total": 1.9953757757207313e-08,
+        "total": 0.00033068977063521743
+      },
+      "clock_rise_network_latency_min_ns": 0.241323,
+      "clock_rise_network_latency_max_ns": 0.271866,
+      "clock_rise_network_skew_ns": 0.030542
+    },
+    "min_tt_025C_1v80": {
+      "timing__setup__ws": 5.610889689458399,
+      "timing__hold__ws": 0.30994518939794713,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.2695757582351628,
+      "clock__skew__worst_hold": -0.3238754633932258,
+      "power_W": {
+        "internal__total": 0.00021253408340271562,
+        "switching__total": 7.042406650725752e-05,
+        "leakage__total": 1.5852627655021934e-08,
+        "total": 0.00028297401149757206
+      },
+      "clock_rise_network_latency_min_ns": 0.341944,
+      "clock_rise_network_latency_max_ns": 0.384228,
+      "clock_rise_network_skew_ns": 0.042284
+    },
+    "min_ss_100C_1v60": {
+      "timing__setup__ws": 1.371278240882654,
+      "timing__hold__ws": 0.8269174468111563,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 11.0,
+      "clock__skew__worst_setup": 0.28236613846324476,
+      "clock__skew__worst_hold": -0.37724560654205597,
+      "power_W": {
+        "internal__total": 0.00016992694872897118,
+        "switching__total": 5.462404806166887e-05,
+        "leakage__total": 1.0311164260201622e-06,
+        "total": 0.00022558211639989167
+      },
+      "clock_rise_network_latency_min_ns": 0.593159,
+      "clock_rise_network_latency_max_ns": 0.664537,
+      "clock_rise_network_skew_ns": 0.071378
+    },
+    "min_ff_n40C_1v95": {
+      "timing__setup__ws": 6.386756193573607,
+      "timing__hold__ws": 0.10914724988312127,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.2637191095700228,
+      "clock__skew__worst_hold": -0.30139644411098276,
+      "power_W": {
+        "internal__total": 0.00024419688270427287,
+        "switching__total": 8.3643346442841e-05,
+        "leakage__total": 1.9953757757207313e-08,
+        "total": 0.00032786017982289195
+      },
+      "clock_rise_network_latency_min_ns": 0.236603,
+      "clock_rise_network_latency_max_ns": 0.266161,
+      "clock_rise_network_skew_ns": 0.029558
+    },
+    "max_tt_025C_1v80": {
+      "timing__setup__ws": 5.584066700424849,
+      "timing__hold__ws": 0.31761733031545103,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.27171102248323814,
+      "clock__skew__worst_hold": -0.3283272913144253,
+      "power_W": {
+        "internal__total": 0.00021269626449793577,
+        "switching__total": 7.49344690120779e-05,
+        "leakage__total": 1.5852627655021934e-08,
+        "total": 0.0002876466023735702
+      },
+      "clock_rise_network_latency_min_ns": 0.356524,
+      "clock_rise_network_latency_max_ns": 0.402152,
+      "clock_rise_network_skew_ns": 0.045628
+    },
+    "max_ss_100C_1v60": {
+      "timing__setup__ws": 1.3148718042090555,
+      "timing__hold__ws": 0.8405372191732413,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 11.0,
+      "clock__skew__worst_setup": 0.28464373330710246,
+      "clock__skew__worst_hold": -0.38369927765557305,
+      "power_W": {
+        "internal__total": 0.00017002542153932154,
+        "switching__total": 5.818781937705353e-05,
+        "leakage__total": 1.0311164260201622e-06,
+        "total": 0.00022924435324966908
+      },
+      "clock_rise_network_latency_min_ns": 0.617408,
+      "clock_rise_network_latency_max_ns": 0.693113,
+      "clock_rise_network_skew_ns": 0.075705
+    },
+    "max_ff_n40C_1v95": {
+      "timing__setup__ws": 6.367102136857418,
+      "timing__hold__ws": 0.11309803413913692,
+      "timing__setup__wns": 0.0,
+      "timing__hold__wns": 0.0,
+      "timing__setup__tns": 0.0,
+      "timing__hold__tns": 0.0,
+      "design__max_slew_violation__count": 0.0,
+      "clock__skew__worst_setup": 0.26600278288511225,
+      "clock__skew__worst_hold": -0.3049695304833389,
+      "power_W": {
+        "internal__total": 0.00024436210514977574,
+        "switching__total": 8.893680205801502e-05,
+        "leakage__total": 1.9953757757207313e-08,
+        "total": 0.00033331886515952647
+      },
+      "clock_rise_network_latency_min_ns": 0.246765,
+      "clock_rise_network_latency_max_ns": 0.279449,
+      "clock_rise_network_skew_ns": 0.032684
+    }
+  },
+  "worst_setup": {
+    "slack_ns": 1.3148718042090555,
+    "corner": "max_ss_100C_1v60",
+    "startpoint": "_187_ / impl.dut.timeout_q[3]",
+    "endpoint": "_197_ / impl.dut.count_q[2]",
+    "arrival_ns": 8.831797,
+    "required_ns": 10.146668
+  },
+  "worst_hold": {
+    "slack_ns": 0.10914724988312127,
+    "corner": "min_ff_n40C_1v95",
+    "startpoint": "_198_ / impl.dut.count_q[1]",
+    "endpoint": "_198_ / impl.dut.count_q[1]",
+    "arrival_ns": 0.579949,
+    "required_ns": 0.470801
+  },
+  "slew_issue": {
+    "violating_pins_per_ss_corner": 11,
+    "corners": [
+      "nom_ss_100C_1v60",
+      "min_ss_100C_1v60",
+      "max_ss_100C_1v60"
+    ],
+    "worst_pin": "_159_/A",
+    "worst_slew_ns": 0.933907,
+    "limit_ns": 0.75,
+    "worst_slew_slack_ns": -0.183907,
+    "net": "net20",
+    "driver": "fanout20 / sky130_fd_sc_hd__clkdlybuf4s25_1",
+    "origin": "rst_n -> input2 -> net2 -> fanout20 -> net20",
+    "violating_pins": [
+      "_159_/A",
+      "_158_/A",
+      "_098_/B",
+      "_091_/A",
+      "_151_/C1",
+      "_147_/C1",
+      "_149_/C1",
+      "_141_/C1",
+      "_137_/C1",
+      "_139_/C1",
+      "fanout20/X"
+    ],
+    "not_unique_nets": true,
+    "checker_config": [
+      ""
+    ],
+    "diagnosis": "One reset-derived delay-buffer branch; 10 receiver pins plus driver output. Inspect fanout load, stronger buffer or split buffering with hold/setup tradeoff; rerun PnR+all-corner STA. Slower clock alone does not repair transition rule."
+  },
+  "power": {
+    "postroute_nom_tt_W": {
+      "internal__total": 0.0002126327162841335,
+      "switching__total": 7.275384268723428e-05,
+      "leakage__total": 1.5852627655021934e-08,
+      "total": 0.0002854024351108819
+    },
+    "final_summary_W": {
+      "internal": 0.00024436210514977574,
+      "switching": 8.893680205801502e-05,
+      "leakage": 1.9953757757207313e-08,
+      "total": 0.00033331886515952647
+    },
+    "summary_matches_corner": "max_ff_n40C_1v95",
+    "activity": "vectorless estimate; no workload VCD/SAIF annotation or explicit numeric toggle/probability reported in archived flow/config",
+    "numeric_toggle_probability": null,
+    "measurement": false
+  },
+  "physical_checks": {
+    "route__drc_errors": 0,
+    "magic__drc_error__count": 0,
+    "klayout__drc_error__count": 0,
+    "design__xor_difference__count": 0,
+    "design__lvs_error__count": 0,
+    "design__lvs_device_difference__count": 0,
+    "design__lvs_net_difference__count": 0,
+    "route__antenna_violation__count": 0,
+    "design__critical_disconnected_pin__count": 0,
+    "design__disconnected_pin__count": 6,
+    "timing__unannotated_net__count": 27,
+    "timing__unannotated_net_filtered__count": 0
+  },
+  "ir_drop": {
+    "corner": "nom_tt_025C_1v80",
+    "VPWR_worst_V": 4.15685e-05,
+    "VGND_worst_V": 5.39897e-05,
+    "limit": "VSRC_LOC_FILES unset, source distribution assumed; cannot claim package-level accuracy"
+  },
+  "limits": [
+    "Successful flow and checked deck DRC/LVS are not fabrication/signoff proof.",
+    "11 max-slew violating pins in slow corners remain.",
+    "Fallback SDC I/O assumptions are not real board constraints.",
+    "Power lacks workload annotation and is not measured silicon power.",
+    "No external CDC or illegal peer protocol completeness claim.",
+    "Actual KLayout PNG is 2D; no physical 3D render was executed."
+  ],
+  "final_file_manifest": {
+    "final/def/tt_um_24101280_f10.def": {
+      "bytes": 679385,
+      "sha256": "576a32c34018deb8baf50291538ee26db317fae7a62676eec48d00d352fb344e"
+    },
+    "final/gds/tt_um_24101280_f10.gds": {
+      "bytes": 1187254,
+      "sha256": "a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d"
+    },
+    "final/json_h/tt_um_24101280_f10.h.json": {
+      "bytes": 70768,
+      "sha256": "7cf488a15fd5cdd55cb42dddb53e0bbf9672ebc4bc4f32943dd748444f807a62"
+    },
+    "final/klayout_gds/tt_um_24101280_f10.klayout.gds": {
+      "bytes": 701802,
+      "sha256": "f9e12af0d482f06a65ca23316fbdee9aa53bc8eeaa1a5ffb3ca87333476259bb"
+    },
+    "final/lef/tt_um_24101280_f10.lef": {
+      "bytes": 11592,
+      "sha256": "0a6ce76098ffbbdd0de8f80d575ef47e975fb6444ad3ac6d9b62180e63256c8a"
+    },
+    "final/lib/max_ff_n40C_1v95/tt_um_24101280_f10__max_ff_n40C_1v95.lib": {
+      "bytes": 17430,
+      "sha256": "60f30591dd8519ac5fd3ae6c1f550c5f700bd2314e694853d4e11be253b2ae7c"
+    },
+    "final/lib/max_ss_100C_1v60/tt_um_24101280_f10__max_ss_100C_1v60.lib": {
+      "bytes": 17430,
+      "sha256": "c1208cab37f0c588d9af406903adc803a18b3c1eb501ec6084058a309542b7ea"
+    },
+    "final/lib/max_tt_025C_1v80/tt_um_24101280_f10__max_tt_025C_1v80.lib": {
+      "bytes": 17429,
+      "sha256": "706473e334264087b2148bf6f078e0d9dc2718a68e6a29d35af10e1eea9c6369"
+    },
+    "final/lib/min_ff_n40C_1v95/tt_um_24101280_f10__min_ff_n40C_1v95.lib": {
+      "bytes": 17430,
+      "sha256": "09a4111a263930e43571dde99795b1382f02c071ea8a0a0fed74355ff105ba05"
+    },
+    "final/lib/min_ss_100C_1v60/tt_um_24101280_f10__min_ss_100C_1v60.lib": {
+      "bytes": 17430,
+      "sha256": "bc0f8bc8d98610125161194f33c34598d64cd3bb0f277ef0b9112e9ad40df607"
+    },
+    "final/lib/min_tt_025C_1v80/tt_um_24101280_f10__min_tt_025C_1v80.lib": {
+      "bytes": 17429,
+      "sha256": "c0e218b444aabea39d4aafb8f5d745a1a16603a44ab3a70728dc16726ca43489"
+    },
+    "final/lib/nom_ff_n40C_1v95/tt_um_24101280_f10__nom_ff_n40C_1v95.lib": {
+      "bytes": 17430,
+      "sha256": "51feb620a70b962ad9925b907336d9ab4da8e06cdf31e0abeb5214a99ff741b6"
+    },
+    "final/lib/nom_ss_100C_1v60/tt_um_24101280_f10__nom_ss_100C_1v60.lib": {
+      "bytes": 17430,
+      "sha256": "478d8fe6cf16a6b24a1a862ad7ea9103f36b7a45d88155e8719c7aaf2f27bcb7"
+    },
+    "final/lib/nom_tt_025C_1v80/tt_um_24101280_f10__nom_tt_025C_1v80.lib": {
+      "bytes": 17429,
+      "sha256": "771a8cec2223bfe09bc7da7914a9d1005f07eaf2d3fad6184651e2f90b294be3"
+    },
+    "final/mag/tt_um_24101280_f10.mag": {
+      "bytes": 1418975,
+      "sha256": "8161d62216cfbfb7b8b2d8b6e9cfa8b94483906a86a9badaf9a4fd998e0a9ab8"
+    },
+    "final/mag_gds/tt_um_24101280_f10.magic.gds": {
+      "bytes": 1187254,
+      "sha256": "a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d"
+    },
+    "final/metrics.csv": {
+      "bytes": 15263,
+      "sha256": "d0bca9cd6532bff9ebee6b4a71e8e959b3f5a42fc4b12e0be0d4db8854228d83"
+    },
+    "final/metrics.json": {
+      "bytes": 17158,
+      "sha256": "cc85f055a6ad1cf506a915090c4282d8cf63ba5bf8e21f1697e0cea21ce778e7"
+    },
+    "final/nl/tt_um_24101280_f10.nl.v": {
+      "bytes": 253753,
+      "sha256": "a055f4144701b40fe7d599b013a76a070ce4dfb44aa4fe89d958cffd462bed1a"
+    },
+    "final/odb/tt_um_24101280_f10.odb": {
+      "bytes": 3437126,
+      "sha256": "6986ad763229b398b4b5280253101b277bb6ca2e68e1e4df45d5829d8bd53a3c"
+    },
+    "final/pnl/tt_um_24101280_f10.pnl.v": {
+      "bytes": 573375,
+      "sha256": "c9b9f4b94731e44b1f880bbd5710adca99f58cb6a8ffe271e9e30a7d67498c11"
+    },
+    "final/render/tt_um_24101280_f10.png": {
+      "bytes": 141858,
+      "sha256": "bd9758e61fe3c4abfc88648e0ff2469a222376f7b12ed137a7416cf1681c3a40"
+    },
+    "final/sdc/tt_um_24101280_f10.sdc": {
+      "bytes": 8557,
+      "sha256": "7a6511468d0b994bed2402260385507ab11291e84cb6d0a5788e7bbacef02066"
+    },
+    "final/sdf/max_ff_n40C_1v95/tt_um_24101280_f10__max_ff_n40C_1v95.sdf": {
+      "bytes": 70510,
+      "sha256": "2894bf19fe74cde029897b44cdddaff4619155354614824ef2ae7b0dce53c3ba"
+    },
+    "final/sdf/max_ss_100C_1v60/tt_um_24101280_f10__max_ss_100C_1v60.sdf": {
+      "bytes": 70510,
+      "sha256": "5420ce701d7eb1eb679cda99ca7459ddc1583ccc89805a9c66ce1dc66331111c"
+    },
+    "final/sdf/max_tt_025C_1v80/tt_um_24101280_f10__max_tt_025C_1v80.sdf": {
+      "bytes": 70508,
+      "sha256": "69bf6075b2325212545ed4d7656e2297e00c1f08208126647da496b0d1b7d459"
+    },
+    "final/sdf/min_ff_n40C_1v95/tt_um_24101280_f10__min_ff_n40C_1v95.sdf": {
+      "bytes": 70510,
+      "sha256": "bfaf7b137a9e8ff30fc4f229591e85012f05f6c95beaa5b22e67310f919c0ae0"
+    },
+    "final/sdf/min_ss_100C_1v60/tt_um_24101280_f10__min_ss_100C_1v60.sdf": {
+      "bytes": 70390,
+      "sha256": "3e06b995d5db5b81a10461266bd9d727731ca227c546056e9f7622a632d9e937"
+    },
+    "final/sdf/min_tt_025C_1v80/tt_um_24101280_f10__min_tt_025C_1v80.sdf": {
+      "bytes": 70448,
+      "sha256": "26244167e7a0f15723e688d5396b20955defe31e096ea3588c19d5fb5f89397a"
+    },
+    "final/sdf/nom_ff_n40C_1v95/tt_um_24101280_f10__nom_ff_n40C_1v95.sdf": {
+      "bytes": 70510,
+      "sha256": "4a66e905f177b086e40b35bed5c1114fb5f5d4ab507385435f671fdd38101dc9"
+    },
+    "final/sdf/nom_ss_100C_1v60/tt_um_24101280_f10__nom_ss_100C_1v60.sdf": {
+      "bytes": 70510,
+      "sha256": "f4de68d79dae0c34721be4f2d3eef0ce39d09a9014b1d5c549ba113ec247379d"
+    },
+    "final/sdf/nom_tt_025C_1v80/tt_um_24101280_f10__nom_tt_025C_1v80.sdf": {
+      "bytes": 70508,
+      "sha256": "4fe82de32462748b2c183a30b6e60b88e77037c43a58de64a7a7fef21ecd00f7"
+    },
+    "final/spef/max/tt_um_24101280_f10.max.spef": {
+      "bytes": 217444,
+      "sha256": "6ab97360fa0e07a013402d37b8091010a33d75cec4fa8c0132647a43a482784a"
+    },
+    "final/spef/min/tt_um_24101280_f10.min.spef": {
+      "bytes": 208981,
+      "sha256": "78f4bcdfd0adfd236bbb7a4a710a0d2c70201a1c211fbfee2600adfd615fd39e"
+    },
+    "final/spef/nom/tt_um_24101280_f10.nom.spef": {
+      "bytes": 210328,
+      "sha256": "d6171f4c95c4592d4cd4f7258da086bf5d5bca3174821cdf93944cc20bd229bb"
+    },
+    "final/spice/tt_um_24101280_f10.spice": {
+      "bytes": 337087,
+      "sha256": "dad347d5f6d50f501e037819af424cf69a7dc59df6036c1deb974cb0fcf81075"
+    },
+    "final/vh/tt_um_24101280_f10.vh": {
+      "bytes": 276,
+      "sha256": "cd76af6abd28ed40b403722d6a3606400c4c80670a97f220e370f0a14e12cf2e"
+    }
+  }
+}

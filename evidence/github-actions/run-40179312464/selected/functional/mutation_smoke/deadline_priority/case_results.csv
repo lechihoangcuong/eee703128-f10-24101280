@@ -1,0 +1,16 @@
+case_id,description,start_ns,end_ns,cycles,checks,errors,result
+TC00_RESET,Reset and idle hold,0,37,4,49,0,PASS
+TC01_NORMAL,Normal complete four-phase handshake,37,87,5,65,0,PASS
+TC02_DELAYED_SUCCESS,Delayed ACK-high and ACK-low before deadline,87,187,10,125,0,PASS
+TC03_NO_ACK,No ACK-high timeout after four waiting cycles,187,247,6,77,0,PASS
+TC04_ACK_STUCK,ACK-high stuck timeout after four waiting cycles,247,327,8,101,0,PASS
+TC05_BACK_TO_BACK,Two complete transactions without an idle bubble,327,467,14,177,0,PASS
+TC06_STALE_ACK,Reject start while stale ACK is high and do not queue it,467,557,9,117,0,PASS
+TC07_BUSY_START,Ignore start in all three busy states,557,627,7,86,0,PASS
+TC08_LATCH_TIMEOUT,Live timeout input changes do not reload either wait deadline,627,767,14,172,0,PASS
+TC09_SYNC_RESET,Reset between edges in IDLE and all three busy states,767,907,14,180,0,PASS
+SW_REQ_TIMEOUT_N000,Request wait timeout at exact deadline,907,937,3,38,0,PASS
+SW_LOW_TIMEOUT_N000,Return wait timeout at exact deadline,937,987,5,62,6,FAIL
+SW_REQ_PRIORITY_N000,ACK-high wins over timeout on exact deadline,987,1037,5,63,7,FAIL
+SW_LOW_PRIORITY_N000,ACK-low wins over timeout on exact deadline,1037,1087,5,62,6,FAIL
+SW_REQ_TIMEOUT_N001,Request wait timeout at exact deadline,1087,1117,3,38,0,PASS

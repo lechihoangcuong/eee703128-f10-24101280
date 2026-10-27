@@ -1,0 +1,28 @@
+
+7. Printing statistics.
+
+=== tt_um_24101280_f10 ===
+
+   Number of wires:                209
+   Number of wire bits:            334
+   Number of public wires:          32
+   Number of public wire bits:     132
+   Number of ports:                  8
+   Number of port bits:             43
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                210
+     $_ANDNOT_                      52
+     $_AND_                          7
+     $_MUX_                         15
+     $_NAND_                         4
+     $_NOR_                         11
+     $_NOT_                          9
+     $_ORNOT_                       11
+     $_OR_                          56
+     $_SDFFE_PN0P_                  12
+     $_SDFF_PN0_                    10
+     $_XNOR_                         1
+     $_XOR_                         22
+

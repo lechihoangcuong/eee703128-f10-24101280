@@ -1,0 +1,53 @@
+{
+  "ci_run": 40179312464,
+  "ci_commit": "b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f",
+  "submitted_source_commit": "7ae2df482cbf7f316b2eac5e066c0b33ebad88eb",
+  "source_file_count": 22,
+  "source_files_identical": true,
+  "core": {
+    "cases": 1035,
+    "failed_cases": 0,
+    "cycles": 138571,
+    "checks": 1665218,
+    "errors": 0,
+    "final_aggregate_checks": 3,
+    "seed": "F1002026",
+    "stress_resets": 16,
+    "status": "PASSED"
+  },
+  "wrapper": {
+    "cases": 11,
+    "failed_cases": 0,
+    "checks": 708,
+    "errors": 0,
+    "status": "PASSED"
+  },
+  "metrics_compared": 307,
+  "metrics_differences": [],
+  "case_csv_byte_identical": true,
+  "gds_sha256": "6bb02c420db3967a6b95394187e302c512e116d9a5b9c268b86434cf40f1800a",
+  "previous_gds_sha256": "a119d53d1b03022d5e020c8124c052bf89232f74ca09cfd7d6e92021bc30777d",
+  "gds_identical_ignoring_library_structure_timestamps": true,
+  "existing_waveform_and_layout_figures_remain_supported": true,
+  "known_limits": [
+    "11 SS max-slew violations remain",
+    "vectorless power",
+    "fallback SDC and assumed power sources",
+    "no hardware verification"
+  ],
+  "waveform_comparison": {
+    "local_vcd_sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+    "ci_vcd_sha256": "006ef72589adae62369b38d4db0d60b9e3b3d51ed4ce41fa6e5f668957e7e2c9",
+    "normalized_sha256": "a9c15b8f53a5d8ceecbf9a5ebd6f750e0f5fa833901ef649c1f50aa0f100426a",
+    "declarations_and_all_events_identical_after_date_version_normalization": true,
+    "normalization": "Remove only $date and $version header blocks; trim surrounding whitespace"
+  },
+  "nom_tt_power_watts": {
+    "power__internal__total": 0.0002126327162841335,
+    "power__switching__total": 7.275384268723428e-05,
+    "power__leakage__total": 1.5852627655021934e-08,
+    "power__total": 0.0002854024351108819
+  },
+  "librelane_version": "3.0.16",
+  "librelane_commit": "a09d248c49bd1f7170d41885936f63e4255b1fe5"
+}

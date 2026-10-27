@@ -1,0 +1,9 @@
+%Warning-UNUSEDPARAM: /home/runner/work/eee703128-f10-24101280/eee703128-f10-24101280/rtl/f10_handshake_controller.sv:2:19: Parameter is not used: 'START_INTERNAL'
+                                                                                                                          : ... note: In instance 'tt_um_24101280_f10.impl.dut'
+    2 |     parameter int START_INTERNAL = 0
+      |                   ^~~~~~~~~~~~~~
+                      ... For warning description see https://verilator.org/warn/UNUSEDPARAM?v=5.044
+                      ... Use "/* verilator lint_off UNUSEDPARAM */" and lint_on around source to disable this message.
+- V e r i l a t i o n   R e p o r t: Verilator 5.044 2026-01-01 rev v5.040
+- Verilator: Built from 0.839 MB sources in 450 modules, into 0.020 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.041 s (elab=0.009, cvt=0.004, bld=0.000); cpu 0.041 s on 1 threads; alloced 28.129 MB

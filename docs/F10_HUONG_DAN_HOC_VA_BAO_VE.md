@@ -23,7 +23,7 @@ Các kết quả **đã chạy thật** trong bộ hồ sơ làm việc (Lab A/B
 | Tổng hợp generic | Lõi 209 cell/22 FF; top 210 cell/22 FF; 0 latch; local Yosys0.52 và CI Yosys0.33 | Generic không tự cung cấp area/thời gian của thư viện Sky130 |
 | LibreLane trên CI | Đã sinh GDS, final metrics; xem mục13 và PHYSICAL_FLOW.md | Còn11vi phạm slew; fallbackSDC và IR nguồn giả định; chưa là sign-off hay chip thật |
 
-Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lechihoangcuong/eee703128-f10-24101280). [CI run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919) đã chạy thành công hai job ngày20/10/2026 trên mã nguồn `298e12b0f79a326343315beee1697f55e2946403`. Các commit bổ sung tài liệu sau run không phải source revision đã được run này thực thi. Bản lưu `evidence/github-actions/run-39390858919/` giữ ZIP, metadata, SHA256 và kết quả thật; phải đọc các giới hạn trước khi nói “CI xanh”.
+Repo công khai: [lechihoangcuong/eee703128-f10-24101280](https://github.com/lechihoangcuong/eee703128-f10-24101280). [CI run40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464) đã chạy thành công hai job ngày25/10/2026 trên mã nguồn `b59c838b69c1b35e73c9c9ca8cdcd36c34d7d25f`. Các commit bổ sung tài liệu sau run không phải source revision đã được run này thực thi. Bản lưu `evidence/github-actions/run-40179312464/` giữ ZIP, metadata, SHA256 và kết quả thật; phải đọc các giới hạn trước khi nói “CI xanh”.
 
 ## 2. Tại sao phải học cả Lab A và Lab B?
 
@@ -248,7 +248,7 @@ Trong GTKWave, chọn nhóm tín hiệu như mục 8. Đừng chỉ tìm chữ P
 5. Nếu flow thất bại, lưu lỗi đầu tiên thuộc stage nào, thông báo nguyên văn, cấu hình/commit, điều đã thử và kết quả. Phân biệt lỗi cài môi trường/PDK với lỗi RTL, constraint và floorplan. Không sửa FSM để chữa lỗi hình học PDN.
 6. Cập nhật PDF bằng dữ liệu thực của CI. Nếu chỉ có log thất bại, trình bày chẩn đoán có bằng chứng như charter cho phép; không bịa hình layout, area, power hay slack.
 
-Máy local chưa chạy LibreLane, còn CI đã thực sự chạy toàn bộ flow với Sky130. Không gắn nhãn kết quả CI thành kết quả WSL. Khi xem [run39390858919](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/39390858919), cần mở cả metrics và warning: job thành công nhưng còn11vi phạm slew ở các cornerSS, dùng fallbackSDC và không có vị trí nguồnVSRC_LOC_FILES thực. DRC/LVS không kiểm những điều kiện đó thay cho STA hay IR. Chi tiết và đơn vị nằm trong `docs/PHYSICAL_FLOW.md`, artifact gốc giữ nguyên trong hai ZIP.
+Máy local chưa chạy LibreLane, còn CI đã thực sự chạy toàn bộ flow với Sky130. Không gắn nhãn kết quả CI thành kết quả WSL. Khi xem [run40179312464](https://github.com/lechihoangcuong/eee703128-f10-24101280/actions/runs/40179312464), cần mở cả metrics và warning: job thành công nhưng còn11vi phạm slew ở các cornerSS, dùng fallbackSDC và không có vị trí nguồnVSRC_LOC_FILES thực. DRC/LVS không kiểm những điều kiện đó thay cho STA hay IR. Chi tiết và đơn vị nằm trong `docs/PHYSICAL_FLOW.md`, artifact gốc giữ nguyên trong hai ZIP.
 
 Phân biệt các báo cáo:
 
@@ -326,7 +326,7 @@ Chẩn đoán riêng đã kiểm cả hai pha chờ ở deadline: N=0 đo 3 chu 
 
 Trong repo portable, chạy `bash diagnostics/contract_bounds/run.sh` để tái lập; chạy `bash scripts/run_mutations.sh` để thấy ba bản sao cố ý sai bị bắt. Log mutation FAIL là kết quả mong đợi của thử phá, không phải RTL được chấp nhận khi sai.
 
-Báo cáo chính15trang và phụ lục mã17trang được cập nhật bằng CI thật, nằm trong `reports/`. Repo công khai lưu lịch sử thay đổi và source commit đã chạy CI. URL repo/run và GDS đã có bằng chứng; phần ôn tập trước khi nộp gồm bốn pha, timer,22FF và giới hạn physical.
+Báo cáo PDF hiện tại do sinh viên chỉnh sửa ngày 27/10/2026 có 38 trang, gồm cả phụ lục, nằm trong `reports/`. Bản phụ lục mã riêng 17 trang được giữ lại từ phiên bản trước. Repo công khai lưu lịch sử thay đổi và source commit đã chạy CI. URL repo/run và GDS đã có bằng chứng; phần ôn tập trước khi nộp gồm bốn pha, timer,22FF và giới hạn physical.
 
 Đọc physical theo ba câu hỏi. **Số ở stage nào?** Generic top210cell, Sky130mapping133cell, final454standardcell không mâu thuẫn vì định nghĩa và thư viện khác nhau; cuối cùng vẫn22cell tuần tự. **Điều kiện đo là gì?** Setup+1,314872ns ở maxSS, hold+0,109147ns ở minFF; powerTT285,402µW là ước tính vectorless với I/O fallback2ns, chưa phải đo chip. **Còn gì chưa đạt?**11pin slewSS vẫn vượt0,75ns, dù DRC/LVS0 và jobsuccess. Rà nhánh reset/buffer cần chạy lại physical; chỉ kéo dài clock không trực tiếp chữa slew.
 

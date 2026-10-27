@@ -1,0 +1,7 @@
+{
+  "local_vcd_sha256": "3678ae4b0a8b0a4f1ec920176603d8aa979dffe1e7c93a7bb44db5fcd23a83d5",
+  "ci_vcd_sha256": "006ef72589adae62369b38d4db0d60b9e3b3d51ed4ce41fa6e5f668957e7e2c9",
+  "normalized_sha256": "a9c15b8f53a5d8ceecbf9a5ebd6f750e0f5fa833901ef649c1f50aa0f100426a",
+  "declarations_and_all_events_identical_after_date_version_normalization": true,
+  "normalization": "Remove only $date and $version header blocks; trim surrounding whitespace"
+}

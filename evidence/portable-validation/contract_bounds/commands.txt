@@ -1,0 +1,3 @@
+timeout 30s iverilog -g2012 -Wall -s f10_contract_bounds_tb -o <out>/sim.vvp rtl/f10_handshake_controller.sv diagnostics/contract_bounds/f10_contract_bounds_tb.sv
+(cd <out>; timeout 10s vvp sim.vvp)
+python3 diagnostics/contract_bounds/summarize.py <out>

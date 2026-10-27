@@ -1,0 +1,30 @@
+{
+  "classification": "INTENTIONAL_MUTATION_SMOKE_ONLY",
+  "mutants": 3,
+  "caught": 3,
+  "status": "ALL_THREE_CAUGHT",
+  "results": [
+    {
+      "mutant": "off_by_one",
+      "compile_exit": "0",
+      "simulation_exit": "1",
+      "detected": "YES",
+      "classification": "INTENTIONAL_MUTANT_FAILURE_CAUGHT"
+    },
+    {
+      "mutant": "deadline_priority",
+      "compile_exit": "0",
+      "simulation_exit": "1",
+      "detected": "YES",
+      "classification": "INTENTIONAL_MUTANT_FAILURE_CAUGHT"
+    },
+    {
+      "mutant": "live_timeout_reload",
+      "compile_exit": "0",
+      "simulation_exit": "1",
+      "detected": "YES",
+      "classification": "INTENTIONAL_MUTANT_FAILURE_CAUGHT"
+    }
+  ],
+  "limits": "Three concrete intentionally broken fixtures; not total mutation coverage. FAIL/FATAL in these logs is expected, separate from original RTL PASS."
+}

@@ -1,0 +1,15 @@
+Physical tool preflight; this does NOT report a failed flow.
+UTC 2026-10-20T02:50:13.020458+00:00
+command -v librelane: NOT_FOUND
+command -v openroad: NOT_FOUND
+command -v sta: NOT_FOUND
+command -v magic: NOT_FOUND
+command -v klayout: NOT_FOUND
+command -v nix-shell: NOT_FOUND
+command -v docker: NOT_FOUND
+PDK_ROOT=UNSET
+PDK=UNSET
+STD_CELL_LIBRARY=UNSET
+directory /home/Leecg/.ciel: ABSENT
+directory /home/Leecg/.volare: ABSENT
+flow_attempted=false; CI physical run and its URL remain pending.

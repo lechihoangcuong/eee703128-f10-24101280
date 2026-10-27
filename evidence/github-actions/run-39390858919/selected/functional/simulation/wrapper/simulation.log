@@ -1,0 +1,26 @@
+VCD info: dumpfile f10_wrapper.vcd opened for output.
+CASE_BEGIN WR01 synchronous initial reset and complete ports
+CASE_END WR01 checks=8 errors=0
+CASE_BEGIN WR02 ena zero suppresses new start
+CASE_END WR02 checks=12 errors=0
+CASE_BEGIN WR03 normal four-phase handshake through mapped pins
+CASE_END WR03 checks=24 errors=0
+CASE_BEGIN WR04 no ACK expires after exactly three wait edges
+CASE_END WR04 checks=20 errors=0
+CASE_BEGIN WR05 stale ACK blocks start; fresh start completes normally
+CASE_END WR05 checks=32 errors=0
+CASE_BEGIN WR06 ena falling does not freeze a busy transaction
+CASE_END WR06 checks=24 errors=0
+CASE_BEGIN WR07 unused uio input bits do not change outputs
+CASE_END WR07 checks=16 errors=0
+CASE_BEGIN WR08 all eight timeout input bits preserved including bit seven
+CASE_END WR08 checks=520 errors=0
+CASE_BEGIN WR09 zero timeout becomes one wait edge
+CASE_END WR09 checks=12 errors=0
+CASE_BEGIN WR10 stuck high ACK expires in wait-for-low phase
+CASE_END WR10 checks=24 errors=0
+CASE_BEGIN WR11 reset asserted between clocks acts only at next posedge
+CASE_END WR11 checks=16 errors=0
+WRAPPER_SUMMARY cases=11 failed_cases=0 checks=708 errors=0
+WRAPPER_ALL_TESTS_PASSED
+tb/f10_wrapper_tb.sv:164: $finish called at 1766000 (1ps)
